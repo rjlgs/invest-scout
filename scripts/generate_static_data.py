@@ -69,13 +69,14 @@ def generate_ticker_detail(symbol: str, days: int = 365) -> dict | None:
             })
 
         # Build indicators (aligned with OHLCV)
+        # Column names from compute_indicators(): rsi, sma_short, sma_long, macd, macd_signal, macd_hist
         indicators = {
-            "rsi": [round(v, 2) if not pd.isna(v) else None for v in df_recent["RSI"].tolist()],
-            "sma50": [round(v, 2) if not pd.isna(v) else None for v in df_recent["SMA50"].tolist()],
-            "sma200": [round(v, 2) if not pd.isna(v) else None for v in df_recent["SMA200"].tolist()],
-            "macd": [round(v, 4) if not pd.isna(v) else None for v in df_recent["MACD"].tolist()],
-            "macd_signal": [round(v, 4) if not pd.isna(v) else None for v in df_recent["MACD_Signal"].tolist()],
-            "macd_hist": [round(v, 4) if not pd.isna(v) else None for v in df_recent["MACD_Hist"].tolist()],
+            "rsi": [round(v, 2) if not pd.isna(v) else None for v in df_recent["rsi"].tolist()],
+            "sma50": [round(v, 2) if not pd.isna(v) else None for v in df_recent["sma_short"].tolist()],
+            "sma200": [round(v, 2) if not pd.isna(v) else None for v in df_recent["sma_long"].tolist()],
+            "macd": [round(v, 4) if not pd.isna(v) else None for v in df_recent["macd"].tolist()],
+            "macd_signal": [round(v, 4) if not pd.isna(v) else None for v in df_recent["macd_signal"].tolist()],
+            "macd_hist": [round(v, 4) if not pd.isna(v) else None for v in df_recent["macd_hist"].tolist()],
         }
 
         # Generate signal history for last 30 trading days

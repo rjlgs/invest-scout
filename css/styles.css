@@ -459,6 +459,12 @@ a.ticker-link:hover {
     color: white;
 }
 
+/* Timestamp cell - subtle styling */
+.timestamp-cell {
+    color: #999;
+    font-size: 0.8rem;
+}
+
 /* Ticker cell with remove button */
 .ticker-cell {
     display: inline-flex;

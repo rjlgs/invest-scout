@@ -106,7 +106,7 @@ function renderRow(signal, inWatchlist) {
                      signal.signal_type === 'off-ramp' ? 'row-off-ramp' : '';
 
     const timestamp = signal.timestamp ?
-        signal.timestamp.slice(0, 19).replace('T', ' ') + ' UTC' : '—';
+        formatTimestamp(signal.timestamp) : '—';
 
     const removeBtn = inWatchlist && !showAllTickers ?
         `<button class="btn-remove" onclick="removeTicker('${signal.ticker}')" title="Remove from watchlist">&times;</button>` :
@@ -139,7 +139,7 @@ function renderRow(signal, inWatchlist) {
                     </div>
                 </div>
             </td>
-            <td>${timestamp}</td>
+            <td class="timestamp-cell">${timestamp}</td>
         </tr>
     `;
 }
@@ -323,12 +323,39 @@ function updateAutocompleteSelection(items) {
 }
 
 /**
- * Format last updated time
+ * Format timestamp for table display (human readable, localized)
+ */
+function formatTimestamp(timestamp) {
+    if (!timestamp) return '—';
+    const date = new Date(timestamp);
+    const now = new Date();
+    const diffMs = now - date;
+    const diffMins = Math.floor(diffMs / 60000);
+    const diffHours = Math.floor(diffMs / 3600000);
+    const diffDays = Math.floor(diffMs / 86400000);
+
+    // Relative time for recent updates
+    if (diffMins < 1) return 'Just now';
+    if (diffMins < 60) return `${diffMins}m ago`;
+    if (diffHours < 24) return `${diffHours}h ago`;
+    if (diffDays < 7) return `${diffDays}d ago`;
+
+    // Absolute date for older updates
+    return date.toLocaleDateString(undefined, { month: 'short', day: 'numeric' });
+}
+
+/**
+ * Format last updated time for header
  */
 function formatLastUpdated(timestamp) {
     if (!timestamp) return 'Unknown';
     const date = new Date(timestamp);
-    return date.toLocaleString();
+    return date.toLocaleString(undefined, {
+        month: 'short',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: '2-digit'
+    });
 }
 
 /**

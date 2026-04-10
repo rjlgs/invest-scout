@@ -1,0 +1,66 @@
+{# Partial template — injected by HTMX after a backtest runs #}
+
+<div class="card">
+    <h3>{{ result.ticker }} &mdash; {{ result.start_date }} to {{ result.end_date }}</h3>
+
+    <div style="display:flex;gap:2rem;margin-bottom:1rem;flex-wrap:wrap">
+        <div>
+            <span style="font-size:0.85rem;color:#666">Total Trades</span><br>
+            <span style="font-size:1.3rem;font-weight:700">{{ result.num_trades }}</span>
+        </div>
+        <div>
+            <span style="font-size:0.85rem;color:#666">Win Rate</span><br>
+            <span style="font-size:1.3rem;font-weight:700">{{ result.win_rate }}%</span>
+        </div>
+        <div>
+            <span style="font-size:0.85rem;color:#666">Total Return</span><br>
+            <span style="font-size:1.3rem;font-weight:700;color:{% if result.total_return_pct >= 0 %}var(--green){% else %}var(--red){% endif %}">
+                {{ "%+.2f"|format(result.total_return_pct) }}%
+            </span>
+        </div>
+    </div>
+</div>
+
+{# Equity curve chart #}
+{% if equity_chart %}
+<div class="card chart-container">
+    {{ equity_chart | safe }}
+</div>
+{% endif %}
+
+{# Trade table #}
+{% if result.trades %}
+<div class="card">
+    <h3>Trade Log</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Entry Date</th>
+                <th>Entry Price</th>
+                <th>Exit Date</th>
+                <th>Exit Price</th>
+                <th>Change</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for t in result.trades %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ t.entry_date }}</td>
+                <td>${{ "%.2f"|format(t.entry_price) }}</td>
+                <td>{{ t.exit_date }}</td>
+                <td>${{ "%.2f"|format(t.exit_price) }}</td>
+                <td style="color:{% if t.pct_change >= 0 %}var(--green){% else %}var(--red){% endif %};font-weight:600">
+                    {{ "%+.2f"|format(t.pct_change) }}%
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% else %}
+<div class="card">
+    <p style="color:#999">No trades were triggered during this period.</p>
+</div>
+{% endif %}

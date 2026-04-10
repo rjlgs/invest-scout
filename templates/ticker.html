@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block title %}{{ symbol }} — Invest-Scout{% endblock %}
+
+{% block content %}
+<p style="margin-bottom:0.5rem">
+    <a href="/" style="color:#666;text-decoration:none">&larr; Back to Overview</a>
+</p>
+
+<h1>{{ symbol }}</h1>
+
+{% if error %}
+    <div class="card">
+        <p class="error">Error loading data: {{ error }}</p>
+    </div>
+{% else %}
+
+{# Current status #}
+<div class="card">
+    <div style="display:flex;gap:2rem;align-items:center;flex-wrap:wrap">
+        <div>
+            <span style="font-size:0.85rem;color:#666">Price</span><br>
+            <span style="font-size:1.5rem;font-weight:700">${{ "%.2f"|format(result.price) }}</span>
+        </div>
+        <div>
+            <span style="font-size:0.85rem;color:#666">Signal</span><br>
+            <span class="badge badge-{{ result.signal_type }}" style="font-size:1rem">
+                {{ result.signal_type }}
+            </span>
+        </div>
+        <div>
+            <span style="font-size:0.85rem;color:#666">On-Ramp Score</span><br>
+            <span class="score score-green" style="font-size:1.5rem">{{ result.on_ramp_score }}</span>
+            <span style="color:#999">/ 5</span>
+        </div>
+        <div>
+            <span style="font-size:0.85rem;color:#666">Off-Ramp Score</span><br>
+            <span class="score score-red" style="font-size:1.5rem">{{ result.off_ramp_score }}</span>
+            <span style="color:#999">/ 5</span>
+        </div>
+    </div>
+</div>
+
+{# Charts #}
+<div class="card chart-container">
+    {{ candle_chart | safe }}
+</div>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+    <div class="card chart-container">
+        {{ rsi_chart | safe }}
+    </div>
+    <div class="card chart-container">
+        {{ macd_chart | safe }}
+    </div>
+</div>
+
+{# Active signals #}
+<div class="card">
+    <h3>Active Signals</h3>
+
+    {% if result.on_ramp_signals %}
+        <h4 style="color:var(--green);margin:0.5rem 0">On-Ramp (Entry)</h4>
+        {% for s in result.on_ramp_signals %}
+        <div class="signal-item">
+            <span class="signal-name" style="color:var(--green)">{{ s.name }}</span>
+            <div class="signal-reason">{{ s.reason }}</div>
+        </div>
+        {% endfor %}
+    {% endif %}
+
+    {% if result.off_ramp_signals %}
+        <h4 style="color:var(--red);margin:0.5rem 0">Off-Ramp (Exit)</h4>
+        {% for s in result.off_ramp_signals %}
+        <div class="signal-item">
+            <span class="signal-name" style="color:var(--red)">{{ s.name }}</span>
+            <div class="signal-reason">{{ s.reason }}</div>
+        </div>
+        {% endfor %}
+    {% endif %}
+
+    {% if not result.on_ramp_signals and not result.off_ramp_signals %}
+        <p style="color:#999">No signals currently firing for {{ symbol }}.</p>
+    {% endif %}
+</div>
+
+{# Recent signal history #}
+{% if history %}
+<div class="card">
+    <h3>Recent Signal History (Last 30 Trading Days)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Signal</th>
+                <th>On / Off</th>
+                <th>Signals Firing</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for h in history %}
+            <tr>
+                <td>{{ h.date }}</td>
+                <td>
+                    <span class="badge badge-{{ h.signal_type }}">{{ h.signal_type }}</span>
+                </td>
+                <td>{{ h.on_ramp_score }} / {{ h.off_ramp_score }}</td>
+                <td style="font-size:0.85rem">{{ h.signals | join(", ") }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endif %}
+
+{% endif %}
+{% endblock %}

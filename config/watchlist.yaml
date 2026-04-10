@@ -1,0 +1,17 @@
+# Invest-Scout Watchlist
+# Add tickers below. Per-ticker overrides are optional.
+#
+# Example with overrides:
+#   - symbol: TSLA
+#     trailing_stop_pct: 12.0
+#     rsi_oversold: 25
+
+tickers:
+  - symbol: AAPL
+  - symbol: MSFT
+  - symbol: GOOGL
+  - symbol: AMZN
+  - symbol: SPY
+  - symbol: QQQ
+  - symbol: TSLA
+  - symbol: NVDA

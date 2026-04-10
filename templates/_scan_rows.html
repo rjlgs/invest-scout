@@ -1,0 +1,29 @@
+{# Partial template — rendered as the table body for HTMX updates #}
+{% for r in results %}
+<tr class="{% if r.signal_type == 'on-ramp' %}row-on-ramp{% elif r.signal_type == 'off-ramp' %}row-off-ramp{% endif %}">
+    <td>
+        <a href="/ticker/{{ r.ticker }}" class="ticker-link">{{ r.ticker }}</a>
+    </td>
+    <td data-sort="{{ r.price or 0 }}">
+        {% if r.price %}${{ "%.2f"|format(r.price) }}{% else %}N/A{% endif %}
+    </td>
+    <td>
+        <span class="badge badge-{{ r.signal_type }}">
+            {{ r.signal_type }}
+        </span>
+    </td>
+    <td data-sort="{{ r.on_ramp_score }}">
+        <span class="score score-green">{{ r.on_ramp_score }}</span> / 5
+    </td>
+    <td data-sort="{{ r.off_ramp_score }}">
+        <span class="score score-red">{{ r.off_ramp_score }}</span> / 5
+    </td>
+    <td>
+        {% if r.timestamp %}
+            {{ r.timestamp[:19] | replace("T", " ") }} UTC
+        {% else %}
+            —
+        {% endif %}
+    </td>
+</tr>
+{% endfor %}

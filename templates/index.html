@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Invest-Scout — Dashboard{% endblock %}
+
+{% block content %}
+<h1>Signal Overview</h1>
+<p style="color:#666;margin-bottom:1rem">
+    Auto-refreshes every 5 minutes.
+    <span class="htmx-indicator"><span class="spinner"></span> Scanning...</span>
+</p>
+
+<table>
+    <thead>
+        <tr>
+            <th onclick="sortTable(0)">Ticker</th>
+            <th onclick="sortTable(1)">Price</th>
+            <th onclick="sortTable(2)">Signal</th>
+            <th onclick="sortTable(3)">On-Ramp</th>
+            <th onclick="sortTable(4)">Off-Ramp</th>
+            <th onclick="sortTable(5)">Updated</th>
+        </tr>
+    </thead>
+    <tbody id="scan-results"
+           hx-get="/api/scan"
+           hx-trigger="every 300s"
+           hx-swap="innerHTML"
+           hx-indicator="closest table">
+        {% include "_scan_rows.html" %}
+    </tbody>
+</table>
+{% endblock %}
+
+{% block scripts %}
+<script>
+// Simple client-side table sorting
+function sortTable(colIdx) {
+    const tbody = document.getElementById("scan-results");
+    const rows = Array.from(tbody.querySelectorAll("tr"));
+
+    const dir = tbody.dataset.sortDir === "asc" ? "desc" : "asc";
+    tbody.dataset.sortDir = dir;
+
+    rows.sort((a, b) => {
+        let aVal = a.cells[colIdx].dataset.sort || a.cells[colIdx].textContent.trim();
+        let bVal = b.cells[colIdx].dataset.sort || b.cells[colIdx].textContent.trim();
+
+        // Try numeric comparison
+        const aNum = parseFloat(aVal);
+        const bNum = parseFloat(bVal);
+        if (!isNaN(aNum) && !isNaN(bNum)) {
+            return dir === "asc" ? aNum - bNum : bNum - aNum;
+        }
+
+        return dir === "asc"
+            ? aVal.localeCompare(bVal)
+            : bVal.localeCompare(aVal);
+    });
+
+    rows.forEach(row => tbody.appendChild(row));
+}
+</script>
+{% endblock %}

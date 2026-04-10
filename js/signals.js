@@ -32,7 +32,9 @@ async function loadMeta() {
         const response = await fetch('data/meta.json');
         if (!response.ok) throw new Error('Failed to load meta');
         const meta = await response.json();
-        availableTickers = meta.tickers || [];
+        // Available tickers come from signals.json (allSignals), not meta.json
+        // This ensures users can add any ticker that was scanned
+        availableTickers = allSignals.map(s => s.ticker).sort();
         return meta;
     } catch (error) {
         console.error('Error loading meta:', error);
@@ -336,8 +338,9 @@ async function initSignals() {
     // Show loading state
     document.body.classList.add('is-loading');
 
-    // Load data
-    const [signals, meta] = await Promise.all([loadSignals(), loadMeta()]);
+    // Load data - signals first (meta depends on allSignals being populated)
+    await loadSignals();
+    const meta = await loadMeta();
 
     // Update last updated time
     const lastUpdated = document.getElementById('last-updated');

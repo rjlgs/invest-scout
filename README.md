@@ -9,21 +9,30 @@ Automated investment signal analysis for stocks and ETFs. Identifies potential e
 ## Quick Start
 
 ```bash
-# 1. Install dependencies
+# 1. Create and activate a virtual environment
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# 2. Install dependencies
 pip install -r requirements.txt
 
-# 2. (Optional) Copy and configure environment variables
+# 3. (Optional) Copy and configure environment variables
 cp .env.example .env
 
-# 3. Start the web dashboard
+# 4. Start the web dashboard
 python main.py
 
 # Dashboard runs at http://localhost:5000
 ```
 
+> **Note (macOS):** Port 5000 is used by AirPlay Receiver on macOS Monterey+. If you see "Address already in use", either disable AirPlay Receiver in System Settings → General → AirDrop & Handoff, or use a different port: `python main.py --port 8080`
+
 ## CLI Usage
 
 ```bash
+# Make sure your virtual environment is activated first
+source venv/bin/activate
+
 # Start the web dashboard (default)
 python main.py
 
@@ -185,6 +194,7 @@ invest-scout/
 ├── templates/           # Jinja2 HTML templates (Flask + HTMX)
 ├── tests/
 │   └── test_signals.py  # Signal logic unit tests
+├── venv/                # Python virtual environment (created during setup)
 ├── .env.example         # Configuration template
 ├── requirements.txt     # Python dependencies
 └── README.md
@@ -193,6 +203,7 @@ invest-scout/
 ## Running Tests
 
 ```bash
+source venv/bin/activate
 pytest tests/ -v
 ```
 

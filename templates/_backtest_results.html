@@ -2,22 +2,59 @@
 
 <div class="card">
     <h3>{{ result.ticker }} &mdash; {{ result.start_date }} to {{ result.end_date }}</h3>
+    <h4 style="margin:0.5rem 0 1rem;color:#666;font-weight:500">Strategy Comparison</h4>
 
-    <div style="display:flex;gap:2rem;margin-bottom:1rem;flex-wrap:wrap">
-        <div>
-            <span style="font-size:0.85rem;color:#666">Total Trades</span><br>
-            <span style="font-size:1.3rem;font-weight:700">{{ result.num_trades }}</span>
+    {# Comparison panel: Signal Engine vs Buy & Hold #}
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:1rem">
+        {# Signal Engine Strategy #}
+        <div style="background:#f8fafc;border-radius:8px;padding:1rem;border-left:4px solid #2196F3">
+            <div style="font-size:0.9rem;font-weight:600;color:#2196F3;margin-bottom:0.75rem">Signal Engine</div>
+            <div style="display:flex;flex-direction:column;gap:0.5rem">
+                <div style="display:flex;justify-content:space-between;align-items:baseline">
+                    <span style="font-size:0.8rem;color:#666">Return</span>
+                    <span style="font-size:1.4rem;font-weight:700;color:{% if result.total_return_pct >= 0 %}var(--green){% else %}var(--red){% endif %}">
+                        {{ "%+.2f"|format(result.total_return_pct) }}%
+                    </span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:baseline">
+                    <span style="font-size:0.8rem;color:#666">Trades</span>
+                    <span style="font-size:1rem;font-weight:600">{{ result.num_trades }}</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:baseline">
+                    <span style="font-size:0.8rem;color:#666">Win Rate</span>
+                    <span style="font-size:1rem;font-weight:600">{{ result.win_rate }}%</span>
+                </div>
+            </div>
         </div>
-        <div>
-            <span style="font-size:0.85rem;color:#666">Win Rate</span><br>
-            <span style="font-size:1.3rem;font-weight:700">{{ result.win_rate }}%</span>
+
+        {# Buy & Hold #}
+        <div style="background:#f8fafc;border-radius:8px;padding:1rem;border-left:4px solid #9E9E9E">
+            <div style="font-size:0.9rem;font-weight:600;color:#666;margin-bottom:0.75rem">Buy & Hold</div>
+            <div style="display:flex;flex-direction:column;gap:0.5rem">
+                <div style="display:flex;justify-content:space-between;align-items:baseline">
+                    <span style="font-size:0.8rem;color:#666">Return</span>
+                    <span style="font-size:1.4rem;font-weight:700;color:{% if result.buy_hold_return_pct >= 0 %}var(--green){% else %}var(--red){% endif %}">
+                        {{ "%+.2f"|format(result.buy_hold_return_pct) }}%
+                    </span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:baseline">
+                    <span style="font-size:0.8rem;color:#666">Trades</span>
+                    <span style="font-size:1rem;font-weight:600">1</span>
+                </div>
+                <div style="display:flex;justify-content:space-between;align-items:baseline">
+                    <span style="font-size:0.8rem;color:#666">Win Rate</span>
+                    <span style="font-size:1rem;font-weight:600">{% if result.buy_hold_return_pct >= 0 %}100{% else %}0{% endif %}%</span>
+                </div>
+            </div>
         </div>
-        <div>
-            <span style="font-size:0.85rem;color:#666">Total Return</span><br>
-            <span style="font-size:1.3rem;font-weight:700;color:{% if result.total_return_pct >= 0 %}var(--green){% else %}var(--red){% endif %}">
-                {{ "%+.2f"|format(result.total_return_pct) }}%
-            </span>
-        </div>
+    </div>
+
+    {# Outperformance indicator #}
+    {% set diff = result.total_return_pct - result.buy_hold_return_pct %}
+    <div style="text-align:center;padding:0.5rem;background:{% if diff >= 0 %}#e8f5e9{% else %}#ffebee{% endif %};border-radius:6px">
+        <span style="font-size:0.85rem;color:{% if diff >= 0 %}var(--green){% else %}var(--red){% endif %};font-weight:600">
+            Signal Engine {{ "%+.2f"|format(diff) }}% vs Buy & Hold
+        </span>
     </div>
 </div>
 

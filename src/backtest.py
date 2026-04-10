@@ -69,9 +69,11 @@ def run_backtest(ticker: str, start_date: str, end_date: str,
                 ...
             ],
             "total_return_pct": float,
+            "buy_hold_return_pct": float,  # buy-and-hold comparison return
             "win_rate": float,
             "num_trades": int,
             "equity_curve": list[float],   # daily portfolio value (starting at 100)
+            "buy_hold_curve": list[float], # buy-and-hold curve (starting at 100)
         }
     """
     df = fetch_historical(ticker, start_date, end_date)
@@ -79,6 +81,7 @@ def run_backtest(ticker: str, start_date: str, end_date: str,
 
     trades: list[dict] = []
     equity = [100.0]  # start with notional $100
+    buy_hold = [100.0]  # buy-and-hold comparison curve
     in_position = False
     entry_price = 0.0
     entry_date = ""
@@ -88,6 +91,9 @@ def run_backtest(ticker: str, start_date: str, end_date: str,
     warmup = 200
     if len(df) <= warmup:
         warmup = max(50, len(df) // 2)
+
+    # Track buy-and-hold starting price
+    buy_hold_start_price = float(df["Close"].iloc[warmup])
 
     for i in range(warmup, len(df)):
         # Evaluate signals using data up to (and including) row i
@@ -106,6 +112,9 @@ def run_backtest(ticker: str, start_date: str, end_date: str,
 
         current_price = float(df["Close"].iloc[i])
         current_date = str(df.index[i].date())
+
+        # Update buy-and-hold curve (always tracks price from start)
+        buy_hold.append(100.0 * current_price / buy_hold_start_price)
 
         if not in_position:
             # Look for entry
@@ -156,15 +165,20 @@ def run_backtest(ticker: str, start_date: str, end_date: str,
     total_return = equity[-1] - 100.0 if equity else 0.0
     win_rate = (len(wins) / len(closed) * 100) if closed else 0.0
 
+    # Buy-and-hold return for comparison
+    buy_hold_return = buy_hold[-1] - 100.0 if buy_hold else 0.0
+
     return {
         "ticker": ticker.upper(),
         "start_date": start_date,
         "end_date": end_date,
         "trades": trades,
         "total_return_pct": round(total_return, 2),
+        "buy_hold_return_pct": round(buy_hold_return, 2),
         "win_rate": round(win_rate, 1),
         "num_trades": len(trades),
         "equity_curve": [round(v, 2) for v in equity],
+        "buy_hold_curve": [round(v, 2) for v in buy_hold],
     }
 
 
@@ -173,26 +187,46 @@ def generate_equity_curve_html(result: dict) -> str:
     Generate a Plotly equity-curve chart and return it as an HTML div string.
     """
     curve = result.get("equity_curve", [])
+    buy_hold = result.get("buy_hold_curve", [])
     if not curve:
         return "<p>No equity data available.</p>"
 
     fig = go.Figure()
+
+    # Buy-and-hold comparison (add first so strategy line is on top)
+    if buy_hold:
+        fig.add_trace(go.Scatter(
+            y=buy_hold,
+            mode="lines",
+            name="Buy & Hold",
+            line=dict(color="#9E9E9E", width=2, dash="dot"),
+        ))
+
+    # Strategy equity curve
     fig.add_trace(go.Scatter(
         y=curve,
         mode="lines",
-        name="Portfolio Value",
+        name="Strategy",
         line=dict(color="#2196F3", width=2),
     ))
+
     fig.add_hline(y=100, line_dash="dash", line_color="grey",
                   annotation_text="Starting Value")
 
+    # Build title with return comparison
+    strategy_return = result.get("total_return_pct", 0)
+    buy_hold_return = result.get("buy_hold_return_pct", 0)
+    title = (f"{result['ticker']} Backtest: Strategy {strategy_return:+.1f}% "
+             f"vs Buy & Hold {buy_hold_return:+.1f}%")
+
     fig.update_layout(
-        title=f"{result['ticker']} Backtest Equity Curve",
+        title=title,
         yaxis_title="Portfolio Value ($)",
         xaxis_title="Trading Days",
         template="plotly_white",
         height=400,
         margin=dict(l=50, r=30, t=50, b=40),
+        legend=dict(yanchor="top", y=0.99, xanchor="left", x=0.01),
     )
 
     return fig.to_html(full_html=False, include_plotlyjs=False)
@@ -202,12 +236,14 @@ def format_backtest_summary(result: dict) -> str:
     """
     Return a plain-text summary of backtest results (for CLI output).
     """
+    buy_hold_ret = result.get('buy_hold_return_pct', 0)
     lines = [
         f"Backtest: {result['ticker']}  ({result['start_date']} to {result['end_date']})",
         f"{'─' * 60}",
         f"Total trades:    {result['num_trades']}",
         f"Win rate:        {result['win_rate']}%",
-        f"Total return:    {result['total_return_pct']:+.2f}%",
+        f"Strategy return: {result['total_return_pct']:+.2f}%",
+        f"Buy & Hold:      {buy_hold_ret:+.2f}%",
         "",
         f"{'Entry Date':<14} {'Entry $':<10} {'Exit Date':<16} {'Exit $':<10} {'Change':<8}",
         f"{'─' * 14} {'─' * 10} {'─' * 16} {'─' * 10} {'─' * 8}",

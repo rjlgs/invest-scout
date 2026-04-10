@@ -11,8 +11,10 @@ It scans all tickers in master_tickers.yaml and generates:
 
 import json
 import sys
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
+
+import pandas as pd
 
 # Add project root to path for imports
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -37,7 +39,6 @@ def generate_ticker_detail(symbol: str, days: int = 365) -> dict | None:
     """
     try:
         # Fetch 1 year of data for charts and backtesting
-        from datetime import timedelta
         end = datetime.now()
         start = end - timedelta(days=days)
 
@@ -110,8 +111,6 @@ def generate_ticker_detail(symbol: str, days: int = 365) -> dict | None:
 
 
 def main():
-    import pandas as pd  # Import here to avoid issues with globals
-
     print("=" * 60)
     print("Invest-Scout Static Data Generator")
     print("=" * 60)

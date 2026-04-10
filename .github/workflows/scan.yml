@@ -9,6 +9,9 @@ on:
   # Allow manual trigger
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   scan:
     runs-on: ubuntu-latest

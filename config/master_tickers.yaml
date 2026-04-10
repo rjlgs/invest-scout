@@ -111,7 +111,7 @@ tickers:
   - symbol: COP
   - symbol: SLB
   - symbol: EOG
-  - symbol: PXD
+  - symbol: DVN
   - symbol: OXY
   - symbol: MPC
   - symbol: VLO
@@ -128,7 +128,7 @@ tickers:
   - symbol: TSM
   - symbol: ASML
   - symbol: SHOP
-  - symbol: SQ
+  - symbol: UBER
   - symbol: ROKU
   - symbol: SNOW
   - symbol: DDOG

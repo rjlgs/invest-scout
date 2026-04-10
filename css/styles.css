@@ -459,18 +459,35 @@ a.ticker-link:hover {
     color: white;
 }
 
+/* Ticker cell with remove button */
+.ticker-cell {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
 /* Remove button in table */
 .btn-remove {
     background: transparent;
     color: var(--red);
-    padding: 0.2rem 0.5rem;
+    padding: 0.1rem 0.4rem;
     font-size: 1rem;
-    opacity: 0.6;
+    opacity: 0.5;
+    width: 1.5rem;
+    text-align: center;
+    flex-shrink: 0;
 }
 
 .btn-remove:hover {
     opacity: 1;
     background: #ffebee;
+}
+
+/* Spacer to maintain alignment when no remove button */
+.btn-remove-spacer {
+    display: inline-block;
+    width: 1.5rem;
+    flex-shrink: 0;
 }
 
 /* Autocomplete dropdown */

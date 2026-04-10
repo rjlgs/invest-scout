@@ -109,13 +109,13 @@ function renderRow(signal, inWatchlist) {
         signal.timestamp.slice(0, 19).replace('T', ' ') + ' UTC' : '—';
 
     const removeBtn = inWatchlist && !showAllTickers ?
-        `<button class="btn-remove" onclick="removeTicker('${signal.ticker}')" title="Remove from watchlist">&times;</button>` : '';
+        `<button class="btn-remove" onclick="removeTicker('${signal.ticker}')" title="Remove from watchlist">&times;</button>` :
+        `<span class="btn-remove-spacer"></span>`;
 
     return `
         <tr class="${rowClass}">
             <td>
-                <a href="ticker.html?symbol=${signal.ticker}" class="ticker-link">${signal.ticker}</a>
-                ${removeBtn}
+                <span class="ticker-cell">${removeBtn}<a href="ticker.html?symbol=${signal.ticker}" class="ticker-link">${signal.ticker}</a></span>
             </td>
             <td data-sort="${signal.price || 0}">
                 ${signal.price ? '$' + signal.price.toFixed(2) : 'N/A'}

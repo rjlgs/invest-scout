@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backtest — Invest-Scout</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="brand">Invest-Scout</a>
+        <a href="index.html">Overview</a>
+        <a href="backtest.html" class="active">Backtest</a>
+    </nav>
+
+    <div class="container">
+        <h1>Backtest</h1>
+        <p class="subtitle" style="margin-bottom:1.5rem">
+            Simulate how the signal engine would have performed on historical data
+        </p>
+
+        <div class="card">
+            <h3>Configure Backtest</h3>
+
+            <form id="backtest-form" onsubmit="runBacktest(event)">
+                <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:1rem">
+                    <div class="form-group">
+                        <label for="ticker">Ticker Symbol</label>
+                        <input type="text" id="ticker" name="ticker" placeholder="e.g., AAPL" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="start-date">Start Date</label>
+                        <input type="date" id="start-date" name="start_date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="end-date">End Date</label>
+                        <input type="date" id="end-date" name="end_date" required>
+                    </div>
+                </div>
+
+                <div style="margin-top:1rem">
+                    <button type="submit" class="btn btn-primary" id="run-btn">
+                        <span class="btn-text">Run Backtest</span>
+                        <span class="btn-loading" style="display:none"><span class="spinner"></span> Running...</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+
+        <div id="backtest-results"></div>
+    </div>
+
+    <div class="disclaimer">
+        For informational purposes only. Not financial advice. Past performance does not guarantee future results.
+    </div>
+
+    <script src="js/watchlist.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/backtest.js"></script>
+    <script>
+        // Set default dates (1 year ago to today)
+        const today = new Date();
+        const oneYearAgo = new Date(today);
+        oneYearAgo.setFullYear(oneYearAgo.getFullYear() - 1);
+
+        document.getElementById('end-date').value = today.toISOString().split('T')[0];
+        document.getElementById('start-date').value = oneYearAgo.toISOString().split('T')[0];
+
+        // Check for ticker in URL params
+        const params = new URLSearchParams(window.location.search);
+        const urlTicker = params.get('symbol');
+        if (urlTicker) {
+            document.getElementById('ticker').value = urlTicker.toUpperCase();
+        }
+
+        async function runBacktest(event) {
+            event.preventDefault();
+
+            const ticker = document.getElementById('ticker').value.toUpperCase().trim();
+            const startDate = document.getElementById('start-date').value;
+            const endDate = document.getElementById('end-date').value;
+
+            if (!ticker || !startDate || !endDate) {
+                alert('Please fill in all fields');
+                return;
+            }
+
+            // Show loading state
+            const btn = document.getElementById('run-btn');
+            btn.querySelector('.btn-text').style.display = 'none';
+            btn.querySelector('.btn-loading').style.display = 'inline';
+            btn.disabled = true;
+
+            const resultsContainer = document.getElementById('backtest-results');
+            resultsContainer.innerHTML = `
+                <div class="card" style="text-align:center">
+                    <span class="spinner"></span> Running backtest for ${ticker}...
+                </div>
+            `;
+
+            try {
+                // Load ticker data
+                const tickerData = await Charts.loadTickerData(ticker);
+
+                if (!tickerData) {
+                    resultsContainer.innerHTML = `
+                        <div class="error">
+                            Unable to load data for ${ticker}. This ticker may not be in the scanned list.
+                            <br><br>
+                            Available tickers can be viewed on the <a href="index.html">Overview page</a>.
+                        </div>
+                    `;
+                    return;
+                }
+
+                // Run backtest
+                const result = Backtest.run(tickerData, startDate, endDate);
+
+                // Render results
+                Backtest.render(result, 'backtest-results');
+
+            } catch (error) {
+                console.error('Backtest error:', error);
+                resultsContainer.innerHTML = `
+                    <div class="error">
+                        An error occurred while running the backtest: ${error.message}
+                    </div>
+                `;
+            } finally {
+                // Reset button
+                btn.querySelector('.btn-text').style.display = 'inline';
+                btn.querySelector('.btn-loading').style.display = 'none';
+                btn.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>

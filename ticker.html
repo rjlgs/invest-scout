@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticker Detail — Invest-Scout</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="brand">Invest-Scout</a>
+        <a href="index.html">Overview</a>
+        <a href="backtest.html">Backtest</a>
+    </nav>
+
+    <div class="container">
+        <p style="margin-bottom:0.5rem">
+            <a href="index.html" style="color:#666;text-decoration:none">&larr; Back to Overview</a>
+        </p>
+
+        <h1 id="ticker-title">Loading...</h1>
+
+        <div id="ticker-content">
+            <div style="text-align:center;padding:3rem">
+                <span class="spinner"></span> Loading ticker data...
+            </div>
+        </div>
+    </div>
+
+    <div class="disclaimer">
+        For informational purposes only. Not financial advice. Do your own research.
+    </div>
+
+    <script src="js/watchlist.js"></script>
+    <script src="js/charts.js"></script>
+    <script>
+        // Get symbol from URL parameter
+        const params = new URLSearchParams(window.location.search);
+        const symbol = (params.get('symbol') || '').toUpperCase();
+
+        async function loadSignalData(symbol) {
+            try {
+                const response = await fetch('data/signals.json');
+                if (!response.ok) return null;
+                const signals = await response.json();
+                return signals.find(s => s.ticker === symbol);
+            } catch (e) {
+                return null;
+            }
+        }
+
+        async function initTicker() {
+            if (!symbol) {
+                document.getElementById('ticker-title').textContent = 'No ticker specified';
+                document.getElementById('ticker-content').innerHTML = `
+                    <div class="error">Please specify a ticker symbol in the URL (e.g., ?symbol=AAPL)</div>
+                `;
+                return;
+            }
+
+            document.getElementById('ticker-title').textContent = symbol;
+            document.title = `${symbol} — Invest-Scout`;
+
+            // Load ticker data and signal data in parallel
+            const [tickerData, signalData] = await Promise.all([
+                Charts.loadTickerData(symbol),
+                loadSignalData(symbol)
+            ]);
+
+            if (!tickerData) {
+                document.getElementById('ticker-content').innerHTML = `
+                    <div class="error">
+                        Unable to load data for ${symbol}. This ticker may not be in the scanned list.
+                        <br><br>
+                        <a href="index.html" class="btn btn-primary">Back to Overview</a>
+                    </div>
+                `;
+                return;
+            }
+
+            // Build the page content
+            const price = tickerData.ohlcv[tickerData.ohlcv.length - 1]?.close || 0;
+            const signalType = signalData?.signal_type || 'neutral';
+            const onRampScore = signalData?.on_ramp_score || 0;
+            const offRampScore = signalData?.off_ramp_score || 0;
+            const onRampSignals = signalData?.on_ramp_signals || [];
+            const offRampSignals = signalData?.off_ramp_signals || [];
+
+            let html = `
+                <!-- Current status -->
+                <div class="card">
+                    <div style="display:flex;gap:2rem;align-items:center;flex-wrap:wrap">
+                        <div>
+                            <span style="font-size:0.85rem;color:#666">Price</span><br>
+                            <span style="font-size:1.5rem;font-weight:700">$${price.toFixed(2)}</span>
+                        </div>
+                        <div>
+                            <span style="font-size:0.85rem;color:#666">Signal</span><br>
+                            <span class="badge badge-${signalType}" style="font-size:1rem">${signalType}</span>
+                        </div>
+                        <div title="Bullish entry signals — higher = more buy indicators firing">
+                            <span style="font-size:0.85rem;color:#666">On-Ramp (Buy)</span><br>
+                            <span class="score score-green" style="font-size:1.5rem">${onRampScore}</span>
+                            <span style="color:#999">/ 5</span>
+                        </div>
+                        <div title="Bearish exit signals — higher = more sell indicators firing">
+                            <span style="font-size:0.85rem;color:#666">Off-Ramp (Sell)</span><br>
+                            <span class="score score-red" style="font-size:1.5rem">${offRampScore}</span>
+                            <span style="color:#999">/ 5</span>
+                        </div>
+                        <div style="margin-left:auto">
+                            <a href="backtest.html?symbol=${symbol}" class="btn btn-primary">Run Backtest</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts -->
+                <div class="card chart-container">
+                    <div id="candlestick-chart"></div>
+                </div>
+
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem">
+                    <div class="card chart-container">
+                        <div id="rsi-chart"></div>
+                    </div>
+                    <div class="card chart-container">
+                        <div id="macd-chart"></div>
+                    </div>
+                </div>
+
+                <!-- Active signals -->
+                <div class="card">
+                    <h3>Active Signals</h3>
+            `;
+
+            if (onRampSignals.length > 0) {
+                html += `<h4 style="color:var(--green);margin:0.5rem 0">On-Ramp (Entry)</h4>`;
+                onRampSignals.forEach(s => {
+                    html += `
+                        <div class="signal-item">
+                            <span class="signal-name" style="color:var(--green)">${s.name}</span>
+                            <div class="signal-reason">${s.reason}</div>
+                        </div>
+                    `;
+                });
+            }
+
+            if (offRampSignals.length > 0) {
+                html += `<h4 style="color:var(--red);margin:0.5rem 0">Off-Ramp (Exit)</h4>`;
+                offRampSignals.forEach(s => {
+                    html += `
+                        <div class="signal-item">
+                            <span class="signal-name" style="color:var(--red)">${s.name}</span>
+                            <div class="signal-reason">${s.reason}</div>
+                        </div>
+                    `;
+                });
+            }
+
+            if (onRampSignals.length === 0 && offRampSignals.length === 0) {
+                html += `<p style="color:#999">No signals currently firing for ${symbol}.</p>`;
+            }
+
+            html += `</div>`;
+
+            // Signal history
+            if (tickerData.history && tickerData.history.length > 0) {
+                html += `
+                    <div class="card">
+                        <h3>Recent Signal History (Last 30 Trading Days)</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Signal</th>
+                                    <th title="Buy signals / Sell signals">Buy / Sell</th>
+                                    <th>Signals Firing</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                `;
+
+                tickerData.history.forEach(h => {
+                    html += `
+                        <tr>
+                            <td>${h.date}</td>
+                            <td><span class="badge badge-${h.signal_type}">${h.signal_type}</span></td>
+                            <td>${h.on_ramp_score} / ${h.off_ramp_score}</td>
+                            <td style="font-size:0.85rem">${h.signals.join(', ') || '—'}</td>
+                        </tr>
+                    `;
+                });
+
+                html += `
+                            </tbody>
+                        </table>
+                    </div>
+                `;
+            }
+
+            document.getElementById('ticker-content').innerHTML = html;
+
+            // Render charts
+            Charts.renderCandlestickChart('candlestick-chart', tickerData);
+            Charts.renderRSIChart('rsi-chart', tickerData);
+            Charts.renderMACDChart('macd-chart', tickerData);
+        }
+
+        document.addEventListener('DOMContentLoaded', initTicker);
+    </script>
+</body>
+</html>

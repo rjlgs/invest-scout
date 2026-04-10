@@ -1,0 +1,47 @@
+name: Daily Signal Scan
+
+on:
+  # Run daily at 5pm ET (9pm/10pm UTC depending on DST)
+  # Using 21:30 UTC to be safe (after market close year-round)
+  schedule:
+    - cron: '30 21 * * 1-5'  # Mon-Fri at 21:30 UTC
+
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Cache pip dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run signal scanner
+        run: python scripts/generate_static_data.py
+
+      - name: Commit and push data
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/
+          git diff --staged --quiet || git commit -m "Update signal data $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push

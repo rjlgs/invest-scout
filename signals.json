@@ -1,0 +1,87 @@
+[
+  {
+    "ticker": "AAPL",
+    "price": 259.92,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "signal_type": "neutral",
+    "timestamp": "2026-04-10T18:54:28.417499+00:00"
+  },
+  {
+    "ticker": "MSFT",
+    "price": 370.31,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "signal_type": "neutral",
+    "timestamp": "2026-04-10T18:54:28.423260+00:00"
+  },
+  {
+    "ticker": "GOOGL",
+    "price": 317.04,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "signal_type": "neutral",
+    "timestamp": "2026-04-10T18:54:28.427825+00:00"
+  },
+  {
+    "ticker": "AMZN",
+    "price": 238.12,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "signal_type": "neutral",
+    "timestamp": "2026-04-10T18:54:28.432199+00:00"
+  },
+  {
+    "ticker": "SPY",
+    "price": 679.43,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "signal_type": "neutral",
+    "timestamp": "2026-04-10T18:54:28.436423+00:00"
+  },
+  {
+    "ticker": "QQQ",
+    "price": 610.71,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "signal_type": "neutral",
+    "timestamp": "2026-04-10T18:54:28.440223+00:00"
+  },
+  {
+    "ticker": "TSLA",
+    "price": 346.88,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "Trailing Stop Breach",
+        "reason": "Trailing stop breached: price 346.88 is 13.1% below recent high 399.27 (threshold 8.0%)"
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 1,
+    "signal_type": "off-ramp",
+    "timestamp": "2026-04-10T18:54:28.443922+00:00"
+  },
+  {
+    "ticker": "NVDA",
+    "price": 188.82,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "signal_type": "neutral",
+    "timestamp": "2026-04-10T18:54:28.447423+00:00"
+  }
+]

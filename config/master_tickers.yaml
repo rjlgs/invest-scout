@@ -1,0 +1,136 @@
+# Master Ticker List for GitHub Pages Static Site
+# These tickers are scanned daily and available for users to add to their watchlist.
+# ~100 popular stocks and ETFs covering major sectors.
+
+tickers:
+  # Large Cap Tech
+  - symbol: AAPL
+  - symbol: MSFT
+  - symbol: GOOGL
+  - symbol: GOOG
+  - symbol: AMZN
+  - symbol: META
+  - symbol: NVDA
+  - symbol: TSLA
+  - symbol: AMD
+  - symbol: INTC
+  - symbol: CRM
+  - symbol: ORCL
+  - symbol: ADBE
+  - symbol: NFLX
+  - symbol: PYPL
+  - symbol: CSCO
+  - symbol: AVGO
+  - symbol: TXN
+  - symbol: QCOM
+  - symbol: IBM
+
+  # ETFs
+  - symbol: SPY
+  - symbol: QQQ
+  - symbol: IWM
+  - symbol: DIA
+  - symbol: VTI
+  - symbol: VOO
+  - symbol: ARKK
+  - symbol: XLF
+  - symbol: XLE
+  - symbol: XLK
+  - symbol: XLV
+  - symbol: XLI
+  - symbol: XLP
+  - symbol: XLY
+  - symbol: GLD
+  - symbol: SLV
+  - symbol: TLT
+  - symbol: HYG
+  - symbol: EEM
+  - symbol: VWO
+
+  # Financials
+  - symbol: JPM
+  - symbol: BAC
+  - symbol: WFC
+  - symbol: GS
+  - symbol: MS
+  - symbol: V
+  - symbol: MA
+  - symbol: AXP
+  - symbol: BLK
+  - symbol: C
+  - symbol: SCHW
+  - symbol: USB
+
+  # Healthcare
+  - symbol: JNJ
+  - symbol: UNH
+  - symbol: PFE
+  - symbol: MRK
+  - symbol: ABBV
+  - symbol: LLY
+  - symbol: TMO
+  - symbol: ABT
+  - symbol: BMY
+  - symbol: GILD
+  - symbol: AMGN
+  - symbol: MDT
+
+  # Consumer
+  - symbol: WMT
+  - symbol: HD
+  - symbol: MCD
+  - symbol: NKE
+  - symbol: SBUX
+  - symbol: TGT
+  - symbol: COST
+  - symbol: LOW
+  - symbol: DIS
+  - symbol: CMCSA
+  - symbol: PEP
+  - symbol: KO
+  - symbol: PG
+  - symbol: CL
+
+  # Industrials
+  - symbol: CAT
+  - symbol: BA
+  - symbol: HON
+  - symbol: UPS
+  - symbol: GE
+  - symbol: MMM
+  - symbol: RTX
+  - symbol: LMT
+  - symbol: DE
+  - symbol: UNP
+  - symbol: FDX
+  - symbol: NSC
+
+  # Energy
+  - symbol: XOM
+  - symbol: CVX
+  - symbol: COP
+  - symbol: SLB
+  - symbol: EOG
+  - symbol: PXD
+  - symbol: OXY
+  - symbol: MPC
+  - symbol: VLO
+  - symbol: PSX
+
+  # High Interest / Growth
+  - symbol: COIN
+  - symbol: PLTR
+  - symbol: SOFI
+  - symbol: RIVN
+  - symbol: LCID
+  - symbol: NIO
+  - symbol: BABA
+  - symbol: TSM
+  - symbol: ASML
+  - symbol: SHOP
+  - symbol: SQ
+  - symbol: ROKU
+  - symbol: SNOW
+  - symbol: DDOG
+  - symbol: NET
+  - symbol: CRWD

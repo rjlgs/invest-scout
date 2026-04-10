@@ -13,10 +13,20 @@
         </span>
     </td>
     <td data-sort="{{ r.on_ramp_score }}">
-        <span class="score score-green">{{ r.on_ramp_score }}</span> / 5
+        <div class="score-bar">
+            <span class="score score-green">{{ r.on_ramp_score }}</span>
+            <div class="score-bar-track">
+                <div class="score-bar-fill green" style="width:{{ r.on_ramp_score * 20 }}%"></div>
+            </div>
+        </div>
     </td>
     <td data-sort="{{ r.off_ramp_score }}">
-        <span class="score score-red">{{ r.off_ramp_score }}</span> / 5
+        <div class="score-bar">
+            <span class="score score-red">{{ r.off_ramp_score }}</span>
+            <div class="score-bar-track">
+                <div class="score-bar-fill red" style="width:{{ r.off_ramp_score * 20 }}%"></div>
+            </div>
+        </div>
     </td>
     <td>
         {% if r.timestamp %}

@@ -3,20 +3,53 @@
 {% block title %}Invest-Scout — Dashboard{% endblock %}
 
 {% block content %}
-<h1>Signal Overview</h1>
-<p style="color:#666;margin-bottom:1rem">
-    Auto-refreshes every 5 minutes.
-    <span class="htmx-indicator"><span class="spinner"></span> Scanning...</span>
-</p>
+<div class="page-header">
+    <div>
+        <h1>Signal Overview</h1>
+        <p class="subtitle">Technical signal analysis for your watchlist</p>
+    </div>
+    <div class="refresh-status">
+        <span class="htmx-indicator"><span class="spinner"></span> Scanning...</span>
+        <span class="htmx-idle">Auto-refreshes every 5 min</span>
+    </div>
+</div>
 
-<table>
+{# Summary cards #}
+<div class="summary-cards" id="summary-cards">
+    {% set bullish = results|selectattr('signal_type', 'equalto', 'on-ramp')|list|length %}
+    {% set bearish = results|selectattr('signal_type', 'equalto', 'off-ramp')|list|length %}
+    {% set neutral = results|selectattr('signal_type', 'equalto', 'neutral')|list|length %}
+    <div class="summary-card bullish">
+        <div class="summary-icon">↑</div>
+        <div class="summary-content">
+            <span class="summary-value">{{ bullish }}</span>
+            <span class="summary-label">Bullish</span>
+        </div>
+    </div>
+    <div class="summary-card bearish">
+        <div class="summary-icon">↓</div>
+        <div class="summary-content">
+            <span class="summary-value">{{ bearish }}</span>
+            <span class="summary-label">Bearish</span>
+        </div>
+    </div>
+    <div class="summary-card neutral-card">
+        <div class="summary-icon">→</div>
+        <div class="summary-content">
+            <span class="summary-value">{{ neutral }}</span>
+            <span class="summary-label">Neutral</span>
+        </div>
+    </div>
+</div>
+
+<table class="signal-table">
     <thead>
         <tr>
             <th onclick="sortTable(0)">Ticker</th>
             <th onclick="sortTable(1)">Price</th>
             <th onclick="sortTable(2)">Signal</th>
-            <th onclick="sortTable(3)">On-Ramp</th>
-            <th onclick="sortTable(4)">Off-Ramp</th>
+            <th onclick="sortTable(3)" title="Entry signals — bullish indicators suggesting a potential buy opportunity">On-Ramp (Buy)</th>
+            <th onclick="sortTable(4)" title="Exit signals — bearish indicators suggesting a potential sell opportunity">Off-Ramp (Sell)</th>
             <th onclick="sortTable(5)">Updated</th>
         </tr>
     </thead>

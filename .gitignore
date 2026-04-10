@@ -3,10 +3,12 @@ __pycache__/
 *.pyo
 .env
 data_cache/
-signals.json
 *.egg-info/
 dist/
 build/
 .pytest_cache/
 .venv/
 venv/
+
+# Note: data/ folder is NOT ignored - it contains static JSON for GitHub Pages
+# The GitHub Actions workflow commits updated data to this folder

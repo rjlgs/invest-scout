@@ -242,6 +242,156 @@
             .container { padding: 1rem; }
             nav { padding: 0.75rem 1rem; gap: 1rem; }
             th, td { padding: 0.5rem; font-size: 0.85rem; }
+            .page-header { flex-direction: column; gap: 0.5rem; }
+            .summary-cards { grid-template-columns: 1fr; }
+            .score-bar-track { display: none; }
+        }
+
+        /* Page header */
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+
+        .page-header h1 {
+            margin-bottom: 0.25rem;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .refresh-status {
+            font-size: 0.85rem;
+            color: #999;
+        }
+
+        /* Summary cards */
+        .summary-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .summary-card {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.25rem;
+            border-radius: 12px;
+            background: var(--card-bg);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border-left: 4px solid transparent;
+        }
+
+        .summary-card.bullish {
+            border-left-color: var(--green);
+            background: linear-gradient(135deg, #f1f8e9 0%, #fff 100%);
+        }
+
+        .summary-card.bearish {
+            border-left-color: var(--red);
+            background: linear-gradient(135deg, #ffebee 0%, #fff 100%);
+        }
+
+        .summary-card.neutral-card {
+            border-left-color: var(--grey);
+            background: linear-gradient(135deg, #f5f5f5 0%, #fff 100%);
+        }
+
+        .summary-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+
+        .bullish .summary-icon {
+            background: #c8e6c9;
+            color: var(--green);
+        }
+
+        .bearish .summary-icon {
+            background: #ffcdd2;
+            color: var(--red);
+        }
+
+        .neutral-card .summary-icon {
+            background: #e0e0e0;
+            color: #666;
+        }
+
+        .summary-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .summary-value {
+            font-size: 1.75rem;
+            font-weight: 700;
+            line-height: 1.1;
+        }
+
+        .summary-label {
+            font-size: 0.85rem;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Score bars */
+        .score-bar {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .score-bar-track {
+            width: 60px;
+            height: 6px;
+            background: #e0e0e0;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .score-bar-fill {
+            height: 100%;
+            border-radius: 3px;
+            transition: width 0.3s ease;
+        }
+
+        .score-bar-fill.green { background: var(--green); }
+        .score-bar-fill.red { background: var(--red); }
+
+        /* Signal table enhancements */
+        .signal-table {
+            border-radius: 12px;
+        }
+
+        .signal-table th {
+            background: #1a1a2e;
+            color: white;
+            font-weight: 500;
+        }
+
+        .signal-table th:hover {
+            background: #16213e;
+        }
+
+        .signal-table th:first-child {
+            border-radius: 12px 0 0 0;
+        }
+
+        .signal-table th:last-child {
+            border-radius: 0 12px 0 0;
         }
 
         /* Loading indicator for HTMX */
@@ -249,8 +399,16 @@
             display: none;
         }
 
+        .htmx-idle {
+            display: inline;
+        }
+
         .htmx-request .htmx-indicator {
             display: inline;
+        }
+
+        .htmx-request .htmx-idle {
+            display: none;
         }
 
         .spinner {

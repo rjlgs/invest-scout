@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invest-Scout — Signal Overview</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="brand">Invest-Scout</a>
+        <a href="index.html" class="active">Overview</a>
+        <a href="backtest.html">Backtest</a>
+    </nav>
+
+    <div class="container">
+        <div class="page-header">
+            <div>
+                <h1>Signal Overview</h1>
+                <p class="subtitle">Technical signal analysis for your watchlist</p>
+            </div>
+            <div class="refresh-status">
+                <span class="loading"><span class="spinner"></span> Loading...</span>
+                <span class="loaded">Last updated: <span id="last-updated">—</span></span>
+            </div>
+        </div>
+
+        <!-- Watchlist controls -->
+        <div class="watchlist-controls">
+            <div class="autocomplete-wrapper">
+                <input type="text" id="ticker-input" placeholder="Add ticker (e.g., AAPL)" autocomplete="off">
+                <div id="autocomplete-list" class="autocomplete-list" style="display:none"></div>
+            </div>
+            <button class="btn btn-primary" onclick="addTicker()">Add</button>
+
+            <div class="filter-toggle">
+                <button id="btn-watchlist" class="active" onclick="setFilter(false)">My Watchlist</button>
+                <button id="btn-all" onclick="setFilter(true)">All Tickers</button>
+            </div>
+        </div>
+
+        <!-- Summary cards -->
+        <div class="summary-cards">
+            <div class="summary-card bullish">
+                <div class="summary-icon">↑</div>
+                <div class="summary-content">
+                    <span class="summary-value" id="bullish-count">0</span>
+                    <span class="summary-label">Bullish</span>
+                </div>
+            </div>
+            <div class="summary-card bearish">
+                <div class="summary-icon">↓</div>
+                <div class="summary-content">
+                    <span class="summary-value" id="bearish-count">0</span>
+                    <span class="summary-label">Bearish</span>
+                </div>
+            </div>
+            <div class="summary-card neutral-card">
+                <div class="summary-icon">→</div>
+                <div class="summary-content">
+                    <span class="summary-value" id="neutral-count">0</span>
+                    <span class="summary-label">Neutral</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Signal table -->
+        <table class="signal-table">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">Ticker</th>
+                    <th onclick="sortTable(1)">Price</th>
+                    <th onclick="sortTable(2)">Signal</th>
+                    <th onclick="sortTable(3)" title="Entry signals — bullish indicators suggesting a potential buy opportunity">On-Ramp (Buy)</th>
+                    <th onclick="sortTable(4)" title="Exit signals — bearish indicators suggesting a potential sell opportunity">Off-Ramp (Sell)</th>
+                    <th onclick="sortTable(5)">Updated</th>
+                </tr>
+            </thead>
+            <tbody id="signal-tbody">
+                <tr>
+                    <td colspan="6" style="text-align:center;color:#666;padding:2rem">
+                        <span class="spinner"></span> Loading signal data...
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="disclaimer">
+        For informational purposes only. Not financial advice. Do your own research.
+    </div>
+
+    <script src="js/watchlist.js"></script>
+    <script src="js/signals.js"></script>
+    <script>
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', initSignals);
+    </script>
+</body>
+</html>

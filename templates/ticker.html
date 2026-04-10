@@ -28,13 +28,13 @@
                 {{ result.signal_type }}
             </span>
         </div>
-        <div>
-            <span style="font-size:0.85rem;color:#666">On-Ramp Score</span><br>
+        <div title="Bullish entry signals — higher = more buy indicators firing">
+            <span style="font-size:0.85rem;color:#666">On-Ramp (Buy)</span><br>
             <span class="score score-green" style="font-size:1.5rem">{{ result.on_ramp_score }}</span>
             <span style="color:#999">/ 5</span>
         </div>
-        <div>
-            <span style="font-size:0.85rem;color:#666">Off-Ramp Score</span><br>
+        <div title="Bearish exit signals — higher = more sell indicators firing">
+            <span style="font-size:0.85rem;color:#666">Off-Ramp (Sell)</span><br>
             <span class="score score-red" style="font-size:1.5rem">{{ result.off_ramp_score }}</span>
             <span style="color:#999">/ 5</span>
         </div>
@@ -93,7 +93,7 @@
             <tr>
                 <th>Date</th>
                 <th>Signal</th>
-                <th>On / Off</th>
+                <th title="Buy signals / Sell signals">Buy / Sell</th>
                 <th>Signals Firing</th>
             </tr>
         </thead>

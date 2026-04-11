@@ -83,26 +83,34 @@ def run_backtest(ticker: str, start_date: str, end_date: str,
             "buy_hold_curve": list[float], # buy-and-hold curve (starting at 100)
         }
     """
-    df = fetch_historical(ticker, start_date, end_date)
+    df = fetch_historical(ticker, start_date, end_date, warmup_days=200)
     df = compute_indicators(df, config)
 
     trades: list[dict] = []
     equity = [100.0]  # start with notional $100
     buy_hold = [100.0]  # buy-and-hold comparison curve
+    dates: list[str] = []  # calendar dates for each evaluation day
     in_position = False
     entry_price = 0.0
     entry_date = ""
 
-    # We need enough history for indicators to be valid — start evaluation
-    # after the first 200 rows (SMA200 warm-up period)
-    warmup = 200
-    if len(df) <= warmup:
-        warmup = max(50, len(df) // 2)
+    # Find the first row on or after the user's requested start_date.
+    # Everything before that is warmup data for indicator stabilisation.
+    eval_start = None
+    for idx, dt in enumerate(df.index):
+        if str(dt.date()) >= start_date:
+            eval_start = idx
+            break
+
+    # Fallback: if we couldn't find the start date (e.g. data doesn't go
+    # back far enough), use the old heuristic.
+    if eval_start is None or eval_start < 50:
+        eval_start = max(50, len(df) // 2)
 
     # Track buy-and-hold starting price
-    buy_hold_start_price = float(df["Close"].iloc[warmup])
+    buy_hold_start_price = float(df["Close"].iloc[eval_start])
 
-    for i in range(warmup, len(df)):
+    for i in range(eval_start, len(df)):
         # Evaluate signals using data up to (and including) row i
         window = df.iloc[:i + 1]
 
@@ -124,6 +132,7 @@ def run_backtest(ticker: str, start_date: str, end_date: str,
 
         # Update buy-and-hold curve (always tracks price from start)
         buy_hold.append(100.0 * current_price / buy_hold_start_price)
+        dates.append(current_date)
 
         if not in_position:
             # Look for entry — but NEVER enter longs in a bearish regime.
@@ -190,6 +199,7 @@ def run_backtest(ticker: str, start_date: str, end_date: str,
         "num_trades": len(trades),
         "equity_curve": [round(v, 2) for v in equity],
         "buy_hold_curve": [round(v, 2) for v in buy_hold],
+        "dates": dates,
     }
 
 
@@ -199,14 +209,27 @@ def generate_equity_curve_html(result: dict) -> str:
     """
     curve = result.get("equity_curve", [])
     buy_hold = result.get("buy_hold_curve", [])
+    dates = result.get("dates", [])
     if not curve:
         return "<p>No equity data available.</p>"
+
+    # Use actual dates on x-axis when available; the equity/buy_hold
+    # curves have one extra leading element (the initial 100.0 value
+    # before the first evaluation day), so we prepend a placeholder.
+    x_vals = dates if dates else None
+    if x_vals:
+        # Align: curve[0] is the starting value *before* the first
+        # evaluation day, so pair it with the first date.
+        # curve has len(dates)+1 entries; trim the leading seed value.
+        curve = curve[1:]
+        buy_hold = buy_hold[1:]
 
     fig = go.Figure()
 
     # Buy-and-hold comparison (add first so strategy line is on top)
     if buy_hold:
         fig.add_trace(go.Scatter(
+            x=x_vals,
             y=buy_hold,
             mode="lines",
             name="Buy & Hold",
@@ -215,6 +238,7 @@ def generate_equity_curve_html(result: dict) -> str:
 
     # Strategy equity curve
     fig.add_trace(go.Scatter(
+        x=x_vals,
         y=curve,
         mode="lines",
         name="Strategy",
@@ -233,7 +257,7 @@ def generate_equity_curve_html(result: dict) -> str:
     fig.update_layout(
         title=title,
         yaxis_title="Portfolio Value ($)",
-        xaxis_title="Trading Days",
+        xaxis_title="Date",
         template="plotly_white",
         height=400,
         margin=dict(l=50, r=30, t=50, b=40),

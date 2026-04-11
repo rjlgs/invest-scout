@@ -96,7 +96,8 @@ def get_cached_data(ticker: str, period: str = DATA_PERIOD) -> pd.DataFrame:
     return df
 
 
-def fetch_historical(ticker: str, start: str, end: str) -> pd.DataFrame:
+def fetch_historical(ticker: str, start: str, end: str,
+                     warmup_days: int = 0) -> pd.DataFrame:
     """
     Fetch historical data for a specific date range (used by backtesting).
 
@@ -108,14 +109,26 @@ def fetch_historical(ticker: str, start: str, end: str) -> pd.DataFrame:
         Start date in YYYY-MM-DD format.
     end : str
         End date in YYYY-MM-DD format.
+    warmup_days : int, optional
+        Number of extra trading days to fetch before ``start`` so that
+        technical indicators (e.g. SMA200) can stabilise before the
+        evaluation window begins.  The actual calendar offset is
+        ``warmup_days * 1.5`` to account for weekends and holidays.
 
     Returns
     -------
     pd.DataFrame
-        OHLCV data for the requested range.
+        OHLCV data for the requested range (including warmup prefix).
     """
+    from datetime import datetime, timedelta
+
+    actual_start = start
+    if warmup_days > 0:
+        dt = datetime.strptime(start, "%Y-%m-%d")
+        actual_start = (dt - timedelta(days=int(warmup_days * 1.5))).strftime("%Y-%m-%d")
+
     tk = yf.Ticker(ticker)
-    df = tk.history(start=start, end=end, interval="1d")
+    df = tk.history(start=actual_start, end=end, interval="1d")
 
     if df.empty:
         raise ValueError(

@@ -28,15 +28,26 @@
                 {{ result.signal_type }}
             </span>
         </div>
-        <div title="Bullish entry signals — higher = more buy indicators firing">
+        <div title="Market regime based on price vs. 200-day SMA and 50/200 SMA relationship. Longs are suppressed in bearish regimes.">
+            <span style="font-size:0.85rem;color:#666">Regime</span><br>
+            {% set regime = result.trend_regime or 'transitional' %}
+            {% if regime == 'bullish' %}
+                <span style="display:inline-block;padding:0.15rem 0.6rem;border-radius:999px;background:#e8f5e9;color:#2e7d32;font-size:0.9rem;font-weight:600">bullish</span>
+            {% elif regime == 'bearish' %}
+                <span style="display:inline-block;padding:0.15rem 0.6rem;border-radius:999px;background:#ffebee;color:#c62828;font-size:0.9rem;font-weight:600">bearish</span>
+            {% else %}
+                <span style="display:inline-block;padding:0.15rem 0.6rem;border-radius:999px;background:#fff8e1;color:#f57f17;font-size:0.9rem;font-weight:600">{{ regime }}</span>
+            {% endif %}
+        </div>
+        <div title="Bullish entry signals (weighted). Weights range 1-3 based on signal reliability. Higher = stronger buy case.">
             <span style="font-size:0.85rem;color:#666">On-Ramp (Buy)</span><br>
             <span class="score score-green" style="font-size:1.5rem">{{ result.on_ramp_score }}</span>
-            <span style="color:#999">/ 5</span>
+            <span style="color:#999">/ {{ result.max_on_ramp_score or 15 }}</span>
         </div>
-        <div title="Bearish exit signals — higher = more sell indicators firing">
+        <div title="Bearish exit signals (weighted). Weights range 1-3 based on signal reliability. Higher = stronger sell case.">
             <span style="font-size:0.85rem;color:#666">Off-Ramp (Sell)</span><br>
             <span class="score score-red" style="font-size:1.5rem">{{ result.off_ramp_score }}</span>
-            <span style="color:#999">/ 5</span>
+            <span style="color:#999">/ {{ result.max_off_ramp_score or 16 }}</span>
         </div>
     </div>
 </div>
@@ -53,6 +64,16 @@
     <div class="card chart-container">
         {{ macd_chart | safe }}
     </div>
+    {% if stoch_chart %}
+    <div class="card chart-container">
+        {{ stoch_chart | safe }}
+    </div>
+    {% endif %}
+    {% if adx_chart %}
+    <div class="card chart-container">
+        {{ adx_chart | safe }}
+    </div>
+    {% endif %}
 </div>
 
 {# Active signals #}
@@ -63,7 +84,10 @@
         <h4 style="color:var(--green);margin:0.5rem 0">On-Ramp (Entry)</h4>
         {% for s in result.on_ramp_signals %}
         <div class="signal-item">
-            <span class="signal-name" style="color:var(--green)">{{ s.name }}</span>
+            <span class="signal-name" style="color:var(--green)">
+                {{ s.name }}
+                {% if s.weight %}<span style="color:#999;font-size:0.8rem;font-weight:400"> (weight {{ s.weight }})</span>{% endif %}
+            </span>
             <div class="signal-reason">{{ s.reason }}</div>
         </div>
         {% endfor %}
@@ -73,7 +97,10 @@
         <h4 style="color:var(--red);margin:0.5rem 0">Off-Ramp (Exit)</h4>
         {% for s in result.off_ramp_signals %}
         <div class="signal-item">
-            <span class="signal-name" style="color:var(--red)">{{ s.name }}</span>
+            <span class="signal-name" style="color:var(--red)">
+                {{ s.name }}
+                {% if s.weight %}<span style="color:#999;font-size:0.8rem;font-weight:400"> (weight {{ s.weight }})</span>{% endif %}
+            </span>
             <div class="signal-reason">{{ s.reason }}</div>
         </div>
         {% endfor %}

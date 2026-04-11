@@ -112,6 +112,11 @@ function renderRow(signal, inWatchlist) {
         `<button class="btn-remove" onclick="removeTicker('${signal.ticker}')" title="Remove from watchlist">&times;</button>` :
         `<span class="btn-remove-spacer"></span>`;
 
+    const maxOn = signal.max_on_ramp_score || 15;
+    const maxOff = signal.max_off_ramp_score || 16;
+    const onPct = Math.round((signal.on_ramp_score / maxOn) * 100);
+    const offPct = Math.round((signal.off_ramp_score / maxOff) * 100);
+
     return `
         <tr class="${rowClass}">
             <td>
@@ -125,17 +130,17 @@ function renderRow(signal, inWatchlist) {
             </td>
             <td data-sort="${signal.on_ramp_score}">
                 <div class="score-bar">
-                    <span class="score score-green">${signal.on_ramp_score}</span>
+                    <span class="score score-green">${signal.on_ramp_score}<span style="color:#999;font-weight:400">/${maxOn}</span></span>
                     <div class="score-bar-track">
-                        <div class="score-bar-fill green" style="width:${signal.on_ramp_score * 20}%"></div>
+                        <div class="score-bar-fill green" style="width:${onPct}%"></div>
                     </div>
                 </div>
             </td>
             <td data-sort="${signal.off_ramp_score}">
                 <div class="score-bar">
-                    <span class="score score-red">${signal.off_ramp_score}</span>
+                    <span class="score score-red">${signal.off_ramp_score}<span style="color:#999;font-weight:400">/${maxOff}</span></span>
                     <div class="score-bar-track">
-                        <div class="score-bar-fill red" style="width:${signal.off_ramp_score * 20}%"></div>
+                        <div class="score-bar-fill red" style="width:${offPct}%"></div>
                     </div>
                 </div>
             </td>

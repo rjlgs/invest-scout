@@ -85,8 +85,16 @@
             const signalType = signalData?.signal_type || 'neutral';
             const onRampScore = signalData?.on_ramp_score || 0;
             const offRampScore = signalData?.off_ramp_score || 0;
+            const maxOnRamp = signalData?.max_on_ramp_score || 15;
+            const maxOffRamp = signalData?.max_off_ramp_score || 16;
+            const trendRegime = signalData?.trend_regime || 'transitional';
             const onRampSignals = signalData?.on_ramp_signals || [];
             const offRampSignals = signalData?.off_ramp_signals || [];
+
+            // Regime badge styling
+            let regimeBg = '#fff8e1', regimeFg = '#f57f17';
+            if (trendRegime === 'bullish') { regimeBg = '#e8f5e9'; regimeFg = '#2e7d32'; }
+            else if (trendRegime === 'bearish') { regimeBg = '#ffebee'; regimeFg = '#c62828'; }
 
             let html = `
                 <!-- Current status -->
@@ -100,15 +108,19 @@
                             <span style="font-size:0.85rem;color:#666">Signal</span><br>
                             <span class="badge badge-${signalType}" style="font-size:1rem">${signalType}</span>
                         </div>
-                        <div title="Bullish entry signals — higher = more buy indicators firing">
+                        <div title="Market regime based on price vs. 200-day SMA and 50/200 SMA relationship. Longs are suppressed in bearish regimes.">
+                            <span style="font-size:0.85rem;color:#666">Regime</span><br>
+                            <span style="display:inline-block;padding:0.15rem 0.6rem;border-radius:999px;background:${regimeBg};color:${regimeFg};font-size:0.9rem;font-weight:600">${trendRegime}</span>
+                        </div>
+                        <div title="Bullish entry signals (weighted). Weights range 1-3 based on signal reliability. Higher = stronger buy case.">
                             <span style="font-size:0.85rem;color:#666">On-Ramp (Buy)</span><br>
                             <span class="score score-green" style="font-size:1.5rem">${onRampScore}</span>
-                            <span style="color:#999">/ 5</span>
+                            <span style="color:#999">/ ${maxOnRamp}</span>
                         </div>
-                        <div title="Bearish exit signals — higher = more sell indicators firing">
+                        <div title="Bearish exit signals (weighted). Weights range 1-3 based on signal reliability. Higher = stronger sell case.">
                             <span style="font-size:0.85rem;color:#666">Off-Ramp (Sell)</span><br>
                             <span class="score score-red" style="font-size:1.5rem">${offRampScore}</span>
-                            <span style="color:#999">/ 5</span>
+                            <span style="color:#999">/ ${maxOffRamp}</span>
                         </div>
                         <div style="margin-left:auto">
                             <a href="backtest.html?symbol=${symbol}" class="btn btn-primary">Run Backtest</a>
@@ -138,9 +150,10 @@
             if (onRampSignals.length > 0) {
                 html += `<h4 style="color:var(--green);margin:0.5rem 0">On-Ramp (Entry)</h4>`;
                 onRampSignals.forEach(s => {
+                    const weightLabel = s.weight ? ` <span style="color:#999;font-size:0.8rem;font-weight:400">(weight ${s.weight})</span>` : '';
                     html += `
                         <div class="signal-item">
-                            <span class="signal-name" style="color:var(--green)">${s.name}</span>
+                            <span class="signal-name" style="color:var(--green)">${s.name}${weightLabel}</span>
                             <div class="signal-reason">${s.reason}</div>
                         </div>
                     `;
@@ -150,9 +163,10 @@
             if (offRampSignals.length > 0) {
                 html += `<h4 style="color:var(--red);margin:0.5rem 0">Off-Ramp (Exit)</h4>`;
                 offRampSignals.forEach(s => {
+                    const weightLabel = s.weight ? ` <span style="color:#999;font-size:0.8rem;font-weight:400">(weight ${s.weight})</span>` : '';
                     html += `
                         <div class="signal-item">
-                            <span class="signal-name" style="color:var(--red)">${s.name}</span>
+                            <span class="signal-name" style="color:var(--red)">${s.name}${weightLabel}</span>
                             <div class="signal-reason">${s.reason}</div>
                         </div>
                     `;

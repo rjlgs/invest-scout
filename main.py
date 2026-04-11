@@ -71,10 +71,27 @@ def _load_latest_results() -> list[dict]:
 
 def generate_candlestick_chart(df, ticker: str) -> str:
     """
-    Plotly candlestick chart with SMA50 and SMA200 overlaid.
+    Plotly candlestick chart with EMA20, SMA50, SMA200 and Bollinger
+    Bands overlaid.
+
     Returns an HTML div string (no full page, no plotly.js include).
     """
     fig = go.Figure()
+
+    # Bollinger Bands — drawn first so they sit behind the candles.
+    # Upper and lower are plotted with a translucent fill between them.
+    if "bb_upper" in df.columns and "bb_lower" in df.columns:
+        fig.add_trace(go.Scatter(
+            x=df.index, y=df["bb_upper"],
+            mode="lines", name="BB Upper",
+            line=dict(color="rgba(158,158,158,0.6)", width=1),
+        ))
+        fig.add_trace(go.Scatter(
+            x=df.index, y=df["bb_lower"],
+            mode="lines", name="BB Lower",
+            line=dict(color="rgba(158,158,158,0.6)", width=1),
+            fill="tonexty", fillcolor="rgba(158,158,158,0.08)",
+        ))
 
     fig.add_trace(go.Candlestick(
         x=df.index,
@@ -84,6 +101,13 @@ def generate_candlestick_chart(df, ticker: str) -> str:
         close=df["Close"],
         name="Price",
     ))
+
+    if "ema_fast" in df.columns:
+        fig.add_trace(go.Scatter(
+            x=df.index, y=df["ema_fast"],
+            mode="lines", name="EMA 20",
+            line=dict(color="#00BCD4", width=1.25),
+        ))
 
     if "sma_short" in df.columns:
         fig.add_trace(go.Scatter(
@@ -100,7 +124,7 @@ def generate_candlestick_chart(df, ticker: str) -> str:
         ))
 
     fig.update_layout(
-        title=f"{ticker} — Price & Moving Averages",
+        title=f"{ticker} — Price, Moving Averages & Bollinger Bands",
         yaxis_title="Price ($)",
         template="plotly_white",
         height=500,
@@ -108,6 +132,76 @@ def generate_candlestick_chart(df, ticker: str) -> str:
         margin=dict(l=50, r=30, t=50, b=40),
     )
 
+    return fig.to_html(full_html=False, include_plotlyjs=False)
+
+
+def generate_stochastic_chart(df) -> str:
+    """Stochastic oscillator (%K, %D) with 20/80 bands."""
+    fig = go.Figure()
+
+    if "stoch_k" in df.columns:
+        fig.add_trace(go.Scatter(
+            x=df.index, y=df["stoch_k"],
+            mode="lines", name="%K",
+            line=dict(color="#2196F3", width=1.5),
+        ))
+    if "stoch_d" in df.columns:
+        fig.add_trace(go.Scatter(
+            x=df.index, y=df["stoch_d"],
+            mode="lines", name="%D",
+            line=dict(color="#FF9800", width=1.5),
+        ))
+
+    fig.add_hline(y=80, line_dash="dash", line_color="#F44336",
+                  annotation_text="Overbought (80)")
+    fig.add_hline(y=20, line_dash="dash", line_color="#4CAF50",
+                  annotation_text="Oversold (20)")
+
+    fig.update_layout(
+        title="Stochastic Oscillator",
+        yaxis_title="%",
+        yaxis=dict(range=[0, 100]),
+        template="plotly_white",
+        height=250,
+        margin=dict(l=50, r=30, t=50, b=40),
+    )
+    return fig.to_html(full_html=False, include_plotlyjs=False)
+
+
+def generate_adx_chart(df) -> str:
+    """ADX, +DI, -DI lines with a 25 reference for trend strength."""
+    fig = go.Figure()
+
+    if "adx" in df.columns:
+        fig.add_trace(go.Scatter(
+            x=df.index, y=df["adx"],
+            mode="lines", name="ADX",
+            line=dict(color="#673AB7", width=1.75),
+        ))
+    if "plus_di" in df.columns:
+        fig.add_trace(go.Scatter(
+            x=df.index, y=df["plus_di"],
+            mode="lines", name="+DI",
+            line=dict(color="#4CAF50", width=1.25),
+        ))
+    if "minus_di" in df.columns:
+        fig.add_trace(go.Scatter(
+            x=df.index, y=df["minus_di"],
+            mode="lines", name="-DI",
+            line=dict(color="#F44336", width=1.25),
+        ))
+
+    fig.add_hline(y=25, line_dash="dash", line_color="#666",
+                  annotation_text="Trending (25)")
+
+    fig.update_layout(
+        title="ADX / Directional Indicators",
+        yaxis_title="",
+        yaxis=dict(range=[0, 60]),
+        template="plotly_white",
+        height=250,
+        margin=dict(l=50, r=30, t=50, b=40),
+    )
     return fig.to_html(full_html=False, include_plotlyjs=False)
 
 
@@ -223,6 +317,8 @@ def ticker_detail(symbol: str):
         candle_html = generate_candlestick_chart(chart_df, symbol)
         rsi_html = generate_rsi_chart(chart_df)
         macd_html = generate_macd_chart(chart_df)
+        stoch_html = generate_stochastic_chart(chart_df)
+        adx_html = generate_adx_chart(chart_df)
 
         # Build recent signal history (check each of the last 30 trading days)
         history = _build_signal_history(df, symbol, config, days=30)
@@ -238,6 +334,8 @@ def ticker_detail(symbol: str):
         candle_chart=candle_html,
         rsi_chart=rsi_html,
         macd_chart=macd_html,
+        stoch_chart=stoch_html,
+        adx_chart=adx_html,
         history=history,
     )
 

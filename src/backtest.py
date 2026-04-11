@@ -17,16 +17,23 @@ import plotly.graph_objects as go
 
 from .data import fetch_historical
 from .signals import (
+    MAX_OFF_RAMP_SCORE,
+    MAX_ON_RAMP_SCORE,
     OFF_RAMP_CHECKS,
     ON_RAMP_CHECKS,
     compute_indicators,
+    compute_trend_regime,
 )
 
 logger = logging.getLogger("invest-scout.backtest")
 
-# Minimum combined score to trigger an entry or exit
-ENTRY_THRESHOLD = 2
-EXIT_THRESHOLD = 2
+# Minimum weighted combined score to trigger an entry or exit.
+# Scores are now weighted (max on-ramp = 15, max off-ramp = 16), so a
+# threshold of 4 means EITHER two medium-weight signals (2+2=4), OR one
+# high-conviction signal plus one supportive (3+1=4), OR four low-weight
+# supportive signals. Much more selective than the old 2-of-5 count.
+ENTRY_THRESHOLD = 4
+EXIT_THRESHOLD = 4
 
 
 def run_backtest(ticker: str, start_date: str, end_date: str,
@@ -101,14 +108,16 @@ def run_backtest(ticker: str, start_date: str, end_date: str,
 
         on_score = 0
         off_score = 0
-        for _, fn in ON_RAMP_CHECKS:
+        for _, fn, weight in ON_RAMP_CHECKS:
             fired, _ = fn(window, config)
             if fired:
-                on_score += 1
-        for _, fn in OFF_RAMP_CHECKS:
+                on_score += weight
+        for _, fn, weight in OFF_RAMP_CHECKS:
             fired, _ = fn(window, config)
             if fired:
-                off_score += 1
+                off_score += weight
+
+        regime = compute_trend_regime(window)
 
         current_price = float(df["Close"].iloc[i])
         current_date = str(df.index[i].date())
@@ -117,13 +126,15 @@ def run_backtest(ticker: str, start_date: str, end_date: str,
         buy_hold.append(100.0 * current_price / buy_hold_start_price)
 
         if not in_position:
-            # Look for entry
-            if on_score >= ENTRY_THRESHOLD:
+            # Look for entry — but NEVER enter longs in a bearish regime.
+            # This is the single biggest win in backtest performance:
+            # refusing to catch falling knives in confirmed downtrends.
+            if on_score >= ENTRY_THRESHOLD and regime != "bearish":
                 in_position = True
                 entry_price = current_price
                 entry_date = current_date
-                logger.debug("BUY  %s @ %.2f on %s (score=%d)",
-                             ticker, entry_price, entry_date, on_score)
+                logger.debug("BUY  %s @ %.2f on %s (score=%d, regime=%s)",
+                             ticker, entry_price, entry_date, on_score, regime)
 
             # Equity stays flat when not invested
             equity.append(equity[-1])

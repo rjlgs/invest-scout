@@ -15,7 +15,12 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 from .data import get_cached_data, load_watchlist
-from .signals import compute_indicators, evaluate_signals
+from .signals import (
+    MAX_OFF_RAMP_SCORE,
+    MAX_ON_RAMP_SCORE,
+    compute_indicators,
+    evaluate_signals,
+)
 
 load_dotenv()
 
@@ -66,7 +71,10 @@ def scan_watchlist(watchlist_path: str | None = None) -> list[dict]:
                 "off_ramp_signals": [],
                 "on_ramp_score": 0,
                 "off_ramp_score": 0,
+                "max_on_ramp_score": MAX_ON_RAMP_SCORE,
+                "max_off_ramp_score": MAX_OFF_RAMP_SCORE,
                 "signal_type": "error",
+                "trend_regime": "unknown",
                 "error": str(e),
                 "timestamp": None,
             })

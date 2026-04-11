@@ -69,14 +69,32 @@ def generate_ticker_detail(symbol: str, days: int = 365) -> dict | None:
             })
 
         # Build indicators (aligned with OHLCV)
-        # Column names from compute_indicators(): rsi, sma_short, sma_long, macd, macd_signal, macd_hist
+        # Include v2 indicators: ema_fast, bb_*, atr, adx, +/-DI, stoch
+        def _round_col(col, ndigits):
+            if col not in df_recent.columns:
+                return [None] * len(df_recent)
+            return [round(v, ndigits) if not pd.isna(v) else None for v in df_recent[col].tolist()]
+
         indicators = {
-            "rsi": [round(v, 2) if not pd.isna(v) else None for v in df_recent["rsi"].tolist()],
-            "sma50": [round(v, 2) if not pd.isna(v) else None for v in df_recent["sma_short"].tolist()],
-            "sma200": [round(v, 2) if not pd.isna(v) else None for v in df_recent["sma_long"].tolist()],
-            "macd": [round(v, 4) if not pd.isna(v) else None for v in df_recent["macd"].tolist()],
-            "macd_signal": [round(v, 4) if not pd.isna(v) else None for v in df_recent["macd_signal"].tolist()],
-            "macd_hist": [round(v, 4) if not pd.isna(v) else None for v in df_recent["macd_hist"].tolist()],
+            "rsi": _round_col("rsi", 2),
+            "sma50": _round_col("sma_short", 2),
+            "sma200": _round_col("sma_long", 2),
+            "macd": _round_col("macd", 4),
+            "macd_signal": _round_col("macd_signal", 4),
+            "macd_hist": _round_col("macd_hist", 4),
+            # v2 indicators
+            "ema20": _round_col("ema_fast", 2),
+            "bb_upper": _round_col("bb_upper", 2),
+            "bb_middle": _round_col("bb_middle", 2),
+            "bb_lower": _round_col("bb_lower", 2),
+            "bb_bandwidth": _round_col("bb_bandwidth", 4),
+            "atr": _round_col("atr", 4),
+            "adx": _round_col("adx", 2),
+            "plus_di": _round_col("plus_di", 2),
+            "minus_di": _round_col("minus_di", 2),
+            "stoch_k": _round_col("stoch_k", 2),
+            "stoch_d": _round_col("stoch_d", 2),
+            "vol_avg_20": _round_col("vol_avg_20", 2),
         }
 
         # Generate signal history for last 30 trading days
@@ -87,7 +105,7 @@ def generate_ticker_detail(symbol: str, days: int = 365) -> dict | None:
             if len(window) < 200:
                 continue
             try:
-                result = evaluate_signals(symbol, window)
+                result = evaluate_signals(window, symbol)
                 history.append({
                     "date": str(df.index[-i].date()),
                     "signal_type": result["signal_type"],

@@ -14,17 +14,17 @@
     </td>
     <td data-sort="{{ r.on_ramp_score }}">
         <div class="score-bar">
-            <span class="score score-green">{{ r.on_ramp_score }}</span>
+            <span class="score score-green">{{ r.on_ramp_score }}<span style="color:#999;font-weight:400">/{{ r.max_on_ramp_score or 15 }}</span></span>
             <div class="score-bar-track">
-                <div class="score-bar-fill green" style="width:{{ r.on_ramp_score * 20 }}%"></div>
+                <div class="score-bar-fill green" style="width:{{ ((r.on_ramp_score / (r.max_on_ramp_score or 15)) * 100) | round }}%"></div>
             </div>
         </div>
     </td>
     <td data-sort="{{ r.off_ramp_score }}">
         <div class="score-bar">
-            <span class="score score-red">{{ r.off_ramp_score }}</span>
+            <span class="score score-red">{{ r.off_ramp_score }}<span style="color:#999;font-weight:400">/{{ r.max_off_ramp_score or 16 }}</span></span>
             <div class="score-bar-track">
-                <div class="score-bar-fill red" style="width:{{ r.off_ramp_score * 20 }}%"></div>
+                <div class="score-bar-fill red" style="width:{{ ((r.off_ramp_score / (r.max_off_ramp_score or 16)) * 100) | round }}%"></div>
             </div>
         </div>
     </td>

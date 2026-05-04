@@ -1,7 +1,7 @@
 [
   {
     "ticker": "AAPL",
-    "price": 280.14,
+    "price": 276.83,
     "on_ramp_signals": [],
     "off_ramp_signals": [],
     "on_ramp_score": 0,
@@ -10,28 +10,34 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:05.087176+00:00"
+    "timestamp": "2026-05-04T22:34:05.595902+00:00"
   },
   {
     "ticker": "MSFT",
-    "price": 414.44,
+    "price": 413.62,
     "on_ramp_signals": [],
-    "off_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "MACD Bearish Flip",
+        "reason": "MACD histogram flipped bearish: 0.4657 -> -0.2302",
+        "weight": 1
+      }
+    ],
     "on_ramp_score": 0,
-    "off_ramp_score": 0,
+    "off_ramp_score": 1,
     "max_on_ramp_score": 15,
     "max_off_ramp_score": 16,
-    "signal_type": "neutral",
+    "signal_type": "off-ramp",
     "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:05.247249+00:00"
+    "timestamp": "2026-05-04T22:34:05.760297+00:00"
   },
   {
     "ticker": "GOOGL",
-    "price": 385.69,
+    "price": 383.25,
     "on_ramp_signals": [
       {
         "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 37.6 (rising from 35.3) with +DI 45.8 > -DI 8.8",
+        "reason": "ADX bullish trend: ADX 39.7 (rising from 37.6) with +DI 43.7 > -DI 8.4",
         "weight": 2
       }
     ],
@@ -42,15 +48,15 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:05.352892+00:00"
+    "timestamp": "2026-05-04T22:34:05.884107+00:00"
   },
   {
     "ticker": "GOOG",
-    "price": 383.22,
+    "price": 379.64,
     "on_ramp_signals": [
       {
         "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 37.9 (rising from 35.6) with +DI 45.9 > -DI 8.8",
+        "reason": "ADX bullish trend: ADX 40.1 (rising from 37.9) with +DI 44.0 > -DI 8.3",
         "weight": 2
       }
     ],
@@ -61,15 +67,15 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:05.699867+00:00"
+    "timestamp": "2026-05-04T22:34:06.008950+00:00"
   },
   {
     "ticker": "AMZN",
-    "price": 268.26,
+    "price": 272.05,
     "on_ramp_signals": [
       {
         "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 37.6 (rising from 36.3) with +DI 39.7 > -DI 12.0",
+        "reason": "ADX bullish trend: ADX 38.9 (rising from 37.6) with +DI 39.4 > -DI 11.1",
         "weight": 2
       }
     ],
@@ -80,21 +86,21 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "transitional",
-    "timestamp": "2026-05-01T22:26:05.798683+00:00"
+    "timestamp": "2026-05-04T22:34:06.119942+00:00"
   },
   {
     "ticker": "META",
-    "price": 608.74,
+    "price": 610.41,
     "on_ramp_signals": [],
     "off_ramp_signals": [
       {
         "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 608.74 dropped 82.78 from recent high 691.52 (>3.0x ATR = 62.73)",
+        "reason": "ATR volatility stop: price 610.41 dropped 81.11 from recent high 691.52 (>3.0x ATR = 60.67)",
         "weight": 2
       },
       {
         "name": "Trailing Stop Breach",
-        "reason": "Trailing stop breached: price 608.74 is 12.0% below recent high 691.52 (threshold 8.0%)",
+        "reason": "Trailing stop breached: price 610.41 is 11.7% below recent high 691.52 (threshold 8.0%)",
         "weight": 1
       }
     ],
@@ -104,1132 +110,79 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:06.044197+00:00"
+    "timestamp": "2026-05-04T22:34:06.245710+00:00"
   },
   {
     "ticker": "NVDA",
-    "price": 198.45,
+    "price": 198.48,
     "on_ramp_signals": [],
     "off_ramp_signals": [
       {
-        "name": "MACD Bearish Flip",
-        "reason": "MACD histogram flipped bearish: 0.7298 -> -0.1112",
-        "weight": 1
-      },
-      {
         "name": "Trailing Stop Breach",
-        "reason": "Trailing stop breached: price 198.45 is 8.5% below recent high 216.83 (threshold 8.0%)",
+        "reason": "Trailing stop breached: price 198.48 is 8.5% below recent high 216.83 (threshold 8.0%)",
         "weight": 1
       }
     ],
     "on_ramp_score": 0,
-    "off_ramp_score": 2,
+    "off_ramp_score": 1,
     "max_on_ramp_score": 15,
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:06.168651+00:00"
+    "timestamp": "2026-05-04T22:34:06.391787+00:00"
   },
   {
     "ticker": "TSLA",
-    "price": 390.82,
-    "on_ramp_signals": [
-      {
-        "name": "Price Reclaims SMA50",
-        "reason": "Price reclaimed SMA50: 390.82 crossed above 383.71",
-        "weight": 2
-      }
-    ],
+    "price": 392.51,
+    "on_ramp_signals": [],
     "off_ramp_signals": [],
-    "on_ramp_score": 2,
+    "on_ramp_score": 0,
     "off_ramp_score": 0,
     "max_on_ramp_score": 15,
     "max_off_ramp_score": 16,
-    "signal_type": "on-ramp",
+    "signal_type": "neutral",
     "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:06.275810+00:00"
+    "timestamp": "2026-05-04T22:34:06.501595+00:00"
   },
   {
     "ticker": "AMD",
-    "price": 360.54,
+    "price": 341.54,
     "on_ramp_signals": [
       {
         "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 48.0 (rising from 46.9) with +DI 51.3 > -DI 12.1",
-        "weight": 2
-      }
-    ],
-    "off_ramp_signals": [],
-    "on_ramp_score": 2,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "on-ramp",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:06.381237+00:00"
-  },
-  {
-    "ticker": "INTC",
-    "price": 99.62,
-    "on_ramp_signals": [
-      {
-        "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 51.4 (rising from 49.4) with +DI 54.9 > -DI 7.1",
-        "weight": 2
-      }
-    ],
-    "off_ramp_signals": [],
-    "on_ramp_score": 2,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "on-ramp",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:06.568474+00:00"
-  },
-  {
-    "ticker": "CRM",
-    "price": 183.82,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:06.678943+00:00"
-  },
-  {
-    "ticker": "ORCL",
-    "price": 171.83,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [
-      {
-        "name": "Trailing Stop Breach",
-        "reason": "Trailing stop breached: price 171.83 is 9.2% below recent high 189.18 (threshold 8.0%)",
-        "weight": 1
-      }
-    ],
-    "on_ramp_score": 0,
-    "off_ramp_score": 1,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "off-ramp",
-    "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:06.830378+00:00"
-  },
-  {
-    "ticker": "ADBE",
-    "price": 250.71,
-    "on_ramp_signals": [
-      {
-        "name": "Price Reclaims SMA50",
-        "reason": "Price reclaimed SMA50: 250.71 crossed above 250.52",
-        "weight": 2
-      }
-    ],
-    "off_ramp_signals": [],
-    "on_ramp_score": 2,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "on-ramp",
-    "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:06.972250+00:00"
-  },
-  {
-    "ticker": "NFLX",
-    "price": 92.06,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [
-      {
-        "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 92.06 dropped 16.89 from recent high 108.95 (>3.0x ATR = 8.74)",
-        "weight": 2
-      },
-      {
-        "name": "Trailing Stop Breach",
-        "reason": "Trailing stop breached: price 92.06 is 15.5% below recent high 108.95 (threshold 8.0%)",
-        "weight": 1
-      }
-    ],
-    "on_ramp_score": 0,
-    "off_ramp_score": 3,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "off-ramp",
-    "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:07.074094+00:00"
-  },
-  {
-    "ticker": "PYPL",
-    "price": 50.44,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:07.172822+00:00"
-  },
-  {
-    "ticker": "CSCO",
-    "price": 91.85,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:07.305716+00:00"
-  },
-  {
-    "ticker": "AVGO",
-    "price": 421.28,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:07.674735+00:00"
-  },
-  {
-    "ticker": "TXN",
-    "price": 281.02,
-    "on_ramp_signals": [
-      {
-        "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 43.1 (rising from 41.5) with +DI 48.3 > -DI 10.4",
-        "weight": 2
-      }
-    ],
-    "off_ramp_signals": [],
-    "on_ramp_score": 2,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "on-ramp",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:07.899977+00:00"
-  },
-  {
-    "ticker": "QCOM",
-    "price": 177.01,
-    "on_ramp_signals": [
-      {
-        "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 33.7 (rising from 30.8) with +DI 54.6 > -DI 9.2",
-        "weight": 2
-      }
-    ],
-    "off_ramp_signals": [],
-    "on_ramp_score": 2,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "on-ramp",
-    "trend_regime": "transitional",
-    "timestamp": "2026-05-01T22:26:08.068437+00:00"
-  },
-  {
-    "ticker": "IBM",
-    "price": 232.2,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [
-      {
-        "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 232.20 dropped 26.30 from recent high 258.50 (>3.0x ATR = 23.22)",
-        "weight": 2
-      },
-      {
-        "name": "Trailing Stop Breach",
-        "reason": "Trailing stop breached: price 232.20 is 10.2% below recent high 258.50 (threshold 8.0%)",
-        "weight": 1
-      }
-    ],
-    "on_ramp_score": 0,
-    "off_ramp_score": 3,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "off-ramp",
-    "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:08.300979+00:00"
-  },
-  {
-    "ticker": "SPY",
-    "price": 720.65,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:08.499143+00:00"
-  },
-  {
-    "ticker": "QQQ",
-    "price": 674.15,
-    "on_ramp_signals": [
-      {
-        "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 29.7 (rising from 28.9) with +DI 39.7 > -DI 16.9",
-        "weight": 2
-      }
-    ],
-    "off_ramp_signals": [],
-    "on_ramp_score": 2,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "on-ramp",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:08.643900+00:00"
-  },
-  {
-    "ticker": "IWM",
-    "price": 279.28,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:08.810671+00:00"
-  },
-  {
-    "ticker": "DIA",
-    "price": 495.02,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:09.021186+00:00"
-  },
-  {
-    "ticker": "VTI",
-    "price": 355.29,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:09.221965+00:00"
-  },
-  {
-    "ticker": "VOO",
-    "price": 662.52,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:09.355850+00:00"
-  },
-  {
-    "ticker": "ARKK",
-    "price": 76.92,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:09.474915+00:00"
-  },
-  {
-    "ticker": "XLF",
-    "price": 51.92,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [
-      {
-        "name": "MACD Bearish Flip",
-        "reason": "MACD histogram flipped bearish: 0.0010 -> -0.0184",
-        "weight": 1
-      }
-    ],
-    "on_ramp_score": 0,
-    "off_ramp_score": 1,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "off-ramp",
-    "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:09.650691+00:00"
-  },
-  {
-    "ticker": "XLE",
-    "price": 58.85,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:09.845104+00:00"
-  },
-  {
-    "ticker": "XLK",
-    "price": 161.87,
-    "on_ramp_signals": [
-      {
-        "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 28.4 (rising from 28.3) with +DI 37.6 > -DI 20.2",
-        "weight": 2
-      }
-    ],
-    "off_ramp_signals": [],
-    "on_ramp_score": 2,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "on-ramp",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:10.037899+00:00"
-  },
-  {
-    "ticker": "XLV",
-    "price": 145.16,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "transitional",
-    "timestamp": "2026-05-01T22:26:10.200949+00:00"
-  },
-  {
-    "ticker": "XLI",
-    "price": 172.96,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:10.345346+00:00"
-  },
-  {
-    "ticker": "XLP",
-    "price": 84.17,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:10.505730+00:00"
-  },
-  {
-    "ticker": "XLY",
-    "price": 118.63,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "transitional",
-    "timestamp": "2026-05-01T22:26:10.668406+00:00"
-  },
-  {
-    "ticker": "GLD",
-    "price": 423.18,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:10.777540+00:00"
-  },
-  {
-    "ticker": "SLV",
-    "price": 68.29,
-    "on_ramp_signals": [
-      {
-        "name": "Stochastic Bullish Cross",
-        "reason": "Stochastic bullish cross in oversold zone: %K 12.6->22.4, %D 16.7->15.6 (oversold threshold 20.0)",
-        "weight": 1
-      }
-    ],
-    "off_ramp_signals": [
-      {
-        "name": "Trailing Stop Breach",
-        "reason": "Trailing stop breached: price 68.29 is 9.1% below recent high 75.16 (threshold 8.0%)",
-        "weight": 1
-      }
-    ],
-    "on_ramp_score": 1,
-    "off_ramp_score": 1,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:10.874557+00:00"
-  },
-  {
-    "ticker": "TLT",
-    "price": 85.61,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "transitional",
-    "timestamp": "2026-05-01T22:26:11.048021+00:00"
-  },
-  {
-    "ticker": "HYG",
-    "price": 80.06,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:11.252710+00:00"
-  },
-  {
-    "ticker": "EEM",
-    "price": 64.13,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:11.403378+00:00"
-  },
-  {
-    "ticker": "VWO",
-    "price": 58.99,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:11.550146+00:00"
-  },
-  {
-    "ticker": "JPM",
-    "price": 312.47,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "transitional",
-    "timestamp": "2026-05-01T22:26:11.803655+00:00"
-  },
-  {
-    "ticker": "BAC",
-    "price": 53.24,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "transitional",
-    "timestamp": "2026-05-01T22:26:12.020271+00:00"
-  },
-  {
-    "ticker": "WFC",
-    "price": 80.81,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [
-      {
-        "name": "Price Breaks SMA50",
-        "reason": "Price broke below SMA50: 80.81 fell under 80.87",
-        "weight": 2
-      },
-      {
-        "name": "MACD Bearish Flip",
-        "reason": "MACD histogram flipped bearish: 0.0007 -> -0.0350",
-        "weight": 1
-      }
-    ],
-    "on_ramp_score": 0,
-    "off_ramp_score": 3,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "off-ramp",
-    "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:12.288133+00:00"
-  },
-  {
-    "ticker": "GS",
-    "price": 923.71,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:12.491563+00:00"
-  },
-  {
-    "ticker": "MS",
-    "price": 190.17,
-    "on_ramp_signals": [
-      {
-        "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 34.0 (rising from 33.7) with +DI 32.4 > -DI 14.4",
+        "reason": "ADX bullish trend: ADX 48.1 (rising from 48.0) with +DI 46.1 > -DI 15.5",
         "weight": 2
       }
     ],
     "off_ramp_signals": [
       {
-        "name": "MACD Bearish Flip",
-        "reason": "MACD histogram flipped bearish: 0.0117 -> -0.0920",
-        "weight": 1
+        "name": "RSI Overbought Reversal",
+        "reason": "RSI dropped from overbought: 79.8 -> 69.9 (threshold 70.0)",
+        "weight": 2
       }
     ],
     "on_ramp_score": 2,
-    "off_ramp_score": 1,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "on-ramp",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:12.693198+00:00"
-  },
-  {
-    "ticker": "V",
-    "price": 328.03,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:12.846168+00:00"
-  },
-  {
-    "ticker": "MA",
-    "price": 495.46,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [
-      {
-        "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 495.46 dropped 38.75 from recent high 534.21 (>3.0x ATR = 38.73)",
-        "weight": 2
-      },
-      {
-        "name": "MACD Bearish Flip",
-        "reason": "MACD histogram flipped bearish: 0.1927 -> -0.8125",
-        "weight": 1
-      }
-    ],
-    "on_ramp_score": 0,
-    "off_ramp_score": 3,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "off-ramp",
-    "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:12.985788+00:00"
-  },
-  {
-    "ticker": "AXP",
-    "price": 319.68,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:13.198351+00:00"
-  },
-  {
-    "ticker": "BLK",
-    "price": 1061.68,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:13.356889+00:00"
-  },
-  {
-    "ticker": "C",
-    "price": 127.44,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:13.551341+00:00"
-  },
-  {
-    "ticker": "SCHW",
-    "price": 91.54,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [
-      {
-        "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 91.54 dropped 9.22 from recent high 100.76 (>3.0x ATR = 7.74)",
-        "weight": 2
-      },
-      {
-        "name": "Trailing Stop Breach",
-        "reason": "Trailing stop breached: price 91.54 is 9.2% below recent high 100.76 (threshold 8.0%)",
-        "weight": 1
-      }
-    ],
-    "on_ramp_score": 0,
-    "off_ramp_score": 3,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "off-ramp",
-    "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:13.737041+00:00"
-  },
-  {
-    "ticker": "USB",
-    "price": 56.3,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:13.968733+00:00"
-  },
-  {
-    "ticker": "JNJ",
-    "price": 227.19,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [
-      {
-        "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 227.19 dropped 17.01 from recent high 244.20 (>3.0x ATR = 13.19)",
-        "weight": 2
-      }
-    ],
-    "on_ramp_score": 0,
     "off_ramp_score": 2,
     "max_on_ramp_score": 15,
     "max_off_ramp_score": 16,
-    "signal_type": "off-ramp",
+    "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:14.225873+00:00"
+    "timestamp": "2026-05-04T22:34:06.613939+00:00"
   },
   {
-    "ticker": "UNH",
-    "price": 368.78,
+    "ticker": "INTC",
+    "price": 95.78,
     "on_ramp_signals": [
       {
         "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 52.4 (rising from 51.2) with +DI 41.4 > -DI 8.2",
+        "reason": "ADX bullish trend: ADX 53.2 (rising from 51.4) with +DI 51.5 > -DI 6.7",
         "weight": 2
       }
     ],
     "off_ramp_signals": [
       {
         "name": "Stochastic Bearish Cross",
-        "reason": "Stochastic bearish cross in overbought zone: %K 97.8->97.0, %D 96.1->97.0 (overbought threshold 80.0)",
-        "weight": 1
-      }
-    ],
-    "on_ramp_score": 2,
-    "off_ramp_score": 1,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "on-ramp",
-    "trend_regime": "transitional",
-    "timestamp": "2026-05-01T22:26:14.407021+00:00"
-  },
-  {
-    "ticker": "PFE",
-    "price": 26.33,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [
-      {
-        "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 26.33 dropped 1.90 from recent high 28.23 (>3.0x ATR = 1.74)",
-        "weight": 2
-      }
-    ],
-    "on_ramp_score": 0,
-    "off_ramp_score": 2,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "off-ramp",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:14.648548+00:00"
-  },
-  {
-    "ticker": "MRK",
-    "price": 112.16,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [
-      {
-        "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 112.16 dropped 11.84 from recent high 124.00 (>3.0x ATR = 9.37)",
-        "weight": 2
-      },
-      {
-        "name": "Trailing Stop Breach",
-        "reason": "Trailing stop breached: price 112.16 is 9.5% below recent high 124.00 (threshold 8.0%)",
-        "weight": 1
-      }
-    ],
-    "on_ramp_score": 0,
-    "off_ramp_score": 3,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "off-ramp",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:14.904510+00:00"
-  },
-  {
-    "ticker": "ABBV",
-    "price": 206.6,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:15.131486+00:00"
-  },
-  {
-    "ticker": "LLY",
-    "price": 963.33,
-    "on_ramp_signals": [
-      {
-        "name": "Price Reclaims SMA50",
-        "reason": "Price reclaimed SMA50: 963.33 crossed above 947.66",
-        "weight": 2
-      }
-    ],
-    "off_ramp_signals": [],
-    "on_ramp_score": 2,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "on-ramp",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:15.372438+00:00"
-  },
-  {
-    "ticker": "TMO",
-    "price": 469.21,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [
-      {
-        "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 469.21 dropped 69.20 from recent high 538.41 (>3.0x ATR = 47.75)",
-        "weight": 2
-      },
-      {
-        "name": "Trailing Stop Breach",
-        "reason": "Trailing stop breached: price 469.21 is 12.9% below recent high 538.41 (threshold 8.0%)",
-        "weight": 1
-      }
-    ],
-    "on_ramp_score": 0,
-    "off_ramp_score": 3,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "off-ramp",
-    "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:15.525023+00:00"
-  },
-  {
-    "ticker": "ABT",
-    "price": 89.46,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [
-      {
-        "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 89.46 dropped 13.73 from recent high 103.19 (>3.0x ATR = 6.85)",
-        "weight": 2
-      },
-      {
-        "name": "Trailing Stop Breach",
-        "reason": "Trailing stop breached: price 89.46 is 13.3% below recent high 103.19 (threshold 8.0%)",
-        "weight": 1
-      }
-    ],
-    "on_ramp_score": 0,
-    "off_ramp_score": 3,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "off-ramp",
-    "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:15.714517+00:00"
-  },
-  {
-    "ticker": "BMY",
-    "price": 58.22,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [
-      {
-        "name": "Price Breaks SMA50",
-        "reason": "Price broke below SMA50: 58.22 fell under 59.17",
-        "weight": 2
-      },
-      {
-        "name": "BB Upper Band Rejection",
-        "reason": "BB upper rejection: close 60.59 was above upper band 60.44, now 58.22 < middle 58.75",
-        "weight": 2
-      },
-      {
-        "name": "MACD Bearish Flip",
-        "reason": "MACD histogram flipped bearish: 0.0341 -> -0.0125",
-        "weight": 1
-      }
-    ],
-    "on_ramp_score": 0,
-    "off_ramp_score": 5,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "off-ramp",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:15.955325+00:00"
-  },
-  {
-    "ticker": "GILD",
-    "price": 131.65,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [
-      {
-        "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 131.65 dropped 11.32 from recent high 142.97 (>3.0x ATR = 9.40)",
-        "weight": 2
-      }
-    ],
-    "on_ramp_score": 0,
-    "off_ramp_score": 2,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "off-ramp",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:16.146908+00:00"
-  },
-  {
-    "ticker": "AMGN",
-    "price": 329.82,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [
-      {
-        "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 329.82 dropped 29.63 from recent high 359.45 (>3.0x ATR = 26.20)",
-        "weight": 2
-      },
-      {
-        "name": "Trailing Stop Breach",
-        "reason": "Trailing stop breached: price 329.82 is 8.2% below recent high 359.45 (threshold 8.0%)",
-        "weight": 1
-      }
-    ],
-    "on_ramp_score": 0,
-    "off_ramp_score": 3,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "off-ramp",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:16.279917+00:00"
-  },
-  {
-    "ticker": "MDT",
-    "price": 80.0,
-    "on_ramp_signals": [
-      {
-        "name": "Stochastic Bullish Cross",
-        "reason": "Stochastic bullish cross in oversold zone: %K 11.5->12.3, %D 11.6->11.0 (oversold threshold 20.0)",
-        "weight": 1
-      }
-    ],
-    "off_ramp_signals": [
-      {
-        "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 80.00 dropped 8.84 from recent high 88.84 (>3.0x ATR = 5.60)",
-        "weight": 2
-      },
-      {
-        "name": "Trailing Stop Breach",
-        "reason": "Trailing stop breached: price 80.00 is 10.0% below recent high 88.84 (threshold 8.0%)",
-        "weight": 1
-      }
-    ],
-    "on_ramp_score": 1,
-    "off_ramp_score": 3,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "off-ramp",
-    "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:16.492554+00:00"
-  },
-  {
-    "ticker": "WMT",
-    "price": 131.6,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:16.738933+00:00"
-  },
-  {
-    "ticker": "HD",
-    "price": 323.88,
-    "on_ramp_signals": [
-      {
-        "name": "Stochastic Bullish Cross",
-        "reason": "Stochastic bullish cross in oversold zone: %K 15.2->17.7, %D 17.1->14.6 (oversold threshold 20.0)",
-        "weight": 1
-      }
-    ],
-    "off_ramp_signals": [
-      {
-        "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 323.88 dropped 29.67 from recent high 353.55 (>3.0x ATR = 24.71)",
-        "weight": 2
-      },
-      {
-        "name": "Trailing Stop Breach",
-        "reason": "Trailing stop breached: price 323.88 is 8.4% below recent high 353.55 (threshold 8.0%)",
-        "weight": 1
-      }
-    ],
-    "on_ramp_score": 1,
-    "off_ramp_score": 3,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "off-ramp",
-    "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:16.943288+00:00"
-  },
-  {
-    "ticker": "MCD",
-    "price": 286.64,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [
-      {
-        "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 286.64 dropped 25.90 from recent high 312.54 (>3.0x ATR = 15.82)",
-        "weight": 2
-      },
-      {
-        "name": "Trailing Stop Breach",
-        "reason": "Trailing stop breached: price 286.64 is 8.3% below recent high 312.54 (threshold 8.0%)",
-        "weight": 1
-      }
-    ],
-    "on_ramp_score": 0,
-    "off_ramp_score": 3,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "off-ramp",
-    "trend_regime": "transitional",
-    "timestamp": "2026-05-01T22:26:17.179171+00:00"
-  },
-  {
-    "ticker": "NKE",
-    "price": 44.4,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:17.395105+00:00"
-  },
-  {
-    "ticker": "SBUX",
-    "price": 105.9,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:17.560389+00:00"
-  },
-  {
-    "ticker": "TGT",
-    "price": 128.89,
-    "on_ramp_signals": [
-      {
-        "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 28.0 (rising from 27.6) with +DI 31.1 > -DI 15.7",
-        "weight": 2
-      }
-    ],
-    "off_ramp_signals": [
-      {
-        "name": "MACD Bearish Flip",
-        "reason": "MACD histogram flipped bearish: 0.0061 -> -0.0928",
+        "reason": "Stochastic bearish cross in overbought zone: %K 97.9->93.9, %D 96.0->95.8 (overbought threshold 80.0)",
         "weight": 1
       }
     ],
@@ -1239,11 +192,11 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:17.761462+00:00"
+    "timestamp": "2026-05-04T22:34:06.825991+00:00"
   },
   {
-    "ticker": "COST",
-    "price": 1011.7,
+    "ticker": "CRM",
+    "price": 185.48,
     "on_ramp_signals": [],
     "off_ramp_signals": [],
     "on_ramp_score": 0,
@@ -1251,204 +204,30 @@
     "max_on_ramp_score": 15,
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:17.930053+00:00"
-  },
-  {
-    "ticker": "LOW",
-    "price": 233.33,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [
-      {
-        "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 233.33 dropped 22.54 from recent high 255.87 (>3.0x ATR = 19.71)",
-        "weight": 2
-      },
-      {
-        "name": "Trailing Stop Breach",
-        "reason": "Trailing stop breached: price 233.33 is 8.8% below recent high 255.87 (threshold 8.0%)",
-        "weight": 1
-      }
-    ],
-    "on_ramp_score": 0,
-    "off_ramp_score": 3,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "off-ramp",
     "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:18.135055+00:00"
+    "timestamp": "2026-05-04T22:34:06.954867+00:00"
   },
   {
-    "ticker": "DIS",
-    "price": 103.08,
+    "ticker": "ORCL",
+    "price": 180.29,
     "on_ramp_signals": [],
-    "off_ramp_signals": [
-      {
-        "name": "MACD Bearish Flip",
-        "reason": "MACD histogram flipped bearish: 0.0159 -> -0.0013",
-        "weight": 1
-      }
-    ],
+    "off_ramp_signals": [],
     "on_ramp_score": 0,
-    "off_ramp_score": 1,
+    "off_ramp_score": 0,
     "max_on_ramp_score": 15,
     "max_off_ramp_score": 16,
-    "signal_type": "off-ramp",
+    "signal_type": "neutral",
     "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:18.382594+00:00"
+    "timestamp": "2026-05-04T22:34:07.107298+00:00"
   },
   {
-    "ticker": "CMCSA",
-    "price": 27.19,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [
-      {
-        "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 27.19 dropped 4.89 from recent high 32.08 (>3.0x ATR = 2.92)",
-        "weight": 2
-      },
-      {
-        "name": "Trailing Stop Breach",
-        "reason": "Trailing stop breached: price 27.19 is 15.2% below recent high 32.08 (threshold 8.0%)",
-        "weight": 1
-      }
-    ],
-    "on_ramp_score": 0,
-    "off_ramp_score": 3,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "off-ramp",
-    "trend_regime": "transitional",
-    "timestamp": "2026-05-01T22:26:18.585484+00:00"
-  },
-  {
-    "ticker": "PEP",
-    "price": 157.41,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [
-      {
-        "name": "Price Breaks SMA50",
-        "reason": "Price broke below SMA50: 157.41 fell under 157.67",
-        "weight": 2
-      }
-    ],
-    "on_ramp_score": 0,
-    "off_ramp_score": 2,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "off-ramp",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:18.811645+00:00"
-  },
-  {
-    "ticker": "KO",
-    "price": 78.58,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:19.046951+00:00"
-  },
-  {
-    "ticker": "PG",
-    "price": 147.26,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "transitional",
-    "timestamp": "2026-05-01T22:26:19.297739+00:00"
-  },
-  {
-    "ticker": "CL",
-    "price": 87.26,
-    "on_ramp_signals": [
-      {
-        "name": "BB Squeeze Breakout",
-        "reason": "BB squeeze breakout: close 87.26 > upper band 86.68 after bandwidth compressed into bottom 20% over last 120 bars",
-        "weight": 2
-      }
-    ],
-    "off_ramp_signals": [],
-    "on_ramp_score": 2,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "on-ramp",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:19.552613+00:00"
-  },
-  {
-    "ticker": "CAT",
-    "price": 889.67,
-    "on_ramp_signals": [
-      {
-        "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 26.1 (rising from 24.2) with +DI 42.2 > -DI 14.0",
-        "weight": 2
-      }
-    ],
-    "off_ramp_signals": [],
-    "on_ramp_score": 2,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "on-ramp",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:19.805143+00:00"
-  },
-  {
-    "ticker": "BA",
-    "price": 227.38,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "transitional",
-    "timestamp": "2026-05-01T22:26:20.051977+00:00"
-  },
-  {
-    "ticker": "HON",
-    "price": 212.5,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [
-      {
-        "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 212.50 dropped 24.33 from recent high 236.83 (>3.0x ATR = 15.98)",
-        "weight": 2
-      },
-      {
-        "name": "Trailing Stop Breach",
-        "reason": "Trailing stop breached: price 212.50 is 10.3% below recent high 236.83 (threshold 8.0%)",
-        "weight": 1
-      }
-    ],
-    "on_ramp_score": 0,
-    "off_ramp_score": 3,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "off-ramp",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:20.274344+00:00"
-  },
-  {
-    "ticker": "UPS",
-    "price": 107.57,
+    "ticker": "ADBE",
+    "price": 253.96,
     "on_ramp_signals": [],
     "off_ramp_signals": [
       {
         "name": "ADX Trend Fading",
-        "reason": "ADX trend fading: 20.4 -> 19.6 (below weak-trend threshold 20.0)",
+        "reason": "ADX trend fading: 20.5 -> 19.4 (below weak-trend threshold 20.0)",
         "weight": 2
       }
     ],
@@ -1457,46 +236,22 @@
     "max_on_ramp_score": 15,
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:20.426230+00:00"
+    "trend_regime": "bearish",
+    "timestamp": "2026-05-04T22:34:07.251867+00:00"
   },
   {
-    "ticker": "GE",
-    "price": 286.51,
+    "ticker": "NFLX",
+    "price": 91.02,
     "on_ramp_signals": [],
     "off_ramp_signals": [
       {
         "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 286.51 dropped 32.63 from recent high 319.14 (>3.0x ATR = 31.16)",
+        "reason": "ATR volatility stop: price 91.02 dropped 17.93 from recent high 108.95 (>3.0x ATR = 8.42)",
         "weight": 2
       },
       {
         "name": "Trailing Stop Breach",
-        "reason": "Trailing stop breached: price 286.51 is 10.2% below recent high 319.14 (threshold 8.0%)",
-        "weight": 1
-      }
-    ],
-    "on_ramp_score": 0,
-    "off_ramp_score": 3,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "off-ramp",
-    "trend_regime": "transitional",
-    "timestamp": "2026-05-01T22:26:20.691195+00:00"
-  },
-  {
-    "ticker": "MMM",
-    "price": 142.5,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [
-      {
-        "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 142.50 dropped 15.64 from recent high 158.14 (>3.0x ATR = 11.62)",
-        "weight": 2
-      },
-      {
-        "name": "Trailing Stop Breach",
-        "reason": "Trailing stop breached: price 142.50 is 9.9% below recent high 158.14 (threshold 8.0%)",
+        "reason": "Trailing stop breached: price 91.02 is 16.5% below recent high 108.95 (threshold 8.0%)",
         "weight": 1
       }
     ],
@@ -1506,59 +261,36 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:20.942838+00:00"
+    "timestamp": "2026-05-04T22:34:07.414888+00:00"
   },
   {
-    "ticker": "RTX",
-    "price": 173.99,
-    "on_ramp_signals": [],
+    "ticker": "PYPL",
+    "price": 50.39,
+    "on_ramp_signals": [
+      {
+        "name": "ADX Bullish Trend",
+        "reason": "ADX bullish trend: ADX 25.7 (rising from 24.7) with +DI 28.0 > -DI 12.3",
+        "weight": 2
+      }
+    ],
     "off_ramp_signals": [
       {
-        "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 173.99 dropped 31.37 from recent high 205.36 (>3.0x ATR = 14.95)",
-        "weight": 2
-      },
-      {
-        "name": "Trailing Stop Breach",
-        "reason": "Trailing stop breached: price 173.99 is 15.3% below recent high 205.36 (threshold 8.0%)",
+        "name": "MACD Bearish Flip",
+        "reason": "MACD histogram flipped bearish: 0.0104 -> -0.0288",
         "weight": 1
       }
     ],
-    "on_ramp_score": 0,
-    "off_ramp_score": 3,
+    "on_ramp_score": 2,
+    "off_ramp_score": 1,
     "max_on_ramp_score": 15,
     "max_off_ramp_score": 16,
-    "signal_type": "off-ramp",
-    "trend_regime": "transitional",
-    "timestamp": "2026-05-01T22:26:21.200931+00:00"
+    "signal_type": "on-ramp",
+    "trend_regime": "bearish",
+    "timestamp": "2026-05-04T22:34:07.528528+00:00"
   },
   {
-    "ticker": "LMT",
-    "price": 512.77,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [
-      {
-        "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 512.77 dropped 125.15 from recent high 637.92 (>3.0x ATR = 47.98)",
-        "weight": 2
-      },
-      {
-        "name": "Trailing Stop Breach",
-        "reason": "Trailing stop breached: price 512.77 is 19.6% below recent high 637.92 (threshold 8.0%)",
-        "weight": 1
-      }
-    ],
-    "on_ramp_score": 0,
-    "off_ramp_score": 3,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "off-ramp",
-    "trend_regime": "transitional",
-    "timestamp": "2026-05-01T22:26:21.453846+00:00"
-  },
-  {
-    "ticker": "DE",
-    "price": 577.26,
+    "ticker": "CSCO",
+    "price": 92.63,
     "on_ramp_signals": [],
     "off_ramp_signals": [],
     "on_ramp_score": 0,
@@ -1567,15 +299,34 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:21.686575+00:00"
+    "timestamp": "2026-05-04T22:34:07.784895+00:00"
   },
   {
-    "ticker": "UNP",
-    "price": 266.32,
+    "ticker": "AVGO",
+    "price": 416.5,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "MACD Bearish Flip",
+        "reason": "MACD histogram flipped bearish: 0.3665 -> -0.2980",
+        "weight": 1
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 1,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:07.931326+00:00"
+  },
+  {
+    "ticker": "TXN",
+    "price": 280.89,
     "on_ramp_signals": [
       {
         "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 28.5 (rising from 28.0) with +DI 30.0 > -DI 14.4",
+        "reason": "ADX bullish trend: ADX 44.7 (rising from 43.1) with +DI 47.1 > -DI 9.8",
         "weight": 2
       }
     ],
@@ -1586,28 +337,88 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:21.917286+00:00"
+    "timestamp": "2026-05-04T22:34:08.234941+00:00"
   },
   {
-    "ticker": "FDX",
-    "price": 393.67,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:22.066046+00:00"
-  },
-  {
-    "ticker": "NSC",
-    "price": 315.9,
+    "ticker": "QCOM",
+    "price": 168.38,
     "on_ramp_signals": [
       {
         "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 27.8 (rising from 27.8) with +DI 28.4 > -DI 15.9",
+        "reason": "ADX bullish trend: ADX 35.5 (rising from 33.7) with +DI 47.7 > -DI 12.0",
+        "weight": 2
+      }
+    ],
+    "off_ramp_signals": [
+      {
+        "name": "Stochastic Bearish Cross",
+        "reason": "Stochastic bearish cross in overbought zone: %K 85.2->78.9, %D 80.1->81.5 (overbought threshold 80.0)",
+        "weight": 1
+      },
+      {
+        "name": "Trailing Stop Breach",
+        "reason": "Trailing stop breached: price 168.38 is 9.9% below recent high 186.89 (threshold 8.0%)",
+        "weight": 1
+      }
+    ],
+    "on_ramp_score": 2,
+    "off_ramp_score": 2,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "transitional",
+    "timestamp": "2026-05-04T22:34:08.411816+00:00"
+  },
+  {
+    "ticker": "IBM",
+    "price": 229.48,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "ATR Volatility Stop",
+        "reason": "ATR volatility stop: price 229.48 dropped 29.02 from recent high 258.50 (>3.0x ATR = 22.75)",
+        "weight": 2
+      },
+      {
+        "name": "Trailing Stop Breach",
+        "reason": "Trailing stop breached: price 229.48 is 11.2% below recent high 258.50 (threshold 8.0%)",
+        "weight": 1
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 3,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "bearish",
+    "timestamp": "2026-05-04T22:34:08.759451+00:00"
+  },
+  {
+    "ticker": "SPY",
+    "price": 718.01,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "RSI Overbought Reversal",
+        "reason": "RSI dropped from overbought: 71.7 -> 68.6 (threshold 70.0)",
+        "weight": 2
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 2,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:08.963654+00:00"
+  },
+  {
+    "ticker": "QQQ",
+    "price": 672.88,
+    "on_ramp_signals": [
+      {
+        "name": "ADX Bullish Trend",
+        "reason": "ADX bullish trend: ADX 30.5 (rising from 29.7) with +DI 37.9 > -DI 15.9",
         "weight": 2
       }
     ],
@@ -1618,45 +429,466 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:22.243691+00:00"
+    "timestamp": "2026-05-04T22:34:09.126485+00:00"
   },
   {
-    "ticker": "XOM",
-    "price": 152.75,
+    "ticker": "IWM",
+    "price": 277.88,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:09.307631+00:00"
+  },
+  {
+    "ticker": "DIA",
+    "price": 489.56,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:09.504330+00:00"
+  },
+  {
+    "ticker": "VTI",
+    "price": 353.98,
     "on_ramp_signals": [],
     "off_ramp_signals": [
       {
-        "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 152.75 dropped 13.49 from recent high 166.24 (>3.0x ATR = 13.31)",
+        "name": "RSI Overbought Reversal",
+        "reason": "RSI dropped from overbought: 70.8 -> 67.9 (threshold 70.0)",
         "weight": 2
-      },
-      {
-        "name": "Trailing Stop Breach",
-        "reason": "Trailing stop breached: price 152.75 is 8.1% below recent high 166.24 (threshold 8.0%)",
-        "weight": 1
       }
     ],
     "on_ramp_score": 0,
-    "off_ramp_score": 3,
+    "off_ramp_score": 2,
     "max_on_ramp_score": 15,
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:22.527747+00:00"
+    "timestamp": "2026-05-04T22:34:09.673355+00:00"
   },
   {
-    "ticker": "CVX",
-    "price": 190.63,
+    "ticker": "VOO",
+    "price": 660.12,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "RSI Overbought Reversal",
+        "reason": "RSI dropped from overbought: 71.7 -> 68.6 (threshold 70.0)",
+        "weight": 2
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 2,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:09.813932+00:00"
+  },
+  {
+    "ticker": "ARKK",
+    "price": 78.23,
+    "on_ramp_signals": [
+      {
+        "name": "MACD Bullish Flip",
+        "reason": "MACD histogram flipped bullish: -0.0863 -> 0.0107",
+        "weight": 1
+      }
+    ],
+    "off_ramp_signals": [],
+    "on_ramp_score": 1,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "on-ramp",
+    "trend_regime": "transitional",
+    "timestamp": "2026-05-04T22:34:09.997915+00:00"
+  },
+  {
+    "ticker": "XLF",
+    "price": 51.58,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "ADX Trend Fading",
+        "reason": "ADX trend fading: 20.6 -> 19.5 (below weak-trend threshold 20.0)",
+        "weight": 2
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 2,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "bearish",
+    "timestamp": "2026-05-04T22:34:10.174008+00:00"
+  },
+  {
+    "ticker": "XLE",
+    "price": 59.39,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "Stochastic Bearish Cross",
+        "reason": "Stochastic bearish cross in overbought zone: %K 93.4->91.6, %D 87.5->91.9 (overbought threshold 80.0)",
+        "weight": 1
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 1,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:10.367350+00:00"
+  },
+  {
+    "ticker": "XLK",
+    "price": 162.05,
+    "on_ramp_signals": [
+      {
+        "name": "ADX Bullish Trend",
+        "reason": "ADX bullish trend: ADX 28.7 (rising from 28.4) with +DI 37.8 > -DI 19.1",
+        "weight": 2
+      }
+    ],
+    "off_ramp_signals": [],
+    "on_ramp_score": 2,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "on-ramp",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:10.548569+00:00"
+  },
+  {
+    "ticker": "XLV",
+    "price": 144.73,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "transitional",
+    "timestamp": "2026-05-04T22:34:10.723469+00:00"
+  },
+  {
+    "ticker": "XLI",
+    "price": 170.98,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "MACD Bearish Flip",
+        "reason": "MACD histogram flipped bearish: 0.0494 -> -0.1057",
+        "weight": 1
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 1,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:10.906427+00:00"
+  },
+  {
+    "ticker": "XLP",
+    "price": 83.54,
     "on_ramp_signals": [],
     "off_ramp_signals": [
       {
         "name": "Price Breaks SMA50",
-        "reason": "Price broke below SMA50: 190.63 fell under 192.94",
+        "reason": "Price broke below SMA50: 83.54 fell under 83.61",
+        "weight": 2
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 2,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:11.080166+00:00"
+  },
+  {
+    "ticker": "XLY",
+    "price": 117.72,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "MACD Bearish Flip",
+        "reason": "MACD histogram flipped bearish: 0.0664 -> -0.0217",
+        "weight": 1
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 1,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "transitional",
+    "timestamp": "2026-05-04T22:34:11.270360+00:00"
+  },
+  {
+    "ticker": "GLD",
+    "price": 414.71,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "ATR Volatility Stop",
+        "reason": "ATR volatility stop: price 414.71 dropped 33.99 from recent high 448.70 (>3.0x ATR = 26.57)",
+        "weight": 2
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 2,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:11.385378+00:00"
+  },
+  {
+    "ticker": "SLV",
+    "price": 65.94,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "ATR Volatility Stop",
+        "reason": "ATR volatility stop: price 65.94 dropped 9.22 from recent high 75.16 (>3.0x ATR = 8.27)",
+        "weight": 2
+      },
+      {
+        "name": "Trailing Stop Breach",
+        "reason": "Trailing stop breached: price 65.94 is 12.3% below recent high 75.16 (threshold 8.0%)",
+        "weight": 1
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 3,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:11.496704+00:00"
+  },
+  {
+    "ticker": "TLT",
+    "price": 84.96,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "ATR Volatility Stop",
+        "reason": "ATR volatility stop: price 84.96 dropped 2.09 from recent high 87.05 (>3.0x ATR = 1.99)",
+        "weight": 2
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 2,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "transitional",
+    "timestamp": "2026-05-04T22:34:11.676482+00:00"
+  },
+  {
+    "ticker": "HYG",
+    "price": 79.8,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:11.830758+00:00"
+  },
+  {
+    "ticker": "EEM",
+    "price": 64.1,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:11.982605+00:00"
+  },
+  {
+    "ticker": "VWO",
+    "price": 58.73,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "MACD Bearish Flip",
+        "reason": "MACD histogram flipped bearish: 0.0317 -> -0.0007",
+        "weight": 1
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 1,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:12.142849+00:00"
+  },
+  {
+    "ticker": "JPM",
+    "price": 307.65,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "transitional",
+    "timestamp": "2026-05-04T22:34:12.347622+00:00"
+  },
+  {
+    "ticker": "BAC",
+    "price": 52.19,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "transitional",
+    "timestamp": "2026-05-04T22:34:12.590890+00:00"
+  },
+  {
+    "ticker": "WFC",
+    "price": 79.18,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "ATR Volatility Stop",
+        "reason": "ATR volatility stop: price 79.18 dropped 7.52 from recent high 86.70 (>3.0x ATR = 5.89)",
+        "weight": 2
+      },
+      {
+        "name": "Trailing Stop Breach",
+        "reason": "Trailing stop breached: price 79.18 is 8.7% below recent high 86.70 (threshold 8.0%)",
+        "weight": 1
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 3,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "bearish",
+    "timestamp": "2026-05-04T22:34:12.810461+00:00"
+  },
+  {
+    "ticker": "GS",
+    "price": 903.27,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:12.978511+00:00"
+  },
+  {
+    "ticker": "MS",
+    "price": 188.01,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:13.191606+00:00"
+  },
+  {
+    "ticker": "V",
+    "price": 326.85,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "bearish",
+    "timestamp": "2026-05-04T22:34:13.348923+00:00"
+  },
+  {
+    "ticker": "MA",
+    "price": 504.74,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "bearish",
+    "timestamp": "2026-05-04T22:34:13.512508+00:00"
+  },
+  {
+    "ticker": "AXP",
+    "price": 319.21,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "bearish",
+    "timestamp": "2026-05-04T22:34:13.791830+00:00"
+  },
+  {
+    "ticker": "BLK",
+    "price": 1052.25,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "bearish",
+    "timestamp": "2026-05-04T22:34:14.000837+00:00"
+  },
+  {
+    "ticker": "C",
+    "price": 125.63,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "ATR Volatility Stop",
+        "reason": "ATR volatility stop: price 125.63 dropped 9.66 from recent high 135.29 (>3.0x ATR = 9.60)",
         "weight": 2
       },
       {
         "name": "ADX Trend Fading",
-        "reason": "ADX trend fading: 20.6 -> 19.2 (below weak-trend threshold 20.0)",
+        "reason": "ADX trend fading: 20.8 -> 19.9 (below weak-trend threshold 20.0)",
         "weight": 2
       }
     ],
@@ -1666,118 +898,76 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:22.755682+00:00"
+    "timestamp": "2026-05-04T22:34:14.228048+00:00"
   },
   {
-    "ticker": "COP",
-    "price": 123.19,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:23.009059+00:00"
-  },
-  {
-    "ticker": "SLB",
-    "price": 56.92,
-    "on_ramp_signals": [
-      {
-        "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 34.6 (rising from 33.8) with +DI 23.4 > -DI 8.8",
-        "weight": 2
-      }
-    ],
-    "off_ramp_signals": [],
-    "on_ramp_score": 2,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "on-ramp",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:23.201496+00:00"
-  },
-  {
-    "ticker": "EOG",
-    "price": 138.95,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:23.388938+00:00"
-  },
-  {
-    "ticker": "DVN",
-    "price": 50.56,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:23.572002+00:00"
-  },
-  {
-    "ticker": "OXY",
-    "price": 58.71,
+    "ticker": "SCHW",
+    "price": 91.48,
     "on_ramp_signals": [],
     "off_ramp_signals": [
       {
+        "name": "ATR Volatility Stop",
+        "reason": "ATR volatility stop: price 91.48 dropped 9.28 from recent high 100.76 (>3.0x ATR = 7.56)",
+        "weight": 2
+      },
+      {
         "name": "Trailing Stop Breach",
-        "reason": "Trailing stop breached: price 58.71 is 8.7% below recent high 64.28 (threshold 8.0%)",
+        "reason": "Trailing stop breached: price 91.48 is 9.2% below recent high 100.76 (threshold 8.0%)",
         "weight": 1
       }
     ],
     "on_ramp_score": 0,
-    "off_ramp_score": 1,
+    "off_ramp_score": 3,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "bearish",
+    "timestamp": "2026-05-04T22:34:14.421794+00:00"
+  },
+  {
+    "ticker": "USB",
+    "price": 55.24,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:14.621582+00:00"
+  },
+  {
+    "ticker": "JNJ",
+    "price": 224.2,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "ATR Volatility Stop",
+        "reason": "ATR volatility stop: price 224.20 dropped 20.00 from recent high 244.20 (>3.0x ATR = 13.02)",
+        "weight": 2
+      },
+      {
+        "name": "Trailing Stop Breach",
+        "reason": "Trailing stop breached: price 224.20 is 8.2% below recent high 244.20 (threshold 8.0%)",
+        "weight": 1
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 3,
     "max_on_ramp_score": 15,
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:23.782253+00:00"
+    "timestamp": "2026-05-04T22:34:14.903788+00:00"
   },
   {
-    "ticker": "MPC",
-    "price": 246.15,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:23.922810+00:00"
-  },
-  {
-    "ticker": "VLO",
-    "price": 246.87,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:24.130137+00:00"
-  },
-  {
-    "ticker": "PSX",
-    "price": 176.19,
+    "ticker": "UNH",
+    "price": 370.75,
     "on_ramp_signals": [
       {
         "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 25.9 (rising from 25.9) with +DI 29.8 > -DI 17.5",
+        "reason": "ADX bullish trend: ADX 52.9 (rising from 52.4) with +DI 39.4 > -DI 9.7",
         "weight": 2
       }
     ],
@@ -1787,17 +977,281 @@
     "max_on_ramp_score": 15,
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:24.264780+00:00"
+    "trend_regime": "transitional",
+    "timestamp": "2026-05-04T22:34:15.098033+00:00"
   },
   {
-    "ticker": "COIN",
-    "price": 191.25,
+    "ticker": "PFE",
+    "price": 26.3,
+    "on_ramp_signals": [
+      {
+        "name": "Stochastic Bullish Cross",
+        "reason": "Stochastic bullish cross in oversold zone: %K 13.9->15.7, %D 14.2->14.8 (oversold threshold 20.0)",
+        "weight": 1
+      }
+    ],
+    "off_ramp_signals": [],
+    "on_ramp_score": 1,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "on-ramp",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:15.339296+00:00"
+  },
+  {
+    "ticker": "MRK",
+    "price": 113.11,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "ATR Volatility Stop",
+        "reason": "ATR volatility stop: price 113.11 dropped 10.89 from recent high 124.00 (>3.0x ATR = 9.53)",
+        "weight": 2
+      },
+      {
+        "name": "Trailing Stop Breach",
+        "reason": "Trailing stop breached: price 113.11 is 8.8% below recent high 124.00 (threshold 8.0%)",
+        "weight": 1
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 3,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:15.635592+00:00"
+  },
+  {
+    "ticker": "ABBV",
+    "price": 208.16,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "bearish",
+    "timestamp": "2026-05-04T22:34:15.767683+00:00"
+  },
+  {
+    "ticker": "LLY",
+    "price": 967.93,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "ADX Trend Fading",
+        "reason": "ADX trend fading: 20.2 -> 19.8 (below weak-trend threshold 20.0)",
+        "weight": 2
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 2,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:16.016229+00:00"
+  },
+  {
+    "ticker": "TMO",
+    "price": 462.6,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "ATR Volatility Stop",
+        "reason": "ATR volatility stop: price 462.60 dropped 75.81 from recent high 538.41 (>3.0x ATR = 46.16)",
+        "weight": 2
+      },
+      {
+        "name": "Trailing Stop Breach",
+        "reason": "Trailing stop breached: price 462.60 is 14.1% below recent high 538.41 (threshold 8.0%)",
+        "weight": 1
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 3,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "bearish",
+    "timestamp": "2026-05-04T22:34:16.202819+00:00"
+  },
+  {
+    "ticker": "ABT",
+    "price": 87.54,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "ATR Volatility Stop",
+        "reason": "ATR volatility stop: price 87.54 dropped 15.65 from recent high 103.19 (>3.0x ATR = 6.88)",
+        "weight": 2
+      },
+      {
+        "name": "Trailing Stop Breach",
+        "reason": "Trailing stop breached: price 87.54 is 15.2% below recent high 103.19 (threshold 8.0%)",
+        "weight": 1
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 3,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "bearish",
+    "timestamp": "2026-05-04T22:34:16.403085+00:00"
+  },
+  {
+    "ticker": "BMY",
+    "price": 57.38,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:16.646275+00:00"
+  },
+  {
+    "ticker": "GILD",
+    "price": 132.69,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "ATR Volatility Stop",
+        "reason": "ATR volatility stop: price 132.69 dropped 10.28 from recent high 142.97 (>3.0x ATR = 9.39)",
+        "weight": 2
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 2,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:16.786377+00:00"
+  },
+  {
+    "ticker": "AMGN",
+    "price": 323.85,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "ATR Volatility Stop",
+        "reason": "ATR volatility stop: price 323.85 dropped 35.60 from recent high 359.45 (>3.0x ATR = 26.02)",
+        "weight": 2
+      },
+      {
+        "name": "Trailing Stop Breach",
+        "reason": "Trailing stop breached: price 323.85 is 9.9% below recent high 359.45 (threshold 8.0%)",
+        "weight": 1
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 3,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:17.025262+00:00"
+  },
+  {
+    "ticker": "MDT",
+    "price": 78.3,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "ATR Volatility Stop",
+        "reason": "ATR volatility stop: price 78.30 dropped 10.54 from recent high 88.84 (>3.0x ATR = 5.57)",
+        "weight": 2
+      },
+      {
+        "name": "Trailing Stop Breach",
+        "reason": "Trailing stop breached: price 78.30 is 11.9% below recent high 88.84 (threshold 8.0%)",
+        "weight": 1
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 3,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "bearish",
+    "timestamp": "2026-05-04T22:34:17.247673+00:00"
+  },
+  {
+    "ticker": "WMT",
+    "price": 130.33,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:17.493872+00:00"
+  },
+  {
+    "ticker": "HD",
+    "price": 312.42,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "ATR Volatility Stop",
+        "reason": "ATR volatility stop: price 312.42 dropped 41.13 from recent high 353.55 (>3.0x ATR = 25.43)",
+        "weight": 2
+      },
+      {
+        "name": "Trailing Stop Breach",
+        "reason": "Trailing stop breached: price 312.42 is 11.6% below recent high 353.55 (threshold 8.0%)",
+        "weight": 1
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 3,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "bearish",
+    "timestamp": "2026-05-04T22:34:17.750505+00:00"
+  },
+  {
+    "ticker": "MCD",
+    "price": 284.1,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "ATR Volatility Stop",
+        "reason": "ATR volatility stop: price 284.10 dropped 28.44 from recent high 312.54 (>3.0x ATR = 15.99)",
+        "weight": 2
+      },
+      {
+        "name": "Trailing Stop Breach",
+        "reason": "Trailing stop breached: price 284.10 is 9.1% below recent high 312.54 (threshold 8.0%)",
+        "weight": 1
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 3,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "transitional",
+    "timestamp": "2026-05-04T22:34:17.994214+00:00"
+  },
+  {
+    "ticker": "NKE",
+    "price": 43.09,
     "on_ramp_signals": [],
     "off_ramp_signals": [
       {
         "name": "Trailing Stop Breach",
-        "reason": "Trailing stop breached: price 191.25 is 11.5% below recent high 216.05 (threshold 8.0%)",
+        "reason": "Trailing stop breached: price 43.09 is 8.3% below recent high 46.97 (threshold 8.0%)",
         "weight": 1
       }
     ],
@@ -1807,15 +1261,615 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:24.389426+00:00"
+    "timestamp": "2026-05-04T22:34:18.185341+00:00"
   },
   {
-    "ticker": "PLTR",
-    "price": 144.07,
+    "ticker": "SBUX",
+    "price": 104.97,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:18.411278+00:00"
+  },
+  {
+    "ticker": "TGT",
+    "price": 127.76,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:18.622920+00:00"
+  },
+  {
+    "ticker": "COST",
+    "price": 1012.79,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:18.790000+00:00"
+  },
+  {
+    "ticker": "LOW",
+    "price": 223.72,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "ATR Volatility Stop",
+        "reason": "ATR volatility stop: price 223.72 dropped 32.15 from recent high 255.87 (>3.0x ATR = 20.39)",
+        "weight": 2
+      },
+      {
+        "name": "Trailing Stop Breach",
+        "reason": "Trailing stop breached: price 223.72 is 12.6% below recent high 255.87 (threshold 8.0%)",
+        "weight": 1
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 3,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "bearish",
+    "timestamp": "2026-05-04T22:34:19.015460+00:00"
+  },
+  {
+    "ticker": "DIS",
+    "price": 101.31,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "bearish",
+    "timestamp": "2026-05-04T22:34:19.305601+00:00"
+  },
+  {
+    "ticker": "CMCSA",
+    "price": 27.07,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "ATR Volatility Stop",
+        "reason": "ATR volatility stop: price 27.07 dropped 5.01 from recent high 32.08 (>3.0x ATR = 2.78)",
+        "weight": 2
+      },
+      {
+        "name": "Trailing Stop Breach",
+        "reason": "Trailing stop breached: price 27.07 is 15.6% below recent high 32.08 (threshold 8.0%)",
+        "weight": 1
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 3,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "transitional",
+    "timestamp": "2026-05-04T22:34:19.520730+00:00"
+  },
+  {
+    "ticker": "PEP",
+    "price": 154.59,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:19.736970+00:00"
+  },
+  {
+    "ticker": "KO",
+    "price": 78.19,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:20.011900+00:00"
+  },
+  {
+    "ticker": "PG",
+    "price": 143.42,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "Death Cross",
+        "reason": "Death Cross: SMA50 crossed below SMA200",
+        "weight": 3
+      },
+      {
+        "name": "ATR Volatility Stop",
+        "reason": "ATR volatility stop: price 143.42 dropped 9.00 from recent high 152.42 (>3.0x ATR = 8.83)",
+        "weight": 2
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 5,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "bearish",
+    "timestamp": "2026-05-04T22:34:20.292560+00:00"
+  },
+  {
+    "ticker": "CL",
+    "price": 85.37,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:20.543712+00:00"
+  },
+  {
+    "ticker": "CAT",
+    "price": 874.78,
+    "on_ramp_signals": [
+      {
+        "name": "ADX Bullish Trend",
+        "reason": "ADX bullish trend: ADX 27.3 (rising from 26.1) with +DI 39.6 > -DI 15.7",
+        "weight": 2
+      }
+    ],
+    "off_ramp_signals": [
+      {
+        "name": "RSI Overbought Reversal",
+        "reason": "RSI dropped from overbought: 75.1 -> 69.8 (threshold 70.0)",
+        "weight": 2
+      }
+    ],
+    "on_ramp_score": 2,
+    "off_ramp_score": 2,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:20.832513+00:00"
+  },
+  {
+    "ticker": "BA",
+    "price": 221.3,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "MACD Bearish Flip",
+        "reason": "MACD histogram flipped bearish: 0.3710 -> -0.2786",
+        "weight": 1
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 1,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "transitional",
+    "timestamp": "2026-05-04T22:34:21.093754+00:00"
+  },
+  {
+    "ticker": "HON",
+    "price": 209.59,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "ATR Volatility Stop",
+        "reason": "ATR volatility stop: price 209.59 dropped 27.24 from recent high 236.83 (>3.0x ATR = 15.70)",
+        "weight": 2
+      },
+      {
+        "name": "Trailing Stop Breach",
+        "reason": "Trailing stop breached: price 209.59 is 11.5% below recent high 236.83 (threshold 8.0%)",
+        "weight": 1
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 3,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "transitional",
+    "timestamp": "2026-05-04T22:34:21.374061+00:00"
+  },
+  {
+    "ticker": "UPS",
+    "price": 96.31,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "Price Breaks SMA50",
+        "reason": "Price broke below SMA50: 96.31 fell under 103.25",
+        "weight": 2
+      },
+      {
+        "name": "ATR Volatility Stop",
+        "reason": "ATR volatility stop: price 96.31 dropped 13.53 from recent high 109.84 (>3.0x ATR = 10.08)",
+        "weight": 2
+      },
+      {
+        "name": "MACD Bearish Flip",
+        "reason": "MACD histogram flipped bearish: 0.3923 -> -0.4081",
+        "weight": 1
+      },
+      {
+        "name": "Trailing Stop Breach",
+        "reason": "Trailing stop breached: price 96.31 is 12.3% below recent high 109.84 (threshold 8.0%)",
+        "weight": 1
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 6,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:21.544613+00:00"
+  },
+  {
+    "ticker": "GE",
+    "price": 280.52,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "ATR Volatility Stop",
+        "reason": "ATR volatility stop: price 280.52 dropped 38.62 from recent high 319.14 (>3.0x ATR = 31.17)",
+        "weight": 2
+      },
+      {
+        "name": "Trailing Stop Breach",
+        "reason": "Trailing stop breached: price 280.52 is 12.1% below recent high 319.14 (threshold 8.0%)",
+        "weight": 1
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 3,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "transitional",
+    "timestamp": "2026-05-04T22:34:21.906957+00:00"
+  },
+  {
+    "ticker": "MMM",
+    "price": 141.56,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "ATR Volatility Stop",
+        "reason": "ATR volatility stop: price 141.56 dropped 16.58 from recent high 158.14 (>3.0x ATR = 11.41)",
+        "weight": 2
+      },
+      {
+        "name": "Trailing Stop Breach",
+        "reason": "Trailing stop breached: price 141.56 is 10.5% below recent high 158.14 (threshold 8.0%)",
+        "weight": 1
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 3,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "bearish",
+    "timestamp": "2026-05-04T22:34:22.157420+00:00"
+  },
+  {
+    "ticker": "RTX",
+    "price": 172.9,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "ATR Volatility Stop",
+        "reason": "ATR volatility stop: price 172.90 dropped 32.46 from recent high 205.36 (>3.0x ATR = 14.58)",
+        "weight": 2
+      },
+      {
+        "name": "Trailing Stop Breach",
+        "reason": "Trailing stop breached: price 172.90 is 15.8% below recent high 205.36 (threshold 8.0%)",
+        "weight": 1
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 3,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "transitional",
+    "timestamp": "2026-05-04T22:34:22.425435+00:00"
+  },
+  {
+    "ticker": "LMT",
+    "price": 518.15,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "ATR Volatility Stop",
+        "reason": "ATR volatility stop: price 518.15 dropped 118.73 from recent high 636.88 (>3.0x ATR = 47.22)",
+        "weight": 2
+      },
+      {
+        "name": "Trailing Stop Breach",
+        "reason": "Trailing stop breached: price 518.15 is 18.6% below recent high 636.88 (threshold 8.0%)",
+        "weight": 1
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 3,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "transitional",
+    "timestamp": "2026-05-04T22:34:22.788154+00:00"
+  },
+  {
+    "ticker": "DE",
+    "price": 578.39,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:23.085437+00:00"
+  },
+  {
+    "ticker": "UNP",
+    "price": 263.41,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:23.283284+00:00"
+  },
+  {
+    "ticker": "FDX",
+    "price": 357.8,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "Price Breaks SMA50",
+        "reason": "Price broke below SMA50: 357.80 fell under 370.79",
+        "weight": 2
+      },
+      {
+        "name": "ATR Volatility Stop",
+        "reason": "ATR volatility stop: price 357.80 dropped 46.23 from recent high 404.03 (>3.0x ATR = 37.05)",
+        "weight": 2
+      },
+      {
+        "name": "MACD Bearish Flip",
+        "reason": "MACD histogram flipped bearish: 0.8311 -> -1.8221",
+        "weight": 1
+      },
+      {
+        "name": "Trailing Stop Breach",
+        "reason": "Trailing stop breached: price 357.80 is 11.4% below recent high 404.03 (threshold 8.0%)",
+        "weight": 1
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 6,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:23.504523+00:00"
+  },
+  {
+    "ticker": "NSC",
+    "price": 311.66,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:23.729508+00:00"
+  },
+  {
+    "ticker": "XOM",
+    "price": 153.69,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:24.025140+00:00"
+  },
+  {
+    "ticker": "CVX",
+    "price": 192.28,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:24.295465+00:00"
+  },
+  {
+    "ticker": "COP",
+    "price": 124.91,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "Stochastic Bearish Cross",
+        "reason": "Stochastic bearish cross in overbought zone: %K 84.2->77.3, %D 83.5->82.9 (overbought threshold 80.0)",
+        "weight": 1
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 1,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:24.536903+00:00"
+  },
+  {
+    "ticker": "SLB",
+    "price": 55.63,
+    "on_ramp_signals": [
+      {
+        "name": "ADX Bullish Trend",
+        "reason": "ADX bullish trend: ADX 34.8 (rising from 34.6) with +DI 22.1 > -DI 9.9",
+        "weight": 2
+      }
+    ],
+    "off_ramp_signals": [],
+    "on_ramp_score": 2,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "on-ramp",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:24.746177+00:00"
+  },
+  {
+    "ticker": "EOG",
+    "price": 141.61,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:24.936645+00:00"
+  },
+  {
+    "ticker": "DVN",
+    "price": 51.26,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "Stochastic Bearish Cross",
+        "reason": "Stochastic bearish cross in overbought zone: %K 95.8->95.2, %D 95.8->96.2 (overbought threshold 80.0)",
+        "weight": 1
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 1,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:25.126241+00:00"
+  },
+  {
+    "ticker": "OXY",
+    "price": 60.27,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "Stochastic Bearish Cross",
+        "reason": "Stochastic bearish cross in overbought zone: %K 91.2->89.4, %D 87.0->90.6 (overbought threshold 80.0)",
+        "weight": 1
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 1,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:25.333251+00:00"
+  },
+  {
+    "ticker": "MPC",
+    "price": 252.54,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:25.473980+00:00"
+  },
+  {
+    "ticker": "VLO",
+    "price": 251.63,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "Stochastic Bearish Cross",
+        "reason": "Stochastic bearish cross in overbought zone: %K 92.9->91.4, %D 90.6->92.5 (overbought threshold 80.0)",
+        "weight": 1
+      }
+    ],
+    "on_ramp_score": 0,
+    "off_ramp_score": 1,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "off-ramp",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:25.717043+00:00"
+  },
+  {
+    "ticker": "PSX",
+    "price": 178.47,
+    "on_ramp_signals": [
+      {
+        "name": "ADX Bullish Trend",
+        "reason": "ADX bullish trend: ADX 26.0 (rising from 25.9) with +DI 28.3 > -DI 16.3",
+        "weight": 2
+      }
+    ],
+    "off_ramp_signals": [],
+    "on_ramp_score": 2,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "on-ramp",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:25.848138+00:00"
+  },
+  {
+    "ticker": "COIN",
+    "price": 202.99,
     "on_ramp_signals": [
       {
         "name": "MACD Bullish Flip",
-        "reason": "MACD histogram flipped bullish: -0.1355 -> 0.1116",
+        "reason": "MACD histogram flipped bullish: -0.6741 -> 0.0452",
         "weight": 1
       }
     ],
@@ -1826,21 +1880,40 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:24.516401+00:00"
+    "timestamp": "2026-05-04T22:34:26.003887+00:00"
+  },
+  {
+    "ticker": "PLTR",
+    "price": 146.03,
+    "on_ramp_signals": [
+      {
+        "name": "Price Reclaims SMA50",
+        "reason": "Price reclaimed SMA50: 146.03 crossed above 145.40",
+        "weight": 2
+      }
+    ],
+    "off_ramp_signals": [],
+    "on_ramp_score": 2,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "on-ramp",
+    "trend_regime": "bearish",
+    "timestamp": "2026-05-04T22:34:26.109951+00:00"
   },
   {
     "ticker": "SOFI",
-    "price": 16.43,
+    "price": 16.2,
     "on_ramp_signals": [],
     "off_ramp_signals": [
       {
         "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 16.43 dropped 3.70 from recent high 20.13 (>3.0x ATR = 2.90)",
+        "reason": "ATR volatility stop: price 16.20 dropped 3.93 from recent high 20.13 (>3.0x ATR = 2.83)",
         "weight": 2
       },
       {
         "name": "Trailing Stop Breach",
-        "reason": "Trailing stop breached: price 16.43 is 18.4% below recent high 20.13 (threshold 8.0%)",
+        "reason": "Trailing stop breached: price 16.20 is 19.5% below recent high 20.13 (threshold 8.0%)",
         "weight": 1
       }
     ],
@@ -1850,79 +1923,75 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:24.644867+00:00"
+    "timestamp": "2026-05-04T22:34:26.223275+00:00"
   },
   {
     "ticker": "RIVN",
-    "price": 15.02,
+    "price": 14.51,
     "on_ramp_signals": [],
     "off_ramp_signals": [
       {
-        "name": "Price Breaks SMA50",
-        "reason": "Price broke below SMA50: 15.02 fell under 15.70",
-        "weight": 2
-      },
-      {
         "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 15.02 dropped 3.05 from recent high 18.07 (>3.0x ATR = 2.40)",
-        "weight": 2
-      },
-      {
-        "name": "ADX Trend Fading",
-        "reason": "ADX trend fading: 20.4 -> 19.0 (below weak-trend threshold 20.0)",
+        "reason": "ATR volatility stop: price 14.51 dropped 3.56 from recent high 18.07 (>3.0x ATR = 2.38)",
         "weight": 2
       },
       {
         "name": "Trailing Stop Breach",
-        "reason": "Trailing stop breached: price 15.02 is 16.9% below recent high 18.07 (threshold 8.0%)",
+        "reason": "Trailing stop breached: price 14.51 is 19.7% below recent high 18.07 (threshold 8.0%)",
         "weight": 1
       }
     ],
     "on_ramp_score": 0,
-    "off_ramp_score": 7,
+    "off_ramp_score": 3,
     "max_on_ramp_score": 15,
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "transitional",
-    "timestamp": "2026-05-01T22:26:24.743264+00:00"
+    "timestamp": "2026-05-04T22:34:26.336906+00:00"
   },
   {
     "ticker": "LCID",
-    "price": 6.54,
-    "on_ramp_signals": [],
+    "price": 6.69,
+    "on_ramp_signals": [
+      {
+        "name": "MACD Bullish Flip",
+        "reason": "MACD histogram flipped bullish: -0.0525 -> 0.0106",
+        "weight": 1
+      }
+    ],
     "off_ramp_signals": [
       {
         "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 6.54 dropped 3.55 from recent high 10.09 (>3.0x ATR = 1.69)",
+        "reason": "ATR volatility stop: price 6.69 dropped 3.40 from recent high 10.09 (>3.0x ATR = 1.64)",
         "weight": 2
       },
       {
         "name": "Trailing Stop Breach",
-        "reason": "Trailing stop breached: price 6.54 is 35.2% below recent high 10.09 (threshold 8.0%)",
+        "reason": "Trailing stop breached: price 6.69 is 33.7% below recent high 10.09 (threshold 8.0%)",
         "weight": 1
       }
     ],
-    "on_ramp_score": 0,
+    "on_ramp_score": 1,
     "off_ramp_score": 3,
     "max_on_ramp_score": 15,
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:24.839343+00:00"
+    "timestamp": "2026-05-04T22:34:26.451255+00:00"
   },
   {
     "ticker": "NIO",
-    "price": 5.91,
+    "price": 6.07,
     "on_ramp_signals": [],
     "off_ramp_signals": [
       {
         "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 5.91 dropped 1.09 from recent high 7.00 (>3.0x ATR = 0.94)",
+        "reason": "ATR volatility stop: price 6.07 dropped 0.93 from recent high 7.00 (>3.0x ATR = 0.92)",
         "weight": 2
       },
       {
         "name": "Trailing Stop Breach",
-        "reason": "Trailing stop breached: price 5.91 is 15.6% below recent high 7.00 (threshold 8.0%)",
+        "reason": "Trailing stop breached: price 6.07 is 13.3% below recent high 7.00 (threshold 8.0%)",
         "weight": 1
       }
     ],
@@ -1932,21 +2001,53 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:24.938999+00:00"
+    "timestamp": "2026-05-04T22:34:26.610238+00:00"
   },
   {
     "ticker": "BABA",
-    "price": 131.5,
+    "price": 133.27,
+    "on_ramp_signals": [
+      {
+        "name": "Price Reclaims SMA50",
+        "reason": "Price reclaimed SMA50: 133.27 crossed above 132.81",
+        "weight": 2
+      }
+    ],
+    "off_ramp_signals": [],
+    "on_ramp_score": 2,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "on-ramp",
+    "trend_regime": "bearish",
+    "timestamp": "2026-05-04T22:34:26.728647+00:00"
+  },
+  {
+    "ticker": "TSM",
+    "price": 401.61,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "bullish",
+    "timestamp": "2026-05-04T22:34:27.007646+00:00"
+  },
+  {
+    "ticker": "ASML",
+    "price": 1386.21,
     "on_ramp_signals": [],
     "off_ramp_signals": [
       {
-        "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 131.50 dropped 12.28 from recent high 143.78 (>3.0x ATR = 11.78)",
+        "name": "Price Breaks SMA50",
+        "reason": "Price broke below SMA50: 1386.21 fell under 1397.16",
         "weight": 2
       },
       {
         "name": "Trailing Stop Breach",
-        "reason": "Trailing stop breached: price 131.50 is 8.5% below recent high 143.78 (threshold 8.0%)",
+        "reason": "Trailing stop breached: price 1386.21 is 9.3% below recent high 1528.64 (threshold 8.0%)",
         "weight": 1
       }
     ],
@@ -1955,74 +2056,54 @@
     "max_on_ramp_score": 15,
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
-    "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:25.044102+00:00"
-  },
-  {
-    "ticker": "TSM",
-    "price": 397.67,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:25.181130+00:00"
-  },
-  {
-    "ticker": "ASML",
-    "price": 1427.02,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:25.324597+00:00"
+    "timestamp": "2026-05-04T22:34:27.162238+00:00"
   },
   {
     "ticker": "SHOP",
-    "price": 127.67,
+    "price": 127.55,
     "on_ramp_signals": [
       {
-        "name": "Price Reclaims SMA50",
-        "reason": "Price reclaimed SMA50: 127.67 crossed above 122.68",
-        "weight": 2
+        "name": "MACD Bullish Flip",
+        "reason": "MACD histogram flipped bullish: -0.0616 -> 0.1007",
+        "weight": 1
       }
     ],
     "off_ramp_signals": [],
-    "on_ramp_score": 2,
+    "on_ramp_score": 1,
     "off_ramp_score": 0,
     "max_on_ramp_score": 15,
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:25.459236+00:00"
+    "timestamp": "2026-05-04T22:34:27.278942+00:00"
   },
   {
     "ticker": "UBER",
-    "price": 75.12,
+    "price": 73.93,
     "on_ramp_signals": [],
-    "off_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "Price Breaks SMA50",
+        "reason": "Price broke below SMA50: 73.93 fell under 73.98",
+        "weight": 2
+      }
+    ],
     "on_ramp_score": 0,
-    "off_ramp_score": 0,
+    "off_ramp_score": 2,
     "max_on_ramp_score": 15,
     "max_off_ramp_score": 16,
-    "signal_type": "neutral",
+    "signal_type": "off-ramp",
     "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:25.555634+00:00"
+    "timestamp": "2026-05-04T22:34:27.390803+00:00"
   },
   {
     "ticker": "ROKU",
-    "price": 123.58,
+    "price": 126.02,
     "on_ramp_signals": [
       {
         "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 26.8 (rising from 24.9) with +DI 37.1 > -DI 11.8",
+        "reason": "ADX bullish trend: ADX 28.7 (rising from 26.8) with +DI 35.5 > -DI 10.9",
         "weight": 2
       }
     ],
@@ -2033,16 +2114,16 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-05-01T22:26:25.652511+00:00"
+    "timestamp": "2026-05-04T22:34:27.550884+00:00"
   },
   {
     "ticker": "SNOW",
-    "price": 141.0,
+    "price": 144.21,
     "on_ramp_signals": [],
     "off_ramp_signals": [
       {
         "name": "Trailing Stop Breach",
-        "reason": "Trailing stop breached: price 141.00 is 10.7% below recent high 157.84 (threshold 8.0%)",
+        "reason": "Trailing stop breached: price 144.21 is 8.6% below recent high 157.84 (threshold 8.0%)",
         "weight": 1
       }
     ],
@@ -2052,11 +2133,11 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:25.756280+00:00"
+    "timestamp": "2026-05-04T22:34:27.658593+00:00"
   },
   {
     "ticker": "DDOG",
-    "price": 140.53,
+    "price": 146.69,
     "on_ramp_signals": [],
     "off_ramp_signals": [],
     "on_ramp_score": 0,
@@ -2065,11 +2146,11 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-05-01T22:26:25.860698+00:00"
+    "timestamp": "2026-05-04T22:34:27.770614+00:00"
   },
   {
     "ticker": "NET",
-    "price": 217.5,
+    "price": 224.17,
     "on_ramp_signals": [],
     "off_ramp_signals": [],
     "on_ramp_score": 0,
@@ -2078,11 +2159,11 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-05-01T22:26:25.961520+00:00"
+    "timestamp": "2026-05-04T22:34:27.882444+00:00"
   },
   {
     "ticker": "CRWD",
-    "price": 455.64,
+    "price": 469.24,
     "on_ramp_signals": [],
     "off_ramp_signals": [],
     "on_ramp_score": 0,
@@ -2090,7 +2171,7 @@
     "max_on_ramp_score": 15,
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
-    "trend_regime": "bearish",
-    "timestamp": "2026-05-01T22:26:26.064192+00:00"
+    "trend_regime": "transitional",
+    "timestamp": "2026-05-04T22:34:28.047637+00:00"
   }
 ]

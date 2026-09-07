@@ -16,7 +16,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:32.599142+00:00"
+    "timestamp": "2026-09-07T23:42:19.117322+00:00"
   },
   {
     "ticker": "MSFT",
@@ -35,7 +35,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:32.770813+00:00"
+    "timestamp": "2026-09-07T23:42:19.268776+00:00"
   },
   {
     "ticker": "GOOGL",
@@ -48,7 +48,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:32.922002+00:00"
+    "timestamp": "2026-09-07T23:42:19.391200+00:00"
   },
   {
     "ticker": "GOOG",
@@ -61,7 +61,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:33.135719+00:00"
+    "timestamp": "2026-09-07T23:42:19.495759+00:00"
   },
   {
     "ticker": "AMZN",
@@ -80,7 +80,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:33.272401+00:00"
+    "timestamp": "2026-09-07T23:42:19.591451+00:00"
   },
   {
     "ticker": "META",
@@ -93,7 +93,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bearish",
-    "timestamp": "2026-09-04T23:12:33.552669+00:00"
+    "timestamp": "2026-09-07T23:42:19.694920+00:00"
   },
   {
     "ticker": "NVDA",
@@ -106,7 +106,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:33.671497+00:00"
+    "timestamp": "2026-09-07T23:42:19.816959+00:00"
   },
   {
     "ticker": "TSLA",
@@ -125,7 +125,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bearish",
-    "timestamp": "2026-09-04T23:12:33.763375+00:00"
+    "timestamp": "2026-09-07T23:42:19.917937+00:00"
   },
   {
     "ticker": "AMD",
@@ -149,7 +149,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:33.857717+00:00"
+    "timestamp": "2026-09-07T23:42:20.016867+00:00"
   },
   {
     "ticker": "INTC",
@@ -168,7 +168,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:33.999619+00:00"
+    "timestamp": "2026-09-07T23:42:20.165959+00:00"
   },
   {
     "ticker": "CRM",
@@ -193,7 +193,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "transitional",
-    "timestamp": "2026-09-04T23:12:34.096873+00:00"
+    "timestamp": "2026-09-07T23:42:20.267497+00:00"
   },
   {
     "ticker": "ORCL",
@@ -212,7 +212,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "bearish",
-    "timestamp": "2026-09-04T23:12:34.290867+00:00"
+    "timestamp": "2026-09-07T23:42:20.483285+00:00"
   },
   {
     "ticker": "ADBE",
@@ -231,7 +231,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bearish",
-    "timestamp": "2026-09-04T23:12:34.455194+00:00"
+    "timestamp": "2026-09-07T23:42:20.614711+00:00"
   },
   {
     "ticker": "NFLX",
@@ -255,7 +255,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bearish",
-    "timestamp": "2026-09-04T23:12:34.584196+00:00"
+    "timestamp": "2026-09-07T23:42:20.751478+00:00"
   },
   {
     "ticker": "PYPL",
@@ -263,28 +263,23 @@
     "on_ramp_signals": [],
     "off_ramp_signals": [
       {
-        "name": "Price Breaks SMA50",
-        "reason": "Price broke below SMA50: 54.96 fell under 55.02",
-        "weight": 2
-      },
-      {
         "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 54.96 dropped 7.77 from recent high 62.73 (>3.0x ATR = 6.08)",
+        "reason": "ATR volatility stop: price 54.96 dropped 7.62 from recent high 62.58 (>3.0x ATR = 6.04)",
         "weight": 2
       },
       {
         "name": "Trailing Stop Breach",
-        "reason": "Trailing stop breached: price 54.96 is 12.4% below recent high 62.73 (threshold 8.0%)",
+        "reason": "Trailing stop breached: price 54.96 is 12.2% below recent high 62.58 (threshold 8.0%)",
         "weight": 1
       }
     ],
     "on_ramp_score": 0,
-    "off_ramp_score": 5,
+    "off_ramp_score": 3,
     "max_on_ramp_score": 15,
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:34.682379+00:00"
+    "timestamp": "2026-09-07T23:42:20.855995+00:00"
   },
   {
     "ticker": "CSCO",
@@ -308,21 +303,21 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:34.847176+00:00"
+    "timestamp": "2026-09-07T23:42:20.996948+00:00"
   },
   {
     "ticker": "AVGO",
-    "price": 357.89,
+    "price": 357.9,
     "on_ramp_signals": [],
     "off_ramp_signals": [
       {
         "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 357.89 dropped 74.84 from recent high 432.73 (>3.0x ATR = 39.05)",
+        "reason": "ATR volatility stop: price 357.90 dropped 74.83 from recent high 432.73 (>3.0x ATR = 39.08)",
         "weight": 2
       },
       {
         "name": "Trailing Stop Breach",
-        "reason": "Trailing stop breached: price 357.89 is 17.3% below recent high 432.73 (threshold 8.0%)",
+        "reason": "Trailing stop breached: price 357.90 is 17.3% below recent high 432.73 (threshold 8.0%)",
         "weight": 1
       }
     ],
@@ -332,7 +327,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "transitional",
-    "timestamp": "2026-09-04T23:12:34.977414+00:00"
+    "timestamp": "2026-09-07T23:42:21.159440+00:00"
   },
   {
     "ticker": "TXN",
@@ -362,7 +357,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:35.165446+00:00"
+    "timestamp": "2026-09-07T23:42:21.362276+00:00"
   },
   {
     "ticker": "QCOM",
@@ -381,7 +376,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:35.340252+00:00"
+    "timestamp": "2026-09-07T23:42:21.518820+00:00"
   },
   {
     "ticker": "IBM",
@@ -394,7 +389,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bearish",
-    "timestamp": "2026-09-04T23:12:35.603980+00:00"
+    "timestamp": "2026-09-07T23:42:21.776648+00:00"
   },
   {
     "ticker": "SPY",
@@ -407,7 +402,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:35.761009+00:00"
+    "timestamp": "2026-09-07T23:42:21.944749+00:00"
   },
   {
     "ticker": "QQQ",
@@ -420,7 +415,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:35.893619+00:00"
+    "timestamp": "2026-09-07T23:42:22.087642+00:00"
   },
   {
     "ticker": "IWM",
@@ -433,7 +428,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:36.024150+00:00"
+    "timestamp": "2026-09-07T23:42:22.284684+00:00"
   },
   {
     "ticker": "DIA",
@@ -446,7 +441,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:36.218867+00:00"
+    "timestamp": "2026-09-07T23:42:22.449285+00:00"
   },
   {
     "ticker": "VTI",
@@ -459,7 +454,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:36.354212+00:00"
+    "timestamp": "2026-09-07T23:42:22.590719+00:00"
   },
   {
     "ticker": "VOO",
@@ -472,7 +467,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:36.481694+00:00"
+    "timestamp": "2026-09-07T23:42:22.723211+00:00"
   },
   {
     "ticker": "ARKK",
@@ -491,7 +486,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:36.588568+00:00"
+    "timestamp": "2026-09-07T23:42:22.836978+00:00"
   },
   {
     "ticker": "XLF",
@@ -510,7 +505,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:36.768520+00:00"
+    "timestamp": "2026-09-07T23:42:23.025839+00:00"
   },
   {
     "ticker": "XLE",
@@ -529,7 +524,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:36.941528+00:00"
+    "timestamp": "2026-09-07T23:42:23.194206+00:00"
   },
   {
     "ticker": "XLK",
@@ -542,7 +537,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:37.111656+00:00"
+    "timestamp": "2026-09-07T23:42:23.349695+00:00"
   },
   {
     "ticker": "XLV",
@@ -555,7 +550,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:37.280947+00:00"
+    "timestamp": "2026-09-07T23:42:23.490122+00:00"
   },
   {
     "ticker": "XLI",
@@ -574,7 +569,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:37.433542+00:00"
+    "timestamp": "2026-09-07T23:42:23.667235+00:00"
   },
   {
     "ticker": "XLP",
@@ -593,7 +588,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:37.634999+00:00"
+    "timestamp": "2026-09-07T23:42:23.845661+00:00"
   },
   {
     "ticker": "XLY",
@@ -617,7 +612,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bearish",
-    "timestamp": "2026-09-04T23:12:37.793447+00:00"
+    "timestamp": "2026-09-07T23:42:24.016261+00:00"
   },
   {
     "ticker": "GLD",
@@ -630,7 +625,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bearish",
-    "timestamp": "2026-09-04T23:12:37.908832+00:00"
+    "timestamp": "2026-09-07T23:42:24.151210+00:00"
   },
   {
     "ticker": "SLV",
@@ -643,7 +638,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bearish",
-    "timestamp": "2026-09-04T23:12:38.042666+00:00"
+    "timestamp": "2026-09-07T23:42:24.285148+00:00"
   },
   {
     "ticker": "TLT",
@@ -656,7 +651,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bearish",
-    "timestamp": "2026-09-04T23:12:38.211551+00:00"
+    "timestamp": "2026-09-07T23:42:24.430042+00:00"
   },
   {
     "ticker": "HYG",
@@ -669,7 +664,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:38.396406+00:00"
+    "timestamp": "2026-09-07T23:42:24.610180+00:00"
   },
   {
     "ticker": "EEM",
@@ -688,7 +683,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:38.796370+00:00"
+    "timestamp": "2026-09-07T23:42:24.758962+00:00"
   },
   {
     "ticker": "VWO",
@@ -707,7 +702,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:38.939152+00:00"
+    "timestamp": "2026-09-07T23:42:24.897673+00:00"
   },
   {
     "ticker": "JPM",
@@ -720,7 +715,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:39.149355+00:00"
+    "timestamp": "2026-09-07T23:42:25.114546+00:00"
   },
   {
     "ticker": "BAC",
@@ -733,7 +728,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:39.305176+00:00"
+    "timestamp": "2026-09-07T23:42:25.345900+00:00"
   },
   {
     "ticker": "WFC",
@@ -746,7 +741,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:39.469038+00:00"
+    "timestamp": "2026-09-07T23:42:25.545929+00:00"
   },
   {
     "ticker": "GS",
@@ -765,7 +760,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:39.614027+00:00"
+    "timestamp": "2026-09-07T23:42:25.704939+00:00"
   },
   {
     "ticker": "MS",
@@ -784,7 +779,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:39.782049+00:00"
+    "timestamp": "2026-09-07T23:42:25.871164+00:00"
   },
   {
     "ticker": "V",
@@ -797,7 +792,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:39.949799+00:00"
+    "timestamp": "2026-09-07T23:42:26.019751+00:00"
   },
   {
     "ticker": "MA",
@@ -810,7 +805,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:40.084233+00:00"
+    "timestamp": "2026-09-07T23:42:26.160702+00:00"
   },
   {
     "ticker": "AXP",
@@ -829,7 +824,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "transitional",
-    "timestamp": "2026-09-04T23:12:40.301450+00:00"
+    "timestamp": "2026-09-07T23:42:26.334036+00:00"
   },
   {
     "ticker": "BLK",
@@ -848,7 +843,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:40.511621+00:00"
+    "timestamp": "2026-09-07T23:42:26.485411+00:00"
   },
   {
     "ticker": "C",
@@ -861,7 +856,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:40.722597+00:00"
+    "timestamp": "2026-09-07T23:42:26.691762+00:00"
   },
   {
     "ticker": "SCHW",
@@ -874,7 +869,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:41.005232+00:00"
+    "timestamp": "2026-09-07T23:42:26.890250+00:00"
   },
   {
     "ticker": "USB",
@@ -887,7 +882,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:41.155825+00:00"
+    "timestamp": "2026-09-07T23:42:27.060252+00:00"
   },
   {
     "ticker": "JNJ",
@@ -906,7 +901,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:41.406270+00:00"
+    "timestamp": "2026-09-07T23:42:27.272828+00:00"
   },
   {
     "ticker": "UNH",
@@ -919,7 +914,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:41.583663+00:00"
+    "timestamp": "2026-09-07T23:42:27.446139+00:00"
   },
   {
     "ticker": "PFE",
@@ -943,7 +938,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:41.753735+00:00"
+    "timestamp": "2026-09-07T23:42:27.645749+00:00"
   },
   {
     "ticker": "MRK",
@@ -962,7 +957,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:41.951453+00:00"
+    "timestamp": "2026-09-07T23:42:27.853682+00:00"
   },
   {
     "ticker": "ABBV",
@@ -975,7 +970,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:42.087784+00:00"
+    "timestamp": "2026-09-07T23:42:27.977934+00:00"
   },
   {
     "ticker": "LLY",
@@ -999,7 +994,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:42.318055+00:00"
+    "timestamp": "2026-09-07T23:42:28.194513+00:00"
   },
   {
     "ticker": "TMO",
@@ -1012,7 +1007,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:42.537949+00:00"
+    "timestamp": "2026-09-07T23:42:28.402907+00:00"
   },
   {
     "ticker": "ABT",
@@ -1031,7 +1026,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "transitional",
-    "timestamp": "2026-09-04T23:12:42.721287+00:00"
+    "timestamp": "2026-09-07T23:42:28.599922+00:00"
   },
   {
     "ticker": "BMY",
@@ -1044,11 +1039,11 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:42.893580+00:00"
+    "timestamp": "2026-09-07T23:42:28.840729+00:00"
   },
   {
     "ticker": "GILD",
-    "price": 150.99,
+    "price": 151.0,
     "on_ramp_signals": [
       {
         "name": "ADX Bullish Trend",
@@ -1059,7 +1054,7 @@
     "off_ramp_signals": [
       {
         "name": "Stochastic Bearish Cross",
-        "reason": "Stochastic bearish cross in overbought zone: %K 91.2->87.3, %D 88.1->88.6 (overbought threshold 80.0)",
+        "reason": "Stochastic bearish cross in overbought zone: %K 91.2->87.4, %D 88.1->88.6 (overbought threshold 80.0)",
         "weight": 1
       }
     ],
@@ -1069,7 +1064,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:43.006521+00:00"
+    "timestamp": "2026-09-07T23:42:28.992338+00:00"
   },
   {
     "ticker": "AMGN",
@@ -1082,7 +1077,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:43.398418+00:00"
+    "timestamp": "2026-09-07T23:42:29.122241+00:00"
   },
   {
     "ticker": "MDT",
@@ -1101,7 +1096,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "transitional",
-    "timestamp": "2026-09-04T23:12:43.601856+00:00"
+    "timestamp": "2026-09-07T23:42:29.302980+00:00"
   },
   {
     "ticker": "WMT",
@@ -1125,7 +1120,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bearish",
-    "timestamp": "2026-09-04T23:12:43.778565+00:00"
+    "timestamp": "2026-09-07T23:42:29.521532+00:00"
   },
   {
     "ticker": "HD",
@@ -1140,7 +1135,7 @@
     "off_ramp_signals": [
       {
         "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 321.05 dropped 34.69 from recent high 355.74 (>3.0x ATR = 21.70)",
+        "reason": "ATR volatility stop: price 321.05 dropped 34.69 from recent high 355.74 (>3.0x ATR = 21.79)",
         "weight": 2
       },
       {
@@ -1155,7 +1150,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bearish",
-    "timestamp": "2026-09-04T23:12:43.950154+00:00"
+    "timestamp": "2026-09-07T23:42:29.714849+00:00"
   },
   {
     "ticker": "MCD",
@@ -1174,7 +1169,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bearish",
-    "timestamp": "2026-09-04T23:12:44.120355+00:00"
+    "timestamp": "2026-09-07T23:42:29.956247+00:00"
   },
   {
     "ticker": "NKE",
@@ -1198,7 +1193,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bearish",
-    "timestamp": "2026-09-04T23:12:44.423687+00:00"
+    "timestamp": "2026-09-07T23:42:30.276077+00:00"
   },
   {
     "ticker": "SBUX",
@@ -1217,7 +1212,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:44.546545+00:00"
+    "timestamp": "2026-09-07T23:42:30.443256+00:00"
   },
   {
     "ticker": "TGT",
@@ -1230,7 +1225,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:44.721443+00:00"
+    "timestamp": "2026-09-07T23:42:30.622736+00:00"
   },
   {
     "ticker": "COST",
@@ -1239,7 +1234,7 @@
     "off_ramp_signals": [
       {
         "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 915.74 dropped 62.96 from recent high 978.70 (>3.0x ATR = 51.62)",
+        "reason": "ATR volatility stop: price 915.74 dropped 62.96 from recent high 978.70 (>3.0x ATR = 51.63)",
         "weight": 2
       }
     ],
@@ -1249,7 +1244,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bearish",
-    "timestamp": "2026-09-04T23:12:44.945774+00:00"
+    "timestamp": "2026-09-07T23:42:30.773329+00:00"
   },
   {
     "ticker": "LOW",
@@ -1258,7 +1253,7 @@
     "off_ramp_signals": [
       {
         "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 204.45 dropped 21.34 from recent high 225.79 (>3.0x ATR = 15.10)",
+        "reason": "ATR volatility stop: price 204.45 dropped 21.34 from recent high 225.79 (>3.0x ATR = 15.11)",
         "weight": 2
       },
       {
@@ -1273,7 +1268,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bearish",
-    "timestamp": "2026-09-04T23:12:45.098711+00:00"
+    "timestamp": "2026-09-07T23:42:30.950149+00:00"
   },
   {
     "ticker": "DIS",
@@ -1286,7 +1281,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-09-04T23:12:45.299108+00:00"
+    "timestamp": "2026-09-07T23:42:31.160664+00:00"
   },
   {
     "ticker": "CMCSA",
@@ -1299,7 +1294,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-09-04T23:12:45.452603+00:00"
+    "timestamp": "2026-09-07T23:42:31.336439+00:00"
   },
   {
     "ticker": "PEP",
@@ -1308,22 +1303,17 @@
     "off_ramp_signals": [
       {
         "name": "Price Breaks SMA50",
-        "reason": "Price broke below SMA50: 137.63 fell under 139.65",
-        "weight": 2
-      },
-      {
-        "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 137.63 dropped 8.27 from recent high 145.90 (>3.0x ATR = 7.24)",
+        "reason": "Price broke below SMA50: 137.63 fell under 138.20",
         "weight": 2
       }
     ],
     "on_ramp_score": 0,
-    "off_ramp_score": 4,
+    "off_ramp_score": 2,
     "max_on_ramp_score": 15,
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bearish",
-    "timestamp": "2026-09-04T23:12:45.629455+00:00"
+    "timestamp": "2026-09-07T23:42:31.519994+00:00"
   },
   {
     "ticker": "KO",
@@ -1342,7 +1332,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:45.810579+00:00"
+    "timestamp": "2026-09-07T23:42:31.795981+00:00"
   },
   {
     "ticker": "PG",
@@ -1355,7 +1345,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:46.039554+00:00"
+    "timestamp": "2026-09-07T23:42:32.051187+00:00"
   },
   {
     "ticker": "CL",
@@ -1368,7 +1358,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:46.211902+00:00"
+    "timestamp": "2026-09-07T23:42:32.256783+00:00"
   },
   {
     "ticker": "CAT",
@@ -1393,7 +1383,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:46.424819+00:00"
+    "timestamp": "2026-09-07T23:42:32.479859+00:00"
   },
   {
     "ticker": "BA",
@@ -1417,7 +1407,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bearish",
-    "timestamp": "2026-09-04T23:12:46.600170+00:00"
+    "timestamp": "2026-09-07T23:42:32.661292+00:00"
   },
   {
     "ticker": "HON",
@@ -1447,7 +1437,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "transitional",
-    "timestamp": "2026-09-04T23:12:46.801556+00:00"
+    "timestamp": "2026-09-07T23:42:32.873225+00:00"
   },
   {
     "ticker": "UPS",
@@ -1460,7 +1450,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:46.942972+00:00"
+    "timestamp": "2026-09-07T23:42:33.031874+00:00"
   },
   {
     "ticker": "GE",
@@ -1469,7 +1459,7 @@
     "off_ramp_signals": [
       {
         "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 337.12 dropped 38.46 from recent high 375.58 (>3.0x ATR = 25.11)",
+        "reason": "ATR volatility stop: price 337.12 dropped 38.46 from recent high 375.58 (>3.0x ATR = 25.13)",
         "weight": 2
       },
       {
@@ -1484,7 +1474,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:47.166307+00:00"
+    "timestamp": "2026-09-07T23:42:33.239626+00:00"
   },
   {
     "ticker": "MMM",
@@ -1508,7 +1498,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:47.361171+00:00"
+    "timestamp": "2026-09-07T23:42:33.444004+00:00"
   },
   {
     "ticker": "RTX",
@@ -1538,7 +1528,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:47.548983+00:00"
+    "timestamp": "2026-09-07T23:42:33.683479+00:00"
   },
   {
     "ticker": "LMT",
@@ -1562,7 +1552,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "transitional",
-    "timestamp": "2026-09-04T23:12:47.937441+00:00"
+    "timestamp": "2026-09-07T23:42:33.929613+00:00"
   },
   {
     "ticker": "DE",
@@ -1581,7 +1571,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:48.108144+00:00"
+    "timestamp": "2026-09-07T23:42:34.166141+00:00"
   },
   {
     "ticker": "UNP",
@@ -1600,7 +1590,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:48.391409+00:00"
+    "timestamp": "2026-09-07T23:42:34.360615+00:00"
   },
   {
     "ticker": "FDX",
@@ -1613,7 +1603,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:48.522943+00:00"
+    "timestamp": "2026-09-07T23:42:34.558769+00:00"
   },
   {
     "ticker": "NSC",
@@ -1622,7 +1612,7 @@
     "off_ramp_signals": [
       {
         "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 329.46 dropped 26.53 from recent high 355.99 (>3.0x ATR = 19.89)",
+        "reason": "ATR volatility stop: price 329.46 dropped 26.53 from recent high 355.99 (>3.0x ATR = 20.06)",
         "weight": 2
       }
     ],
@@ -1632,7 +1622,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:48.735613+00:00"
+    "timestamp": "2026-09-07T23:42:34.764333+00:00"
   },
   {
     "ticker": "XOM",
@@ -1645,7 +1635,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:49.025812+00:00"
+    "timestamp": "2026-09-07T23:42:34.986265+00:00"
   },
   {
     "ticker": "CVX",
@@ -1669,7 +1659,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:49.264195+00:00"
+    "timestamp": "2026-09-07T23:42:35.211714+00:00"
   },
   {
     "ticker": "COP",
@@ -1693,7 +1683,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:49.472920+00:00"
+    "timestamp": "2026-09-07T23:42:35.403596+00:00"
   },
   {
     "ticker": "SLB",
@@ -1712,7 +1702,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:49.638437+00:00"
+    "timestamp": "2026-09-07T23:42:35.589645+00:00"
   },
   {
     "ticker": "EOG",
@@ -1725,7 +1715,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:49.819601+00:00"
+    "timestamp": "2026-09-07T23:42:35.781326+00:00"
   },
   {
     "ticker": "DVN",
@@ -1744,7 +1734,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:49.957562+00:00"
+    "timestamp": "2026-09-07T23:42:35.938420+00:00"
   },
   {
     "ticker": "OXY",
@@ -1757,7 +1747,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:50.122646+00:00"
+    "timestamp": "2026-09-07T23:42:36.166159+00:00"
   },
   {
     "ticker": "MPC",
@@ -1776,7 +1766,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:50.246455+00:00"
+    "timestamp": "2026-09-07T23:42:36.344960+00:00"
   },
   {
     "ticker": "VLO",
@@ -1795,7 +1785,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:50.417139+00:00"
+    "timestamp": "2026-09-07T23:42:36.571318+00:00"
   },
   {
     "ticker": "PSX",
@@ -1808,7 +1798,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:50.552963+00:00"
+    "timestamp": "2026-09-07T23:42:36.767010+00:00"
   },
   {
     "ticker": "COIN",
@@ -1827,7 +1817,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "bearish",
-    "timestamp": "2026-09-04T23:12:50.713523+00:00"
+    "timestamp": "2026-09-07T23:42:36.863769+00:00"
   },
   {
     "ticker": "PLTR",
@@ -1840,7 +1830,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-09-04T23:12:50.839235+00:00"
+    "timestamp": "2026-09-07T23:42:36.983302+00:00"
   },
   {
     "ticker": "SOFI",
@@ -1853,7 +1843,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bearish",
-    "timestamp": "2026-09-04T23:12:50.929051+00:00"
+    "timestamp": "2026-09-07T23:42:37.081660+00:00"
   },
   {
     "ticker": "RIVN",
@@ -1872,7 +1862,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "transitional",
-    "timestamp": "2026-09-04T23:12:51.028615+00:00"
+    "timestamp": "2026-09-07T23:42:37.175067+00:00"
   },
   {
     "ticker": "LCID",
@@ -1896,7 +1886,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bearish",
-    "timestamp": "2026-09-04T23:12:51.118183+00:00"
+    "timestamp": "2026-09-07T23:42:37.286127+00:00"
   },
   {
     "ticker": "NIO",
@@ -1920,7 +1910,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bearish",
-    "timestamp": "2026-09-04T23:12:51.212009+00:00"
+    "timestamp": "2026-09-07T23:42:37.385320+00:00"
   },
   {
     "ticker": "BABA",
@@ -1950,7 +1940,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bearish",
-    "timestamp": "2026-09-04T23:12:51.311401+00:00"
+    "timestamp": "2026-09-07T23:42:37.494950+00:00"
   },
   {
     "ticker": "TSM",
@@ -1974,7 +1964,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:51.442092+00:00"
+    "timestamp": "2026-09-07T23:42:37.638334+00:00"
   },
   {
     "ticker": "ASML",
@@ -1983,7 +1973,7 @@
     "off_ramp_signals": [
       {
         "name": "ATR Volatility Stop",
-        "reason": "ATR volatility stop: price 1714.88 dropped 181.47 from recent high 1896.35 (>3.0x ATR = 168.63)",
+        "reason": "ATR volatility stop: price 1714.88 dropped 181.47 from recent high 1896.35 (>3.0x ATR = 168.65)",
         "weight": 2
       },
       {
@@ -1998,7 +1988,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:51.624701+00:00"
+    "timestamp": "2026-09-07T23:42:37.814300+00:00"
   },
   {
     "ticker": "SHOP",
@@ -2017,7 +2007,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:51.716823+00:00"
+    "timestamp": "2026-09-07T23:42:37.919566+00:00"
   },
   {
     "ticker": "UBER",
@@ -2036,7 +2026,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bearish",
-    "timestamp": "2026-09-04T23:12:51.810825+00:00"
+    "timestamp": "2026-09-07T23:42:38.005612+00:00"
   },
   {
     "ticker": "ROKU",
@@ -2049,7 +2039,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:51.902187+00:00"
+    "timestamp": "2026-09-07T23:42:38.104993+00:00"
   },
   {
     "ticker": "SNOW",
@@ -2068,7 +2058,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:52.003333+00:00"
+    "timestamp": "2026-09-07T23:42:38.197951+00:00"
   },
   {
     "ticker": "DDOG",
@@ -2092,7 +2082,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:52.098432+00:00"
+    "timestamp": "2026-09-07T23:42:38.300383+00:00"
   },
   {
     "ticker": "NET",
@@ -2121,7 +2111,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:52.365644+00:00"
+    "timestamp": "2026-09-07T23:42:38.402305+00:00"
   },
   {
     "ticker": "CRWD",
@@ -2140,6 +2130,6 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "bullish",
-    "timestamp": "2026-09-04T23:12:52.540858+00:00"
+    "timestamp": "2026-09-07T23:42:38.503052+00:00"
   }
 ]

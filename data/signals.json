@@ -10,7 +10,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:34.388730+00:00"
+    "timestamp": "2026-10-30T01:17:01.863865+00:00"
   },
   {
     "ticker": "MSFT",
@@ -23,7 +23,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:34.563282+00:00"
+    "timestamp": "2026-10-30T01:17:02.044486+00:00"
   },
   {
     "ticker": "GOOGL",
@@ -36,7 +36,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:34.714025+00:00"
+    "timestamp": "2026-10-30T01:17:02.194949+00:00"
   },
   {
     "ticker": "GOOG",
@@ -49,7 +49,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:34.881941+00:00"
+    "timestamp": "2026-10-30T01:17:02.339512+00:00"
   },
   {
     "ticker": "AMZN",
@@ -62,7 +62,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:35.055132+00:00"
+    "timestamp": "2026-10-30T01:17:02.526153+00:00"
   },
   {
     "ticker": "META",
@@ -75,7 +75,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:35.190369+00:00"
+    "timestamp": "2026-10-30T01:17:02.723732+00:00"
   },
   {
     "ticker": "NVDA",
@@ -88,7 +88,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:35.365950+00:00"
+    "timestamp": "2026-10-30T01:17:02.880904+00:00"
   },
   {
     "ticker": "TSLA",
@@ -101,20 +101,26 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:35.529801+00:00"
+    "timestamp": "2026-10-30T01:17:03.011673+00:00"
   },
   {
     "ticker": "AMD",
     "price": NaN,
     "on_ramp_signals": [],
-    "off_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "ADX Trend Fading",
+        "reason": "ADX trend fading: 21.1 -> 19.7 (below weak-trend threshold 20.0)",
+        "weight": 2
+      }
+    ],
     "on_ramp_score": 0,
-    "off_ramp_score": 0,
+    "off_ramp_score": 2,
     "max_on_ramp_score": 15,
     "max_off_ramp_score": 16,
-    "signal_type": "neutral",
+    "signal_type": "off-ramp",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:35.664042+00:00"
+    "timestamp": "2026-10-30T01:17:03.148003+00:00"
   },
   {
     "ticker": "INTC",
@@ -127,7 +133,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:35.852676+00:00"
+    "timestamp": "2026-10-30T01:17:03.333233+00:00"
   },
   {
     "ticker": "CRM",
@@ -140,7 +146,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:36.037759+00:00"
+    "timestamp": "2026-10-30T01:17:03.480137+00:00"
   },
   {
     "ticker": "ORCL",
@@ -153,7 +159,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:36.192383+00:00"
+    "timestamp": "2026-10-30T01:17:03.653254+00:00"
   },
   {
     "ticker": "ADBE",
@@ -166,7 +172,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:36.363983+00:00"
+    "timestamp": "2026-10-30T01:17:03.811009+00:00"
   },
   {
     "ticker": "NFLX",
@@ -179,23 +185,10 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:36.490695+00:00"
+    "timestamp": "2026-10-30T01:17:03.950817+00:00"
   },
   {
     "ticker": "PYPL",
-    "price": NaN,
-    "on_ramp_signals": [],
-    "off_ramp_signals": [],
-    "on_ramp_score": 0,
-    "off_ramp_score": 0,
-    "max_on_ramp_score": 15,
-    "max_off_ramp_score": 16,
-    "signal_type": "neutral",
-    "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:36.664210+00:00"
-  },
-  {
-    "ticker": "CSCO",
     "price": NaN,
     "on_ramp_signals": [],
     "off_ramp_signals": [
@@ -211,7 +204,20 @@
     "max_off_ramp_score": 16,
     "signal_type": "off-ramp",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:36.816532+00:00"
+    "timestamp": "2026-10-30T01:17:04.089549+00:00"
+  },
+  {
+    "ticker": "CSCO",
+    "price": NaN,
+    "on_ramp_signals": [],
+    "off_ramp_signals": [],
+    "on_ramp_score": 0,
+    "off_ramp_score": 0,
+    "max_on_ramp_score": 15,
+    "max_off_ramp_score": 16,
+    "signal_type": "neutral",
+    "trend_regime": "transitional",
+    "timestamp": "2026-10-30T01:17:04.277520+00:00"
   },
   {
     "ticker": "AVGO",
@@ -224,7 +230,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:36.981835+00:00"
+    "timestamp": "2026-10-30T01:17:04.441388+00:00"
   },
   {
     "ticker": "TXN",
@@ -237,7 +243,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:37.189927+00:00"
+    "timestamp": "2026-10-30T01:17:04.686762+00:00"
   },
   {
     "ticker": "QCOM",
@@ -250,7 +256,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:37.354161+00:00"
+    "timestamp": "2026-10-30T01:17:04.854569+00:00"
   },
   {
     "ticker": "IBM",
@@ -258,7 +264,7 @@
     "on_ramp_signals": [
       {
         "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 25.2 (rising from 23.7) with +DI 27.3 > -DI 10.7",
+        "reason": "ADX bullish trend: ADX 25.7 (rising from 24.8) with +DI 25.6 > -DI 11.4",
         "weight": 2
       }
     ],
@@ -269,7 +275,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:37.575912+00:00"
+    "timestamp": "2026-10-30T01:17:05.078667+00:00"
   },
   {
     "ticker": "SPY",
@@ -282,7 +288,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:37.742625+00:00"
+    "timestamp": "2026-10-30T01:17:05.264301+00:00"
   },
   {
     "ticker": "QQQ",
@@ -295,7 +301,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:37.932395+00:00"
+    "timestamp": "2026-10-30T01:17:05.433701+00:00"
   },
   {
     "ticker": "IWM",
@@ -308,7 +314,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:38.103421+00:00"
+    "timestamp": "2026-10-30T01:17:05.614083+00:00"
   },
   {
     "ticker": "DIA",
@@ -321,7 +327,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:38.274469+00:00"
+    "timestamp": "2026-10-30T01:17:05.793558+00:00"
   },
   {
     "ticker": "VTI",
@@ -334,7 +340,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:38.481485+00:00"
+    "timestamp": "2026-10-30T01:17:05.960829+00:00"
   },
   {
     "ticker": "VOO",
@@ -347,7 +353,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:38.627789+00:00"
+    "timestamp": "2026-10-30T01:17:06.136650+00:00"
   },
   {
     "ticker": "ARKK",
@@ -360,7 +366,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:38.764424+00:00"
+    "timestamp": "2026-10-30T01:17:06.283926+00:00"
   },
   {
     "ticker": "XLF",
@@ -373,7 +379,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:38.947685+00:00"
+    "timestamp": "2026-10-30T01:17:06.462842+00:00"
   },
   {
     "ticker": "XLE",
@@ -386,7 +392,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:39.131018+00:00"
+    "timestamp": "2026-10-30T01:17:06.639054+00:00"
   },
   {
     "ticker": "XLK",
@@ -399,7 +405,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:39.327154+00:00"
+    "timestamp": "2026-10-30T01:17:06.879689+00:00"
   },
   {
     "ticker": "XLV",
@@ -407,7 +413,7 @@
     "on_ramp_signals": [
       {
         "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 26.8 (rising from 25.7) with +DI 28.9 > -DI 12.3",
+        "reason": "ADX bullish trend: ADX 28.5 (rising from 27.1) with +DI 29.5 > -DI 11.0",
         "weight": 2
       }
     ],
@@ -418,7 +424,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:39.503777+00:00"
+    "timestamp": "2026-10-30T01:17:07.058915+00:00"
   },
   {
     "ticker": "XLI",
@@ -431,26 +437,20 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:39.725526+00:00"
+    "timestamp": "2026-10-30T01:17:07.228564+00:00"
   },
   {
     "ticker": "XLP",
     "price": NaN,
-    "on_ramp_signals": [
-      {
-        "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 35.5 (rising from 35.1) with +DI 35.7 > -DI 15.1",
-        "weight": 2
-      }
-    ],
+    "on_ramp_signals": [],
     "off_ramp_signals": [],
-    "on_ramp_score": 2,
+    "on_ramp_score": 0,
     "off_ramp_score": 0,
     "max_on_ramp_score": 15,
     "max_off_ramp_score": 16,
-    "signal_type": "on-ramp",
+    "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:39.888488+00:00"
+    "timestamp": "2026-10-30T01:17:07.410149+00:00"
   },
   {
     "ticker": "XLY",
@@ -463,7 +463,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:40.106613+00:00"
+    "timestamp": "2026-10-30T01:17:07.686959+00:00"
   },
   {
     "ticker": "GLD",
@@ -476,7 +476,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:40.270801+00:00"
+    "timestamp": "2026-10-30T01:17:07.822500+00:00"
   },
   {
     "ticker": "SLV",
@@ -489,20 +489,26 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:40.397546+00:00"
+    "timestamp": "2026-10-30T01:17:07.958354+00:00"
   },
   {
     "ticker": "TLT",
     "price": NaN,
     "on_ramp_signals": [],
-    "off_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "ADX Trend Fading",
+        "reason": "ADX trend fading: 20.4 -> 19.4 (below weak-trend threshold 20.0)",
+        "weight": 2
+      }
+    ],
     "on_ramp_score": 0,
-    "off_ramp_score": 0,
+    "off_ramp_score": 2,
     "max_on_ramp_score": 15,
     "max_off_ramp_score": 16,
-    "signal_type": "neutral",
+    "signal_type": "off-ramp",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:40.561911+00:00"
+    "timestamp": "2026-10-30T01:17:08.183140+00:00"
   },
   {
     "ticker": "HYG",
@@ -515,7 +521,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:40.747904+00:00"
+    "timestamp": "2026-10-30T01:17:08.412356+00:00"
   },
   {
     "ticker": "EEM",
@@ -528,7 +534,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:40.920861+00:00"
+    "timestamp": "2026-10-30T01:17:08.584526+00:00"
   },
   {
     "ticker": "VWO",
@@ -541,7 +547,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:41.087414+00:00"
+    "timestamp": "2026-10-30T01:17:08.801504+00:00"
   },
   {
     "ticker": "JPM",
@@ -554,7 +560,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:41.281399+00:00"
+    "timestamp": "2026-10-30T01:17:08.989261+00:00"
   },
   {
     "ticker": "BAC",
@@ -567,7 +573,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:41.464341+00:00"
+    "timestamp": "2026-10-30T01:17:09.233912+00:00"
   },
   {
     "ticker": "WFC",
@@ -580,7 +586,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:41.665375+00:00"
+    "timestamp": "2026-10-30T01:17:09.443199+00:00"
   },
   {
     "ticker": "GS",
@@ -593,7 +599,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:41.835205+00:00"
+    "timestamp": "2026-10-30T01:17:09.635181+00:00"
   },
   {
     "ticker": "MS",
@@ -606,7 +612,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:42.026204+00:00"
+    "timestamp": "2026-10-30T01:17:09.837604+00:00"
   },
   {
     "ticker": "V",
@@ -619,7 +625,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:42.203575+00:00"
+    "timestamp": "2026-10-30T01:17:10.044482+00:00"
   },
   {
     "ticker": "MA",
@@ -632,7 +638,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:42.377473+00:00"
+    "timestamp": "2026-10-30T01:17:10.273311+00:00"
   },
   {
     "ticker": "AXP",
@@ -645,7 +651,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:42.569298+00:00"
+    "timestamp": "2026-10-30T01:17:10.480651+00:00"
   },
   {
     "ticker": "BLK",
@@ -658,7 +664,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:42.717010+00:00"
+    "timestamp": "2026-10-30T01:17:10.652071+00:00"
   },
   {
     "ticker": "C",
@@ -671,7 +677,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:42.901972+00:00"
+    "timestamp": "2026-10-30T01:17:10.843389+00:00"
   },
   {
     "ticker": "SCHW",
@@ -684,7 +690,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:43.100652+00:00"
+    "timestamp": "2026-10-30T01:17:11.027747+00:00"
   },
   {
     "ticker": "USB",
@@ -697,7 +703,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:43.349313+00:00"
+    "timestamp": "2026-10-30T01:17:11.223487+00:00"
   },
   {
     "ticker": "JNJ",
@@ -710,7 +716,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:43.566927+00:00"
+    "timestamp": "2026-10-30T01:17:11.452748+00:00"
   },
   {
     "ticker": "UNH",
@@ -723,26 +729,20 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:43.769384+00:00"
+    "timestamp": "2026-10-30T01:17:11.639546+00:00"
   },
   {
     "ticker": "PFE",
     "price": NaN,
-    "on_ramp_signals": [
-      {
-        "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 29.5 (rising from 29.4) with +DI 27.2 > -DI 14.6",
-        "weight": 2
-      }
-    ],
+    "on_ramp_signals": [],
     "off_ramp_signals": [],
-    "on_ramp_score": 2,
+    "on_ramp_score": 0,
     "off_ramp_score": 0,
     "max_on_ramp_score": 15,
     "max_off_ramp_score": 16,
-    "signal_type": "on-ramp",
+    "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:44.000198+00:00"
+    "timestamp": "2026-10-30T01:17:11.852507+00:00"
   },
   {
     "ticker": "MRK",
@@ -755,7 +755,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:44.227313+00:00"
+    "timestamp": "2026-10-30T01:17:12.071572+00:00"
   },
   {
     "ticker": "ABBV",
@@ -768,7 +768,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:44.480769+00:00"
+    "timestamp": "2026-10-30T01:17:12.234128+00:00"
   },
   {
     "ticker": "LLY",
@@ -776,7 +776,7 @@
     "on_ramp_signals": [
       {
         "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 33.2 (rising from 32.3) with +DI 29.0 > -DI 11.1",
+        "reason": "ADX bullish trend: ADX 32.9 (rising from 32.6) with +DI 26.7 > -DI 12.3",
         "weight": 2
       }
     ],
@@ -787,7 +787,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:44.681049+00:00"
+    "timestamp": "2026-10-30T01:17:12.513836+00:00"
   },
   {
     "ticker": "TMO",
@@ -800,7 +800,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:44.858565+00:00"
+    "timestamp": "2026-10-30T01:17:12.691054+00:00"
   },
   {
     "ticker": "ABT",
@@ -813,7 +813,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:45.038681+00:00"
+    "timestamp": "2026-10-30T01:17:12.903275+00:00"
   },
   {
     "ticker": "BMY",
@@ -826,7 +826,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:45.253016+00:00"
+    "timestamp": "2026-10-30T01:17:13.160936+00:00"
   },
   {
     "ticker": "GILD",
@@ -839,7 +839,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:45.393933+00:00"
+    "timestamp": "2026-10-30T01:17:13.312209+00:00"
   },
   {
     "ticker": "AMGN",
@@ -847,7 +847,7 @@
     "on_ramp_signals": [
       {
         "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 30.2 (rising from 29.2) with +DI 30.9 > -DI 12.1",
+        "reason": "ADX bullish trend: ADX 31.9 (rising from 30.6) with +DI 31.6 > -DI 10.9",
         "weight": 2
       }
     ],
@@ -858,7 +858,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:45.543678+00:00"
+    "timestamp": "2026-10-30T01:17:13.467584+00:00"
   },
   {
     "ticker": "MDT",
@@ -871,7 +871,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:45.774544+00:00"
+    "timestamp": "2026-10-30T01:17:13.716192+00:00"
   },
   {
     "ticker": "WMT",
@@ -879,7 +879,7 @@
     "on_ramp_signals": [
       {
         "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 38.3 (rising from 37.1) with +DI 37.6 > -DI 11.1",
+        "reason": "ADX bullish trend: ADX 38.7 (rising from 37.9) with +DI 36.2 > -DI 12.5",
         "weight": 2
       }
     ],
@@ -890,7 +890,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:46.011920+00:00"
+    "timestamp": "2026-10-30T01:17:13.917545+00:00"
   },
   {
     "ticker": "HD",
@@ -898,7 +898,7 @@
     "on_ramp_signals": [
       {
         "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 31.5 (rising from 30.7) with +DI 32.7 > -DI 13.2",
+        "reason": "ADX bullish trend: ADX 32.6 (rising from 31.7) with +DI 32.5 > -DI 12.4",
         "weight": 2
       }
     ],
@@ -909,7 +909,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:46.202899+00:00"
+    "timestamp": "2026-10-30T01:17:14.131963+00:00"
   },
   {
     "ticker": "MCD",
@@ -922,26 +922,20 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:46.413852+00:00"
+    "timestamp": "2026-10-30T01:17:14.388835+00:00"
   },
   {
     "ticker": "NKE",
     "price": NaN,
-    "on_ramp_signals": [
-      {
-        "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 25.6 (rising from 25.2) with +DI 23.3 > -DI 12.6",
-        "weight": 2
-      }
-    ],
+    "on_ramp_signals": [],
     "off_ramp_signals": [],
-    "on_ramp_score": 2,
+    "on_ramp_score": 0,
     "off_ramp_score": 0,
     "max_on_ramp_score": 15,
     "max_off_ramp_score": 16,
-    "signal_type": "on-ramp",
+    "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:46.584740+00:00"
+    "timestamp": "2026-10-30T01:17:14.575802+00:00"
   },
   {
     "ticker": "SBUX",
@@ -949,7 +943,7 @@
     "on_ramp_signals": [
       {
         "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 30.0 (rising from 29.7) with +DI 27.6 > -DI 13.9",
+        "reason": "ADX bullish trend: ADX 31.0 (rising from 30.4) with +DI 29.7 > -DI 13.1",
         "weight": 2
       }
     ],
@@ -960,7 +954,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:46.773309+00:00"
+    "timestamp": "2026-10-30T01:17:14.741063+00:00"
   },
   {
     "ticker": "TGT",
@@ -973,26 +967,20 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:46.950611+00:00"
+    "timestamp": "2026-10-30T01:17:14.939165+00:00"
   },
   {
     "ticker": "COST",
     "price": NaN,
-    "on_ramp_signals": [
-      {
-        "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 40.9 (rising from 40.5) with +DI 31.0 > -DI 11.3",
-        "weight": 2
-      }
-    ],
+    "on_ramp_signals": [],
     "off_ramp_signals": [],
-    "on_ramp_score": 2,
+    "on_ramp_score": 0,
     "off_ramp_score": 0,
     "max_on_ramp_score": 15,
     "max_off_ramp_score": 16,
-    "signal_type": "on-ramp",
+    "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:47.109299+00:00"
+    "timestamp": "2026-10-30T01:17:15.112506+00:00"
   },
   {
     "ticker": "LOW",
@@ -1000,7 +988,7 @@
     "on_ramp_signals": [
       {
         "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 28.6 (rising from 28.2) with +DI 30.4 > -DI 15.1",
+        "reason": "ADX bullish trend: ADX 29.4 (rising from 28.8) with +DI 30.5 > -DI 14.3",
         "weight": 2
       }
     ],
@@ -1011,7 +999,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:47.275480+00:00"
+    "timestamp": "2026-10-30T01:17:15.302191+00:00"
   },
   {
     "ticker": "DIS",
@@ -1024,7 +1012,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:47.524100+00:00"
+    "timestamp": "2026-10-30T01:17:15.536395+00:00"
   },
   {
     "ticker": "CMCSA",
@@ -1037,7 +1025,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:47.743237+00:00"
+    "timestamp": "2026-10-30T01:17:15.732729+00:00"
   },
   {
     "ticker": "PEP",
@@ -1050,7 +1038,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:47.935482+00:00"
+    "timestamp": "2026-10-30T01:17:15.955592+00:00"
   },
   {
     "ticker": "KO",
@@ -1063,7 +1051,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:48.150317+00:00"
+    "timestamp": "2026-10-30T01:17:16.225504+00:00"
   },
   {
     "ticker": "PG",
@@ -1071,7 +1059,7 @@
     "on_ramp_signals": [
       {
         "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 36.8 (rising from 36.0) with +DI 35.3 > -DI 12.7",
+        "reason": "ADX bullish trend: ADX 36.5 (rising from 36.3) with +DI 33.5 > -DI 14.3",
         "weight": 2
       }
     ],
@@ -1082,26 +1070,20 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:48.375755+00:00"
+    "timestamp": "2026-10-30T01:17:16.445229+00:00"
   },
   {
     "ticker": "CL",
     "price": NaN,
-    "on_ramp_signals": [
-      {
-        "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 38.6 (rising from 38.5) with +DI 31.5 > -DI 13.8",
-        "weight": 2
-      }
-    ],
+    "on_ramp_signals": [],
     "off_ramp_signals": [],
-    "on_ramp_score": 2,
+    "on_ramp_score": 0,
     "off_ramp_score": 0,
     "max_on_ramp_score": 15,
     "max_off_ramp_score": 16,
-    "signal_type": "on-ramp",
+    "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:48.588000+00:00"
+    "timestamp": "2026-10-30T01:17:16.638790+00:00"
   },
   {
     "ticker": "CAT",
@@ -1114,7 +1096,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:48.859483+00:00"
+    "timestamp": "2026-10-30T01:17:16.850644+00:00"
   },
   {
     "ticker": "BA",
@@ -1127,7 +1109,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:49.060935+00:00"
+    "timestamp": "2026-10-30T01:17:17.057126+00:00"
   },
   {
     "ticker": "HON",
@@ -1140,7 +1122,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:49.277812+00:00"
+    "timestamp": "2026-10-30T01:17:17.304997+00:00"
   },
   {
     "ticker": "UPS",
@@ -1148,7 +1130,7 @@
     "on_ramp_signals": [
       {
         "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 36.8 (rising from 35.2) with +DI 33.6 > -DI 9.1",
+        "reason": "ADX bullish trend: ADX 38.3 (rising from 36.8) with +DI 31.2 > -DI 8.4",
         "weight": 2
       }
     ],
@@ -1159,7 +1141,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:49.440775+00:00"
+    "timestamp": "2026-10-30T01:17:17.528135+00:00"
   },
   {
     "ticker": "GE",
@@ -1172,7 +1154,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:49.664264+00:00"
+    "timestamp": "2026-10-30T01:17:17.746614+00:00"
   },
   {
     "ticker": "MMM",
@@ -1185,7 +1167,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:49.914502+00:00"
+    "timestamp": "2026-10-30T01:17:17.972071+00:00"
   },
   {
     "ticker": "RTX",
@@ -1198,7 +1180,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:50.130030+00:00"
+    "timestamp": "2026-10-30T01:17:18.206906+00:00"
   },
   {
     "ticker": "LMT",
@@ -1206,7 +1188,7 @@
     "on_ramp_signals": [
       {
         "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 42.8 (rising from 41.0) with +DI 41.0 > -DI 8.4",
+        "reason": "ADX bullish trend: ADX 42.8 (rising from 41.9) with +DI 37.3 > -DI 11.0",
         "weight": 2
       }
     ],
@@ -1217,7 +1199,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:50.344871+00:00"
+    "timestamp": "2026-10-30T01:17:18.429397+00:00"
   },
   {
     "ticker": "DE",
@@ -1230,7 +1212,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:50.540023+00:00"
+    "timestamp": "2026-10-30T01:17:18.647182+00:00"
   },
   {
     "ticker": "UNP",
@@ -1238,7 +1220,7 @@
     "on_ramp_signals": [
       {
         "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 35.8 (rising from 33.9) with +DI 26.5 > -DI 6.7",
+        "reason": "ADX bullish trend: ADX 37.8 (rising from 35.9) with +DI 26.2 > -DI 6.2",
         "weight": 2
       }
     ],
@@ -1249,7 +1231,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:50.793906+00:00"
+    "timestamp": "2026-10-30T01:17:18.847714+00:00"
   },
   {
     "ticker": "FDX",
@@ -1262,7 +1244,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:50.974412+00:00"
+    "timestamp": "2026-10-30T01:17:19.029540+00:00"
   },
   {
     "ticker": "NSC",
@@ -1270,7 +1252,7 @@
     "on_ramp_signals": [
       {
         "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 33.4 (rising from 31.7) with +DI 27.3 > -DI 7.6",
+        "reason": "ADX bullish trend: ADX 35.4 (rising from 33.6) with +DI 27.4 > -DI 7.1",
         "weight": 2
       }
     ],
@@ -1281,7 +1263,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:51.155679+00:00"
+    "timestamp": "2026-10-30T01:17:19.285051+00:00"
   },
   {
     "ticker": "XOM",
@@ -1294,7 +1276,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:51.375905+00:00"
+    "timestamp": "2026-10-30T01:17:19.499399+00:00"
   },
   {
     "ticker": "CVX",
@@ -1302,7 +1284,7 @@
     "on_ramp_signals": [
       {
         "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 32.2 (rising from 31.9) with +DI 26.0 > -DI 12.0",
+        "reason": "ADX bullish trend: ADX 32.6 (rising from 32.2) with +DI 24.7 > -DI 11.4",
         "weight": 2
       }
     ],
@@ -1313,7 +1295,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:51.579949+00:00"
+    "timestamp": "2026-10-30T01:17:19.760879+00:00"
   },
   {
     "ticker": "COP",
@@ -1321,7 +1303,7 @@
     "on_ramp_signals": [
       {
         "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 33.9 (rising from 33.4) with +DI 29.5 > -DI 12.6",
+        "reason": "ADX bullish trend: ADX 34.3 (rising from 33.9) with +DI 28.0 > -DI 12.0",
         "weight": 2
       }
     ],
@@ -1332,7 +1314,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:51.793723+00:00"
+    "timestamp": "2026-10-30T01:17:19.951080+00:00"
   },
   {
     "ticker": "SLB",
@@ -1345,7 +1327,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:52.028697+00:00"
+    "timestamp": "2026-10-30T01:17:20.142683+00:00"
   },
   {
     "ticker": "EOG",
@@ -1353,7 +1335,7 @@
     "on_ramp_signals": [
       {
         "name": "ADX Bullish Trend",
-        "reason": "ADX bullish trend: ADX 26.6 (rising from 26.2) with +DI 25.8 > -DI 13.3",
+        "reason": "ADX bullish trend: ADX 27.0 (rising from 26.6) with +DI 25.1 > -DI 13.0",
         "weight": 2
       }
     ],
@@ -1364,7 +1346,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "on-ramp",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:52.217073+00:00"
+    "timestamp": "2026-10-30T01:17:20.324043+00:00"
   },
   {
     "ticker": "DVN",
@@ -1377,7 +1359,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:52.403030+00:00"
+    "timestamp": "2026-10-30T01:17:20.567752+00:00"
   },
   {
     "ticker": "OXY",
@@ -1390,7 +1372,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:52.604127+00:00"
+    "timestamp": "2026-10-30T01:17:20.800389+00:00"
   },
   {
     "ticker": "MPC",
@@ -1403,7 +1385,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:52.765841+00:00"
+    "timestamp": "2026-10-30T01:17:20.978624+00:00"
   },
   {
     "ticker": "VLO",
@@ -1416,7 +1398,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:52.984485+00:00"
+    "timestamp": "2026-10-30T01:17:21.232902+00:00"
   },
   {
     "ticker": "PSX",
@@ -1429,7 +1411,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:53.165912+00:00"
+    "timestamp": "2026-10-30T01:17:21.404018+00:00"
   },
   {
     "ticker": "COIN",
@@ -1442,7 +1424,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:53.306440+00:00"
+    "timestamp": "2026-10-30T01:17:21.561371+00:00"
   },
   {
     "ticker": "PLTR",
@@ -1455,20 +1437,26 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:53.446216+00:00"
+    "timestamp": "2026-10-30T01:17:21.693009+00:00"
   },
   {
     "ticker": "SOFI",
     "price": NaN,
-    "on_ramp_signals": [],
+    "on_ramp_signals": [
+      {
+        "name": "ADX Bullish Trend",
+        "reason": "ADX bullish trend: ADX 25.1 (rising from 24.8) with +DI 30.5 > -DI 16.6",
+        "weight": 2
+      }
+    ],
     "off_ramp_signals": [],
-    "on_ramp_score": 0,
+    "on_ramp_score": 2,
     "off_ramp_score": 0,
     "max_on_ramp_score": 15,
     "max_off_ramp_score": 16,
-    "signal_type": "neutral",
+    "signal_type": "on-ramp",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:53.567589+00:00"
+    "timestamp": "2026-10-30T01:17:21.827345+00:00"
   },
   {
     "ticker": "RIVN",
@@ -1481,7 +1469,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:53.690912+00:00"
+    "timestamp": "2026-10-30T01:17:22.010768+00:00"
   },
   {
     "ticker": "LCID",
@@ -1494,7 +1482,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:53.853136+00:00"
+    "timestamp": "2026-10-30T01:17:22.147848+00:00"
   },
   {
     "ticker": "NIO",
@@ -1507,7 +1495,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:53.979103+00:00"
+    "timestamp": "2026-10-30T01:17:22.383479+00:00"
   },
   {
     "ticker": "BABA",
@@ -1520,7 +1508,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:54.120683+00:00"
+    "timestamp": "2026-10-30T01:17:22.527823+00:00"
   },
   {
     "ticker": "TSM",
@@ -1533,7 +1521,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:54.294835+00:00"
+    "timestamp": "2026-10-30T01:17:22.694401+00:00"
   },
   {
     "ticker": "ASML",
@@ -1546,20 +1534,26 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:54.457586+00:00"
+    "timestamp": "2026-10-30T01:17:22.863273+00:00"
   },
   {
     "ticker": "SHOP",
     "price": NaN,
     "on_ramp_signals": [],
-    "off_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "ADX Trend Fading",
+        "reason": "ADX trend fading: 20.5 -> 19.4 (below weak-trend threshold 20.0)",
+        "weight": 2
+      }
+    ],
     "on_ramp_score": 0,
-    "off_ramp_score": 0,
+    "off_ramp_score": 2,
     "max_on_ramp_score": 15,
     "max_off_ramp_score": 16,
-    "signal_type": "neutral",
+    "signal_type": "off-ramp",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:54.592924+00:00"
+    "timestamp": "2026-10-30T01:17:23.046183+00:00"
   },
   {
     "ticker": "UBER",
@@ -1572,20 +1566,26 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:54.720447+00:00"
+    "timestamp": "2026-10-30T01:17:23.179318+00:00"
   },
   {
     "ticker": "ROKU",
     "price": NaN,
     "on_ramp_signals": [],
-    "off_ramp_signals": [],
+    "off_ramp_signals": [
+      {
+        "name": "ADX Trend Fading",
+        "reason": "ADX trend fading: 20.3 -> 19.2 (below weak-trend threshold 20.0)",
+        "weight": 2
+      }
+    ],
     "on_ramp_score": 0,
-    "off_ramp_score": 0,
+    "off_ramp_score": 2,
     "max_on_ramp_score": 15,
     "max_off_ramp_score": 16,
-    "signal_type": "neutral",
+    "signal_type": "off-ramp",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:54.850041+00:00"
+    "timestamp": "2026-10-30T01:17:23.366182+00:00"
   },
   {
     "ticker": "SNOW",
@@ -1598,7 +1598,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:55.030970+00:00"
+    "timestamp": "2026-10-30T01:17:23.505307+00:00"
   },
   {
     "ticker": "DDOG",
@@ -1611,7 +1611,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:55.280440+00:00"
+    "timestamp": "2026-10-30T01:17:23.646148+00:00"
   },
   {
     "ticker": "NET",
@@ -1624,7 +1624,7 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:55.405887+00:00"
+    "timestamp": "2026-10-30T01:17:23.779799+00:00"
   },
   {
     "ticker": "CRWD",
@@ -1637,6 +1637,6 @@
     "max_off_ramp_score": 16,
     "signal_type": "neutral",
     "trend_regime": "transitional",
-    "timestamp": "2026-10-29T01:09:55.566684+00:00"
+    "timestamp": "2026-10-30T01:17:23.973586+00:00"
   }
 ]
